@@ -1,0 +1,567 @@
+<div id="menu_a"></div>
+
+
+
+
+<section id="nwHero" aria-label="Norwegian Wood Hero">
+  <style>
+    /* ================= Scope: #nwHero only ================= */
+    #nwHero{
+      --ink:#ffffff; --muted:rgba(255,255,255,.88); --accent:#c7d66b;
+      --shadow:0 16px 50px rgba(0,0,0,.25);
+      --slideDur:8000ms; /* 자동전환 + 게이지 시간 */
+      font-family:Pretendard,"Noto Sans KR",system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
+      position:relative; overflow:hidden; color:var(--ink);
+    }
+
+    /* ===== 슬라이드 ===== */
+    #nwHero .slides{position:relative; width:100%; height:100vh;}
+    #nwHero .slide{position:absolute; inset:0; opacity:0; transition:opacity 900ms ease;}
+    #nwHero .slide.active{opacity:1; z-index:1;}
+
+    #nwHero .slide::before{
+      content:""; position:absolute; inset:0; z-index:0;
+      background-size:120% 120%; background-repeat:no-repeat; background-position:left center;
+      animation:nwPan var(--slideDur) linear infinite;
+    }
+    #nwHero .slide[data-img="sea"]::before{background-image:url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=1920&auto=format&fit=crop');}
+    #nwHero .slide[data-img="forest"]::before{background-image:url('https://images.unsplash.com/photo-1500375592092-40eb2168fd21?q=80&w=1920&auto=format&fit=crop');}
+
+    @keyframes nwPan{from{background-position:left center;} to{background-position:right center;}}
+
+    /* ===== 비네트 ===== */
+    #nwHero .vignette{position:absolute; inset:0; z-index:2; pointer-events:none;}
+    #nwHero .vignette::before{content:""; position:absolute; inset:0; background:radial-gradient(120% 100% at 20% 60%, rgba(0,0,0,.45) 0%, rgba(0,0,0,.25) 45%, rgba(0,0,0,.08) 70%, rgba(0,0,0,0) 100%);}    
+    #nwHero .vignette::after{content:""; position:absolute; inset:0; background:linear-gradient(180deg, rgba(0,0,0,.12), rgba(0,0,0,.08) 40%, rgba(0,0,0,0) 60%);} 
+
+    /* ===== 텍스트 ===== */
+    #nwHero .content{position:absolute; left:8%; top:50%; transform:translateY(-50%); z-index:3; max-width:min(780px, 75vw);}    
+    #nwHero .eyebrow{display:block; font-size:1rem; letter-spacing:.2px; color:var(--muted); margin-bottom:14px; opacity:0; transform:translateX(-30px); animation:textFade 1s ease forwards .3s;}
+    #nwHero .title{font-size:3.4rem; font-weight:800; line-height:1.35; word-break:keep-all; text-wrap:balance; text-shadow:0 2px 6px rgba(0,0,0,.25), 0 1px 0 rgba(0,0,0,.35); opacity:0; transform:translateX(-40px); animation:textFade 1.2s ease forwards .6s;}
+    @keyframes textFade{to{opacity:1; transform:translateX(0);}}
+
+    /* ===== 컨트롤 버튼 ===== */
+    #nwHero .controls{position:absolute; bottom:42px; left:40px; z-index:4; display:flex; gap:9px;}
+    #nwHero .btn{width:46px; height:46px; border-radius:50%; border:1px solid rgba(255,255,255,.45); background:rgba(255,255,255,.06); color:#fff; font-size:1.15rem; backdrop-filter:saturate(110%) blur(2px);}
+    #nwHero .btn:hover{background:rgba(255,255,255,.18);} 
+
+    /* ===== 게이지 ===== */
+    #nwHero .gaugeWrap{position:absolute;left: 160px;right: 40px;bottom: 62px; height:2px; background:rgba(255,255,255,.35); z-index:4; overflow:hidden;}
+    #nwHero .gauge{height:100%; width:0%; background:#fff; animation:nwGauge var(--slideDur) linear infinite;}
+    @keyframes nwGauge{from{width:0%;} to{width:100%;}}
+
+    /* ===== Scroll Down (텍스트만) ===== */
+    #nwHero .scrollCue{
+      position:absolute; right:40px; bottom:96px; z-index:4;
+      font-size:.72rem; writing-mode:vertical-rl; text-orientation:mixed; letter-spacing:.6px;
+      color:#fff; cursor:pointer; font-weight:500;
+    }
+    #nwHero .scrollCue span{display:inline-block; animation:scrollText 2.2s ease-in-out infinite;}
+    @keyframes scrollText{0%,100%{transform:translateY(0);} 50%{transform:translateY(-12px);}}
+
+    /* 반응형 */
+    @media (max-width:1024px){#nwHero .title{font-size:3rem;}}
+    @media (max-width:768px){
+      #nwHero .title{font-size:2rem;}
+      #nwHero .eyebrow{font-size:.95rem;}
+      #nwHero .controls{left:18px; bottom:22px;}
+      #nwHero .gaugeWrap{left: 140px;right: 88px;bottom: 42px;}
+      #nwHero .scrollCue{right:38px; bottom:78px; font-size:.65rem;}
+    }
+  </style>
+
+  <!-- Slides -->
+  <div class="slides">
+    <div class="slide active" data-img="forest"></div>
+    <div class="slide" data-img="sea"></div>
+  </div>
+
+  <div class="vignette" aria-hidden="true"></div>
+
+  <!-- Text -->
+  <div class="content">
+    <span class="eyebrow">Norwegian Wood</span>
+    <div class="title">숲과 들, 바다 공해없는<br>자연을 소비자와 함께 나누는 가치</div>
+  </div>
+
+  <!-- Controls + Gauge -->
+  <div class="controls">
+    <button class="btn prev" aria-label="이전 슬라이드">←</button>
+    <button class="btn next" aria-label="다음 슬라이드">→</button>
+  </div>
+  <div class="gaugeWrap"><div class="gauge"></div></div>
+
+  <!-- Scroll Down Cue -->
+  <div class="scrollCue"><span>Scroll Down</span></div>
+
+  <script>
+    (function(){
+      const root = document.querySelector('#nwHero');
+      const slides = root.querySelectorAll('.slide');
+      const prevBtn = root.querySelector('.prev');
+      const nextBtn = root.querySelector('.next');
+      const gauge = root.querySelector('.gauge');
+      const DUR = 8000;
+      let i = 0, timer;
+
+      function show(n){
+        i = (n + slides.length) % slides.length;
+        slides.forEach((s,idx)=>{
+          s.classList.toggle('active', idx===i);
+        });
+        gauge.style.animation = 'none';
+        void gauge.offsetWidth;
+        gauge.style.animation = null;
+      }
+      function next(){ show(i+1); }
+      function prev(){ show(i-1); }
+
+      function play(){ timer = setInterval(next, DUR); }
+      function reset(){ clearInterval(timer); play(); }
+
+      prevBtn.addEventListener('click', ()=>{ prev(); reset(); });
+      nextBtn.addEventListener('click', ()=>{ next(); reset(); });
+      play();
+    })();
+  </script>
+</section>
+
+
+
+
+<section id="forestTherapyHero" aria-label="Forest Therapy Training">
+  <style>
+    /* ================= Scope: #forestTherapyHero only ================= */
+    #forestTherapyHero {
+      --ink:#333; 
+      --muted:#555; 
+      --accent:#5b7c2c; /* 버튼 및 강조 색상 */
+      --bg:#fafafa;
+      --ease:cubic-bezier(.19,1,.22,1);
+      font-family:Pretendard,"Noto Sans KR",system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
+      background: url('https://www.transparenttextures.com/patterns/wood-pattern.png') repeat; 
+      padding:80px 20px;
+      position:relative;
+      overflow:hidden;
+    }
+
+    #forestTherapyHero .wrap {
+      max-width:1200px;
+      margin:0 auto;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:40px;
+      flex-wrap:wrap;
+    }
+
+    /* 텍스트 영역 */
+    #forestTherapyHero .textBox {
+      flex:1 1 480px;
+      min-width:300px;
+      opacity:0;
+      transform:translateY(40px);
+      transition:all 1s var(--ease);
+    }
+    #forestTherapyHero .textBox.in {
+      opacity:1;
+      transform:translateY(0);
+    }
+    #forestTherapyHero h2 {
+      font-size:2rem;
+      line-height:1.4;
+      color:var(--accent);
+      margin-bottom:20px;
+      font-weight:600;
+    }
+    #forestTherapyHero p {
+      font-size:1rem;
+      line-height:1.7;
+      color:var(--muted);
+      margin-bottom:30px;
+    }
+    #forestTherapyHero .btn {
+      display:inline-block;
+      background:var(--accent);
+      color:#fff;
+      padding:12px 26px;
+      border-radius:28px;
+      font-weight:600;
+      font-size:1rem;
+      text-decoration:none;
+      transition:.35s var(--ease);
+      box-shadow:0 10px 24px rgba(91,124,44,.22);
+      position:relative;
+      overflow:hidden;
+    }
+    #forestTherapyHero .btn:hover {
+      transform:translateY(-2px);
+      box-shadow:0 16px 30px rgba(91,124,44,.28);
+    }
+
+    /* 버튼 글로시 효과 */
+    #forestTherapyHero .btn::after {
+      content:"";
+      position:absolute;
+      inset:0;
+      background:linear-gradient(105deg, transparent 0 40%, rgba(255,255,255,.35) 50%, transparent 60% 100%);
+      transform:translateX(-120%);
+      transition:transform .9s var(--ease);
+    }
+    #forestTherapyHero .btn:hover::after { transform:translateX(120%); }
+
+    /* 이미지 영역 */
+    #forestTherapyHero .imgBox {
+      flex:1 1 480px;
+      min-width:280px;
+      text-align:center;
+      opacity:0;
+      transform:scale(0.92) translateY(30px);
+      transition:all 1.2s var(--ease);
+    }
+    #forestTherapyHero .imgBox.in {
+      opacity:1;
+      transform:scale(1) translateY(0);
+    }
+    #forestTherapyHero .imgBox img {
+      max-width:100%;
+      border-radius:8px;
+      box-shadow:0 12px 24px rgba(0,0,0,.25);
+      transform:rotate(-2deg);
+    }
+
+    /* 반응형 */
+    @media(max-width:768px){
+      #forestTherapyHero { padding:50px 20px; }
+      #forestTherapyHero .wrap {
+        flex-direction:column;
+        gap:30px;
+        text-align:center;
+      }
+      #forestTherapyHero h2 { font-size:1.5rem; }
+      #forestTherapyHero .btn { font-size:.95rem; }
+      #forestTherapyHero .imgBox img { margin-top:10px; }
+    }
+
+    /* 모션 감소 사용자 */
+    @media (prefers-reduced-motion:reduce){
+      #forestTherapyHero .textBox,
+      #forestTherapyHero .imgBox {
+        transition:none !important;
+        transform:none !important;
+        opacity:1 !important;
+      }
+    }
+  </style>
+
+  <div class="wrap">
+    <div class="textBox">
+      <h2>Forest Therapy Training<br>Worldwide - Online and In-person</h2>
+      <p>
+        The Association of Nature and Forest Therapy (ANFT) has been training guides for over a decade. 
+        We care for everyone’s wellbeing: People and Nature. ANFT has had more impact and influence for 
+        planetary health than any other forest therapy training organization. The work of each guide we 
+        train sends positive ripples into their communities and landscapes.
+      </p>
+      <a href="#" class="btn">Learn More</a>
+    </div>
+    <div class="imgBox">
+      <img src="https://i.ibb.co/YRT1bH5/forest-therapy.jpg" alt="Forest Therapy Training">
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", ()=>{
+      const io = new IntersectionObserver((entries)=>{
+        entries.forEach(entry=>{
+          if(entry.isIntersecting){
+            entry.target.classList.add("in");
+            io.unobserve(entry.target);
+          }
+        });
+      }, {threshold:0.2});
+
+      document.querySelectorAll("#forestTherapyHero .textBox, #forestTherapyHero .imgBox")
+        .forEach(el=>io.observe(el));
+    });
+  </script>
+</section>
+
+
+<section id="cohortChooser" aria-label="Choose Your Cohort">
+  <style>
+    /* ================= Scope: #cohortChooser only ================= */
+    #cohortChooser{
+      --ink:#26313d;               /* 본문 글자 */
+      --muted:#6b7785;             /* 보조 텍스트 */
+      --accent:#5b7c2c;            /* 초록 라벨/포인트 */
+      --card:#ffffff;              /* 카드 배경 */
+      --bg:#f6f7f5;                /* 섹션 배경 */
+      --line:#e6e9ec;              /* 구분선 */
+      --radius:18px;               /* 둥근 정도 */
+      --shadow:0 12px 38px rgba(0,0,0,.08);
+      --shadowSoft:0 2px 10px rgba(0,0,0,.05);
+      --gap:28px;                  /* 카드 간격 */
+      font-family:Pretendard, "Noto Sans KR", system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+      background:var(--bg);
+      color:var(--ink);
+      padding:64px 20px 80px;
+      position:relative;
+      z-index:1;
+    }
+
+    /* ===== 제목 영역 ===== */
+    #cohortChooser .title{
+      max-width:1200px; margin:0 auto 30px; text-align:center;
+    }
+    #cohortChooser .title h2{
+      font-weight:700; line-height:1.12; letter-spacing:.2px;
+      font-size:clamp(28px, 4vw, 44px);
+      color:#1f2a33; margin:0 0 8px;
+    }
+    #cohortChooser .title p{
+      margin:0; font-size:clamp(16px, 1.8vw, 20px); color:var(--muted);
+    }
+
+    /* ===== 그리드 ===== */
+    #cohortChooser .grid{
+      max-width:1200px; margin:26px auto 0;
+      display:grid; gap:var(--gap);
+      grid-template-columns:repeat(3, minmax(0, 1fr));
+    }
+    @media (max-width: 980px){
+      #cohortChooser .grid{grid-template-columns:repeat(2, minmax(0, 1fr));}
+    }
+    @media (max-width: 640px){
+      #cohortChooser .grid{grid-template-columns:1fr;}
+    }
+
+    /* ===== 카드 ===== */
+    #cohortChooser .card{background:var(--card); border-radius:var(--radius); box-shadow:var(--shadow); overflow:hidden; display:flex; flex-direction:column; transition:transform .2s ease, box-shadow .2s ease;}
+    #cohortChooser .card:focus-within, 
+    #cohortChooser .card:hover{transform:translateY(-3px); box-shadow:0 16px 44px rgba(0,0,0,.10);}  
+
+    /* 이미지 */
+    #cohortChooser .thumb{position:relative; overflow:hidden;}
+    #cohortChooser .thumb img{width:100%; height:auto; display:block; aspect-ratio:16/9; object-fit:cover;}
+
+    /* 본문 텍스트 */
+    #cohortChooser .body{padding:18px 20px 8px;}
+    #cohortChooser .name{display:block; font-size:clamp(22px, 2.5vw, 28px); color:#2e3b21; font-weight:800; text-decoration:none; margin-bottom:2px;}
+    #cohortChooser .cohort{color:var(--muted); font-size:15px;}
+
+    /* 상태 라벨 */
+    #cohortChooser .status{padding:0 20px; margin:14px 0 6px;}
+    #cohortChooser .status .open{display:inline-block; color:var(--accent); font-weight:700;}
+
+    /* 상세 표 */
+    #cohortChooser .facts{display:grid; grid-template-columns:repeat(2, 1fr); gap:0; border-top:1px solid var(--line); margin-top:10px;}
+    #cohortChooser .fact{padding:16px 18px; border-right:1px solid var(--line);} 
+    #cohortChooser .fact:last-child{border-right:none;}
+    #cohortChooser .fact h5{font-size:14px; color:#374151; margin:0 0 8px; font-weight:800;}
+    #cohortChooser .fact .sub{font-size:13px; color:#4b5e2b; font-weight:700; margin:0 0 8px;}
+    #cohortChooser .fact .date{font-size:15px; color:#1f2a33;}
+    #cohortChooser .fact .time{font-size:14px; color:var(--muted);}
+
+    /* 푸터(언어) */
+    #cohortChooser .foot{padding:10px 18px 18px; color:#334155; font-size:14px;}
+
+    /* 접근성 포커스 */
+    #cohortChooser a:focus-visible{outline:3px solid rgba(91,124,44,.35); outline-offset:2px; border-radius:10px;}
+  </style>
+
+  <!-- ===== Headline ===== -->
+  <div class="title" role="presentation">
+    <h2>Choose Your Cohort<br>(Upcoming Training)</h2>
+    <p>Find the cohort that fits your schedule & language.</p>
+  </div>
+
+  <!-- ===== Cards Grid ===== -->
+  <div class="grid" role="list">
+
+    <!-- ✅ Card 1: Cardinal -->
+    <article class="card" role="listitem">
+      <div class="thumb">
+        <img src="https://images.unsplash.com/photo-1484415063229-10e54f579f2d?q=80&w=1600&auto=format&fit=crop" alt="Red cardinal perched on winter branches">
+      </div>
+      <div class="body">
+        <a class="name" href="#" aria-label="Open details for Cardinal cohort 153">Cardinal</a>
+        <div class="cohort">Cohort 153</div>
+      </div>
+      <div class="status"><span class="open">Enrollment Open</span></div>
+      <div class="facts">
+        <div class="fact">
+          <h5>Enrollment<br>Deadline</h5>
+          <p class="date">August 13, 2025</p>
+          <p class="time">5:00 pm</p>
+        </div>
+        <div class="fact">
+          <h5>First Call Date &<br>Language</h5>
+          <p class="date">August 20, 2025</p>
+          <p class="time">English</p>
+        </div>
+      </div>
+      <div class="foot" aria-hidden="true"></div>
+    </article>
+
+    <!-- ✅ Card 2: Sky of Clouds -->
+    <article class="card" role="listitem">
+      <div class="thumb">
+        <img src="https://images.unsplash.com/photo-1485236715568-ddc5ee6ca227?q=80&w=1600&auto=format&fit=crop" alt="Bright cumulus clouds in a blue sky">
+      </div>
+      <div class="body">
+        <a class="name" href="#" aria-label="Open details for Sky of Clouds cohort 154">Sky of Clouds</a>
+        <div class="cohort">Cohort 154</div>
+      </div>
+      <div class="status"><span class="open">Enrollment Open</span></div>
+      <div class="facts">
+        <div class="fact">
+          <h5>Enrollment<br>Deadline</h5>
+          <p class="date">September 4, 2025</p>
+          <p class="time">5:00 pm</p>
+        </div>
+        <div class="fact">
+          <h5>First Call Date &<br>Language</h5>
+          <p class="date">September 11, 2025</p>
+          <p class="time">English</p>
+        </div>
+      </div>
+      <div class="foot" aria-hidden="true"></div>
+    </article>
+
+    <!-- ✅ Card 3: Lotus -->
+    <article class="card" role="listitem">
+      <div class="thumb">
+        <img src="https://images.unsplash.com/photo-1503236823255-94609f598e71?q=80&w=1600&auto=format&fit=crop" alt="Pink lotus flowers floating on water">
+      </div>
+      <div class="body">
+        <a class="name" href="#" aria-label="Open details for Lotus cohort 155">Lotus</a>
+        <div class="cohort">Cohort 155</div>
+      </div>
+      <div class="status"><span class="open">Enrollment Open</span></div>
+      <div class="facts">
+        <div class="fact">
+          <h5>Enrollment<br>Deadline</h5>
+          <p class="date">September 16, 2025</p>
+          <p class="time">5:00 pm</p>
+        </div>
+        <div class="fact">
+          <h5>First Call Date &<br>Language</h5>
+          <p class="date">September 23, 2025</p>
+          <p class="time">English</p>
+        </div>
+      </div>
+      <div class="foot" aria-hidden="true"></div>
+    </article>
+
+  </div>
+</section>
+
+
+<section id="contactSection" aria-label="Contact us">
+  <style>
+    /* ================= Scope: #contactSection only ================= */
+    #contactSection{
+      --ink:#ffffff;
+      --muted:rgba(255,255,255,.85);
+      --accent:#ffffff;
+      position:relative;
+      font-family:Pretendard,"Noto Sans KR",system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
+      color:var(--ink);
+      height:500px;
+      display:flex;
+      align-items:center;
+    }
+
+    #contactSection::before{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:url('./img/wood.jpg') center/cover no-repeat;
+      filter:brightness(0.4)
+    }
+
+    #contactSection .inner{
+      position:relative;
+      z-index:1;
+      max-width:1200px;
+      margin:0 5%;
+      padding:80px 20px;
+      text-align:left;
+    }
+
+    #contactSection h2{
+      font-size:2.5rem;
+      font-weight:600;
+      margin-bottom:16px;
+    }
+    #contactSection p.sub{
+      font-size:1rem;
+      color:var(--muted);
+      margin-bottom:32px;
+    }
+
+    #contactSection .moreBtn{
+      font-size:1rem;
+      font-weight:500;
+      color:var(--accent);
+      display:inline-flex;
+      align-items:center;
+      gap:6px;
+      cursor:pointer;
+      position:relative;
+    }
+    #contactSection .moreBtn::after{
+      content:"";
+      position:absolute;
+      bottom:-2px; left:0;
+      width:100%; height:1px;
+      background:var(--accent);
+      opacity:.6;
+      transition:opacity .3s;
+    }
+    #contactSection .moreBtn:hover::after{
+      opacity:1;
+    }
+
+    /* 우측 하단 Top 버튼 */
+    #contactSection .topBtn{
+      position:fixed;
+      right:24px; bottom:24px;
+      width:46px; height:46px;
+      background:#0d2238;
+      display:flex; align-items:center; justify-content:center;
+      border-radius:4px;
+      cursor:pointer;
+      z-index:10;
+    }
+    #contactSection .topBtn svg{
+      width:20px; height:20px; stroke:#fff;
+    }
+
+    @media(max-width:768px){
+      #contactSection h2{font-size:2rem;}
+      #contactSection p.sub{font-size:.95rem;}
+    }
+  </style>
+
+  <div class="inner">
+    <h2>Contact us</h2>
+    <p class="sub">새로운 공간에서 펼쳐지는 이야기의 시작</p>
+    <a href="#" class="moreBtn">more view</a>
+  </div>
+
+  <div class="topBtn" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="맨 위로">
+    <svg fill="none" stroke-width="2" viewBox="0 0 24 24">
+      <path d="M5 15l7-7 7 7" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </div>
+</section>
+
+
+<div id="footerContainer"></div>
+
+
+<script src="./js/menu.js"></script>
+<script src="./js/footer.js"></script>
+<script src="./js/main.js"></script>

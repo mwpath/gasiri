@@ -1,0 +1,937 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+<head>
+  <!-- ===== 기본 메타 ===== -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>생태명상 &amp; 가시리 포레스트 | 숲을 통한 치유와 회복</title>
+  <meta name="description" content="제주 가시리 포레스트에서 자연과 연결되는 생태명상·산림치유 프로그램을 경험하세요. 숲속 걷기, 명상, 이완 활동 등으로 몸과 마음을 회복합니다.">
+  <meta name="keywords" content="생태명상, 산림치유, 숲치유, 제주 치유여행, 가시리 포레스트, 명상 프로그램, 자연 치유">
+  <meta name="author" content="Gasir i Forest">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <link rel="canonical" href="https://example.com/"> <!-- TODO: 실제 도메인으로 교체 -->
+
+  <!-- ===== 색상/테마 ===== -->
+  <meta name="theme-color" content="#0f1112">
+  <meta name="msapplication-TileColor" content="#0f1112">
+
+  <!-- ===== 성능 최적화: 프리커넥트/폰트 ===== -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Pretendard를 CDN으로 쓰는 경우 아래 예시 사용(프로젝트 정책에 맞게 교체 가능) -->
+  <!-- <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@400;600;700;800&display=swap" rel="stylesheet"> -->
+
+  <!-- ===== 파비콘/아이콘 ===== -->
+  <!-- TODO: 경로를 실제 아이콘 파일로 교체 -->
+  <link rel="icon" href="/icons/favicon.ico" sizes="any">
+  <link rel="icon" href="/icons/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+
+  <!-- ===== Open Graph / Facebook ===== -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ko_KR">
+  <meta property="og:site_name" content="GASIRI FOREST">
+  <meta property="og:title" content="생태명상 &amp; 가시리 포레스트 | 숲을 통한 치유와 회복">
+  <meta property="og:description" content="자연과 연결되는 생태명상·산림치유 프로그램으로 몸과 마음을 회복하세요.">
+  <meta property="og:url" content="https://example.com/">
+  <meta property="og:image" content="https://example.com/og/forest-1200x630.jpg"> <!-- 1200x630 권장 -->
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+
+  <!-- ===== Twitter Card ===== -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="생태명상 &amp; 가시리 포레스트 | 숲을 통한 치유와 회복">
+  <meta name="twitter:description" content="숲속 걷기, 명상, 이완 활동 등으로 자연과 깊이 연결되는 시간. 제주 가시리 포레스트.">
+  <meta name="twitter:image" content="https://example.com/og/forest-1200x630.jpg">
+
+  <!-- ===== 프리로드(Above-the-fold 이미지) ===== -->
+  <!-- TODO: 실제 경로로 교체 -->
+  <link rel="preload" as="image" href="./img/intro-1.png" imagesrcset="./img/intro-1.png" fetchpriority="high">
+  <link rel="preload" as="image" href="./img/wood-1.jpg">
+  <link rel="preload" as="image" href="./img/wood.jpg">
+
+  <!-- ===== 구조화 데이터(JSON-LD) : 사이트/조직 ===== -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "name": "GASIRI FOREST",
+        "url": "https://example.com/",
+        "inLanguage": "ko-KR",
+        "description": "제주 가시리 포레스트의 생태명상·산림치유 프로그램 안내"
+      },
+      {
+        "@type": "Organization",
+        "name": "가시리 포레스트",
+        "url": "https://example.com/",
+        "logo": "https://example.com/icons/logo.png",
+        "sameAs": [
+          "https://www.instagram.com/example",
+          "https://www.facebook.com/example"
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <!-- ===== 기본 스타일 리셋(선택) : 필요시 사용자 프로젝트 리셋 사용 ===== -->
+  <style>
+    /* 시스템 폰트 스택 + 한글 가독성 개선 */
+    html { -webkit-text-size-adjust: 100%; }
+    body { margin:0; font-synthesis-weight: none; text-rendering: optimizeLegibility; }
+    img { max-width: 100%; height: auto; }
+    button { font: inherit; }
+  </style>
+</head>
+<body>
+
+<div id="menu_a"></div>
+
+
+<section id="whoWeAre" aria-label="Who We Are">
+  <style>
+    /* ================= Scope: #whoWeAre only ================= */
+    #whoWeAre {
+      --ink: #ffffff; /* 글자색 */
+      --overlay: rgba(0, 0, 0, 0.35); /* 어두운 오버레이 */
+      --border:#6a8b2e; /* 하단 라인 */
+      font-family: Pretendard, "Noto Sans KR", system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+      position: relative;
+      width: 100%;
+      min-height: 296px;
+      color: var(--ink);
+      background: url('./img/b17.jpg') center/cover no-repeat; /* 👉 여기에 배경 이미지 교체 */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      overflow: hidden;
+      border-bottom: 6px solid var(--border);
+    }
+
+    #whoWeAre::before {
+  
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: var(--overlay);
+      z-index: 1;
+    }
+
+    #whoWeAre .textBox {
+      position: relative;
+      z-index: 2;
+    }
+
+    #whoWeAre h2 {
+      font-size: 2.4rem;
+      font-weight: 500;
+      line-height: 1.3;
+      margin: 0;
+    }
+
+    /* ===== 반응형 ===== */
+    @media (max-width: 768px) {
+      #whoWeAre {
+        min-height: 260px;
+      }
+      #whoWeAre h2 {
+        font-size: 1.8rem;
+      }
+    }
+  </style>
+
+  <div class="textBox">
+    <h2>세부 프로그램</h2>
+      <!-- <p>현재 진행 중인 프로그램을 소개합니다.</p> -->
+
+  </div>
+</section>
+
+
+<section id="forestHealingProgramSection">
+  <style>
+    #forestHealingProgramSection{
+      --fhp-bg:#f5f7ef;
+      --fhp-surface:rgba(255,255,255,0.9);
+      --fhp-surface-strong:#ffffff;
+      --fhp-text:#20311a;
+      --fhp-text-soft:#4e6240;
+      --fhp-line:rgba(106,139,46,0.18);
+      --fhp-accent:#6a8b2e;
+      --fhp-accent-deep:#4f6d1f;
+      --fhp-shadow:0 18px 60px rgba(33,52,20,0.12);
+      --fhp-radius:28px;
+      position:relative;
+      width:100%;
+      overflow:hidden;
+      background:
+        radial-gradient(circle at 15% 20%, rgba(150,180,94,0.15), transparent 28%),
+        radial-gradient(circle at 80% 15%, rgba(106,139,46,0.12), transparent 24%),
+        linear-gradient(180deg, #f8fbf3 0%, #eef4e5 52%, #f8fbf4 100%);
+      color:var(--fhp-text);
+      font-family:'Pretendard','Noto Sans KR',sans-serif;
+      isolation:isolate;
+    }
+
+    #forestHealingProgramSection .fhp-wrap{
+      width:min(1220px, calc(100% - 32px));
+      margin:0 auto;
+      position:relative;
+      z-index:2;
+    }
+
+    #forestHealingProgramSection .fhp-hero{
+      padding:clamp(72px, 10vw, 128px) 0 56px;
+      display:grid;
+      grid-template-columns:minmax(0, 1.08fr) minmax(320px, 0.92fr);
+      gap:32px;
+      align-items:stretch;
+    }
+
+    #forestHealingProgramSection .fhp-kicker{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      padding:10px 16px;
+      border-radius:999px;
+      background:rgba(255,255,255,0.72);
+      border:1px solid rgba(106,139,46,0.18);
+      box-shadow:0 10px 30px rgba(106,139,46,0.08);
+      color:var(--fhp-accent-deep);
+      font-size:13px;
+      font-weight:700;
+      letter-spacing:0.08em;
+      backdrop-filter:blur(12px);
+      -webkit-backdrop-filter:blur(12px);
+    }
+
+    #forestHealingProgramSection .fhp-kicker::before{
+      content:'';
+      width:8px;
+      height:8px;
+      border-radius:50%;
+      background:var(--fhp-accent);
+      box-shadow:0 0 0 7px rgba(106,139,46,0.14);
+      flex:0 0 auto;
+    }
+
+    #forestHealingProgramSection .fhp-title{
+      margin:18px 0 18px;
+      font-size:clamp(34px, 5.2vw, 64px);
+      line-height:1.12;
+      letter-spacing:-0.04em;
+      font-weight:800;
+      color:#1e2f15;
+    }
+
+    #forestHealingProgramSection .fhp-desc{
+      max-width:680px;
+      font-size:clamp(16px, 1.55vw, 19px);
+      line-height:1.9;
+      color:var(--fhp-text-soft);
+      word-break:keep-all;
+      margin:0 0 28px;
+    }
+
+    #forestHealingProgramSection .fhp-meta{
+      display:grid;
+      grid-template-columns:repeat(3, minmax(0, 1fr));
+      gap:14px;
+      margin-top:28px;
+    }
+
+    #forestHealingProgramSection .fhp-meta-card{
+      background:rgba(255,255,255,0.82);
+      border:1px solid var(--fhp-line);
+      border-radius:22px;
+      padding:22px 20px;
+      box-shadow:var(--fhp-shadow);
+      backdrop-filter:blur(10px);
+      -webkit-backdrop-filter:blur(10px);
+    }
+
+    #forestHealingProgramSection .fhp-meta-label{
+      font-size:12px;
+      letter-spacing:0.12em;
+      color:var(--fhp-accent-deep);
+      font-weight:800;
+      margin-bottom:10px;
+    }
+
+    #forestHealingProgramSection .fhp-meta-value{
+      font-size:18px;
+      line-height:1.7; 
+      color:var(--fhp-text);
+      font-weight:700;
+      word-break:keep-all;
+    }
+
+    #forestHealingProgramSection .fhp-visual{
+      min-height:580px;
+      border-radius:32px;
+      overflow:hidden;
+      position:relative;
+      box-shadow:0 30px 70px rgba(37, 59, 22, 0.2);
+      background:
+        linear-gradient(180deg, rgba(21,35,12,0.08) 0%, rgba(21,35,12,0.28) 100%),
+        url('./img/b01.jpg') center center / cover no-repeat;
+    }
+
+    #forestHealingProgramSection .fhp-visual::before{
+      content:'';
+      position:absolute;
+      inset:0;
+      background:
+        linear-gradient(180deg, rgba(255,255,255,0.02) 0%, rgba(27,43,16,0.28) 100%),
+        radial-gradient(circle at 50% 20%, rgba(255,255,255,0.24), transparent 36%);
+    }
+
+    #forestHealingProgramSection .fhp-visual-card{
+      position:absolute;
+      left:24px;
+      right:24px;
+      bottom:24px;
+      padding:24px 24px 22px;
+      border-radius:24px;
+      background:rgba(246,250,240,0.74);
+      border:1px solid rgba(255,255,255,0.55);
+      box-shadow:0 18px 40px rgba(19,34,8,0.18);
+      backdrop-filter:blur(14px);
+      -webkit-backdrop-filter:blur(14px);
+    }
+
+    #forestHealingProgramSection .fhp-visual-mini{
+      font-size:12px;
+      font-weight:800;
+      letter-spacing:0.14em;
+      color:var(--fhp-accent-deep);
+      margin-bottom:10px;
+    }
+
+    #forestHealingProgramSection .fhp-visual-title{
+      font-size:clamp(24px, 2.9vw, 36px);
+      line-height:1.25;
+      font-weight:800;
+      color:#20311a;
+      margin:0 0 12px;
+      word-break:keep-all;
+    }
+
+    #forestHealingProgramSection .fhp-visual-copy-group{
+      display:grid;
+      gap:14px;
+      margin-top:8px;
+    }
+
+    #forestHealingProgramSection .fhp-visual-copy-row{
+      display:grid;
+      grid-template-columns:76px minmax(0,1fr);
+      gap:12px;
+      align-items:flex-start;
+      padding:14px 0;
+      border-top:1px solid rgba(106,139,46,0.14);
+    }
+
+    #forestHealingProgramSection .fhp-visual-copy-row:first-child{
+      border-top:0;
+      padding-top:4px;
+    }
+
+    #forestHealingProgramSection .fhp-visual-label{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      min-height:34px;
+      padding:6px 10px;
+      border-radius:999px;
+      background:rgba(106,139,46,0.1);
+      color:var(--fhp-accent-deep);
+      font-size:13px;
+      font-weight:800;
+      letter-spacing:-0.02em;
+    }
+
+    #forestHealingProgramSection .fhp-visual-copy{
+      margin:0;
+      font-size:16px;
+      line-height:1.9;
+      color:#415334;
+      word-break:keep-all;
+      font-weight:600;
+    }
+
+    #forestHealingProgramSection .fhp-section-head{
+      padding:20px 0 24px;
+      display:flex;
+      align-items:flex-end;
+      justify-content:space-between;
+      gap:20px;
+    }
+
+    #forestHealingProgramSection .fhp-section-kicker{
+      font-size:13px;
+      font-weight:800;
+      letter-spacing:0.12em;
+      color:var(--fhp-accent-deep);
+      margin-bottom:12px;
+    }
+
+    #forestHealingProgramSection .fhp-section-title{
+      margin:0;
+      font-size:clamp(28px, 3.5vw, 44px);
+      line-height:1.18;
+      letter-spacing:-0.03em;
+      font-weight:800;
+      color:#20311a;
+      word-break:keep-all;
+    }
+
+    #forestHealingProgramSection .fhp-section-copy{
+      margin:10px 0 0;
+      font-size:16px;
+      line-height:1.9;
+      color:var(--fhp-text-soft);
+      max-width:720px;
+      word-break:keep-all;
+    }
+
+    #forestHealingProgramSection .fhp-stage-list{
+      padding:12px 0 96px;
+      display:grid;
+      gap:28px;
+    }
+
+    #forestHealingProgramSection .fhp-stage{
+      position:relative;
+      border-radius:32px;
+      background:linear-gradient(180deg, rgba(255,255,255,0.92) 0%, rgba(249,251,245,0.92) 100%);
+      border:1px solid rgba(106,139,46,0.16);
+      box-shadow:var(--fhp-shadow);
+      overflow:hidden;
+    }
+
+    #forestHealingProgramSection .fhp-stage-grid{
+      display:grid;
+      grid-template-columns:280px minmax(0, 1fr);
+      min-height:100%;
+    }
+
+    #forestHealingProgramSection .fhp-stage-side{
+      padding:32px 26px;
+      background:
+        linear-gradient(180deg, rgba(106,139,46,0.92) 0%, rgba(77,106,31,0.96) 100%),
+        url('https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=1200&q=80') center center / cover no-repeat;
+      color:#fff;
+      display:flex;
+      flex-direction:column;
+      justify-content:space-between;
+      gap:24px;
+      position:relative;
+      isolation:isolate;
+    }
+
+    #forestHealingProgramSection .fhp-stage-side::after{
+      content:'';
+      position:absolute;
+      inset:0;
+      background:linear-gradient(180deg, rgba(20,30,12,0.15) 0%, rgba(20,30,12,0.34) 100%);
+      z-index:-1;
+    }
+
+    #forestHealingProgramSection .fhp-stage-step{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      width:78px;
+      height:78px;
+      border-radius:24px;
+      background:rgba(255,255,255,0.14);
+      border:1px solid rgba(255,255,255,0.2);
+      font-size:13px;
+      letter-spacing:0.12em;
+      font-weight:800;
+      backdrop-filter:blur(8px);
+      -webkit-backdrop-filter:blur(8px);
+    }
+
+    #forestHealingProgramSection .fhp-stage-name{
+      margin:18px 0 10px;
+      font-size:clamp(24px, 2.5vw, 34px);
+      line-height:1.2;
+      font-weight:800;
+      letter-spacing:-0.03em;
+      word-break:keep-all;
+    }
+
+    #forestHealingProgramSection .fhp-stage-sub{
+      margin:0;
+      font-size:15px;
+      line-height:1.85;
+      color:rgba(255,255,255,0.9);
+      word-break:keep-all;
+    }
+
+    #forestHealingProgramSection .fhp-stage-content{
+      padding:26px;
+      display:grid;
+      gap:18px;
+    }
+
+    #forestHealingProgramSection .fhp-block{
+      background:var(--fhp-surface-strong);
+      border:1px solid rgba(106,139,46,0.12);
+      border-radius:24px;
+      padding:22px 22px 18px;
+      box-shadow:0 12px 30px rgba(38,58,19,0.06);
+    }
+
+    #forestHealingProgramSection .fhp-block-title{
+      margin:0 0 14px;
+      font-size:18px;
+      line-height:1.5;
+      font-weight:800;
+      color:#25381d;
+      word-break:keep-all;
+    }
+
+    #forestHealingProgramSection .fhp-list{
+      list-style:none;
+      margin:0;
+      padding:0;
+      display:grid;
+      gap:10px;
+    }
+
+    #forestHealingProgramSection .fhp-list li{
+      position:relative;
+      padding-left:18px;
+      font-size:16px;
+      line-height:1.85;
+      color:#314327;
+      word-break:keep-all;
+    }
+
+    #forestHealingProgramSection .fhp-list li::before{
+      content:'•';
+      position:absolute;
+      left:0;
+      top:0;
+      color:var(--fhp-accent);
+      font-weight:900;
+    }
+
+    #forestHealingProgramSection .fhp-material{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      margin-top:2px;
+    }
+
+    #forestHealingProgramSection .fhp-chip{
+      display:inline-flex;
+      align-items:center;
+      min-height:40px;
+      padding:9px 14px;
+      border-radius:999px;
+      background:#f2f7e8;
+      border:1px solid rgba(106,139,46,0.16);
+      font-size:14px;
+      font-weight:700;
+      color:#466025;
+    }
+
+    #forestHealingProgramSection .fhp-reveal{
+      opacity:0;
+      transform:translateY(36px);
+      transition:opacity .9s ease, transform .9s ease;
+      will-change:opacity, transform;
+    }
+
+    #forestHealingProgramSection .fhp-reveal.is-visible{
+      opacity:1;
+      transform:none;
+    }
+
+    #forestHealingProgramSection .fhp-reveal-left{
+      opacity:0;
+      transform:translateX(-34px);
+      transition:opacity .9s ease, transform .9s ease;
+      will-change:opacity, transform;
+    }
+
+    #forestHealingProgramSection .fhp-reveal-left.is-visible{
+      opacity:1;
+      transform:none;
+    }
+
+    #forestHealingProgramSection .fhp-reveal-right{
+      opacity:0;
+      transform:translateX(34px);
+      transition:opacity .9s ease, transform .9s ease;
+      will-change:opacity, transform;
+    }
+
+    #forestHealingProgramSection .fhp-reveal-right.is-visible{
+      opacity:1;
+      transform:none;
+    }
+
+    @media (max-width: 1080px){
+      #forestHealingProgramSection .fhp-hero{
+        grid-template-columns:1fr;
+      }
+      #forestHealingProgramSection .fhp-visual{
+        min-height:440px;
+      }
+      #forestHealingProgramSection .fhp-stage-grid{
+        grid-template-columns:1fr;
+      }
+      #forestHealingProgramSection .fhp-stage-side{
+        min-height:60px;
+      }
+    }
+
+    @media (max-width: 780px){
+      #forestHealingProgramSection .fhp-wrap{
+        width:min(100% - 20px, 1220px);
+      }
+      #forestHealingProgramSection .fhp-hero{
+        padding:56px 0 42px;
+        gap:20px;
+      }
+      #forestHealingProgramSection .fhp-meta{
+        grid-template-columns:1fr;
+      }
+      #forestHealingProgramSection .fhp-section-head{
+        padding:8px 0 18px;
+      }
+      #forestHealingProgramSection .fhp-stage-list{
+        gap:22px;
+        padding-bottom:72px;
+      }
+      #forestHealingProgramSection .fhp-stage-side,
+      #forestHealingProgramSection .fhp-stage-content{
+        padding:22px 18px;
+      }
+      #forestHealingProgramSection .fhp-block{
+        padding:18px 16px 16px;
+        border-radius:20px;
+      }
+      #forestHealingProgramSection .fhp-list li{
+        font-size:15px;
+        line-height:1.8;
+      }
+      #forestHealingProgramSection .fhp-visual-card{
+        left:14px;
+        right:14px;
+        bottom:14px;
+        padding:18px 16px;
+        border-radius:20px;
+      }
+      #forestHealingProgramSection .fhp-visual-copy-row{
+        grid-template-columns:1fr;
+        gap:8px;
+        padding:12px 0;
+      }
+      #forestHealingProgramSection .fhp-visual-label{
+        justify-content:flex-start;
+        width:max-content;
+      }
+    }
+  </style>
+
+  <div class="fhp-wrap">
+    <div class="fhp-hero">
+      <div class="fhp-reveal-left">
+        <!-- <span class="fhp-kicker">FOREST HEALING EXPERIENCE PROGRAM</span> -->
+        <h2 class="fhp-title">치유 체험 프로그램</h2>
+        <p class="fhp-desc">숲과 자연 속에서 마음을 열고, 함께 느끼고, 나누고, 돌아보는 흐름이 한눈에 잘 들어오도록 정리한 숲치유 프로그램 소개 섹션입니다. 글자는 바꾸지 않고, 숲치료 홈페이지의 분위기에 맞춰 읽기 쉽고 편안하게 보이도록 디자인했습니다.</p>
+
+        <div class="fhp-meta">
+          <article class="fhp-meta-card">
+            <div class="fhp-meta-label">시간</div>
+            <div class="fhp-meta-value">1.5 ~ 2시간</div>
+          </article>
+          <article class="fhp-meta-card">
+            <div class="fhp-meta-label">장소</div>
+            <div class="fhp-meta-value">상관 없음</div>
+          </article>
+          <article class="fhp-meta-card">
+            <div class="fhp-meta-label">대상자</div>
+            <div class="fhp-meta-value">청소년, 성인, 노인</div>
+          </article>
+
+          
+        </div>
+      </div>
+
+      <div class="fhp-visual fhp-reveal-right" aria-hidden="true">
+        <div class="fhp-visual-card">
+          <div class="fhp-visual-mini">PROGRAM</div>
+          <h3 class="fhp-visual-title">프로그램</h3>
+          <div class="fhp-visual-copy-group">
+            <div class="fhp-visual-copy-row">
+              <span class="fhp-visual-label">내용</span>
+              <p class="fhp-visual-copy">즐거움, 신남, 감동, 느낌, 그랬구나, 그렇구나</p>
+            </div>
+            <div class="fhp-visual-copy-row">
+              <span class="fhp-visual-label">스타일</span>
+              <p class="fhp-visual-copy">해설, 놀이, 만들기, 활동, 명상</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <div class="fhp-stage-list">
+      <article class="fhp-stage fhp-reveal">
+        <div class="fhp-stage-grid">
+          <div class="fhp-stage-side">
+            <div>
+              <!-- <div class="fhp-stage-step">STEP 01</div> -->
+              <h3 class="fhp-stage-name">치유 체험 1 (도입)</h3>
+              <p class="fhp-stage-sub">마음을 열고, 서로를 소개하며, 자연스럽게 프로그램 안으로 들어가는 시작 단계</p>
+            </div>
+          </div>
+          <div class="fhp-stage-content">
+            <div class="fhp-block">
+              <h4 class="fhp-block-title"> 도입 명상 (마음의 벽~ 안녕!!)</h4>
+              <div class="fhp-material">
+                <span class="fhp-chip">싱잉볼</span>
+              </div>
+            </div>
+
+            <div class="fhp-block">
+              <h4 class="fhp-block-title">도입 프로그램</h4>
+              <ul class="fhp-list">
+                <li> 나비 명상 (과거의 나를 찾아서 찰칵)</li>
+                <li> 우리 엄마 사진 찰칵(행복한, 환한, 멋진 모습)</li>
+                <li> 자기소개 (타인이 나를 소개)</li>
+                <li> 자기소개 (오늘 기분 같은 자연물 찾아와 소개)</li>
+                <li> 자기소개 (생태줄로 던지며 오늘 얻고 싶은 것)</li>
+              </ul>
+              <div class="fhp-material">
+                <span class="fhp-chip">생태줄(노끈)</span>
+              </div>
+            </div>
+
+            <div class="fhp-block">
+              <h4 class="fhp-block-title">놀이 활동</h4>
+              <ul class="fhp-list">
+                <li> 다리찢기 놀이 (2인 1조 가위바위보 한발 뒤로)</li>
+                <li> 무궁화꽃이피었습니닭 (동물 소리를 끝에 붙임)</li>
+                <li> 대장 놀이 (대장이 따라 하는 대로 따라함)</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="fhp-stage fhp-reveal">
+        <div class="fhp-stage-grid">
+          <div class="fhp-stage-side">
+            <div>
+              <!-- <div class="fhp-stage-step">STEP 02</div> -->
+              <h3 class="fhp-stage-name">치유 체험 2 (전개)</h3>
+              <p class="fhp-stage-sub">관계, 존재감, 자연, 생태, 채취와 만들기까지 풍성하게 확장되는 전개 단계</p>
+            </div>
+          </div>
+          <div class="fhp-stage-content">
+            <div class="fhp-block">
+              <h4 class="fhp-block-title">관계와 자기이해</h4>
+              <ul class="fhp-list">
+                <li> 가족 이야기 (동심원 기법, 내가 사랑하는 사람들)</li>
+                <li> 사진 치유 (5종류의 사진 이용)</li>
+                <li> 사진 찍기/찍히기 (사진을 촬영방법, 나의 매력)</li>
+                <li> 영화 치유 (단편 영화와 함께 스토리텔링)</li>
+                <li>나는 ㅇㅇㅇ 입니다 (나의 존재감 들여다 보기)</li>
+                <li> 친구가 바라보는 나 (카톡이나 메신저로 물어보기)</li>
+              </ul>
+              <div class="fhp-material">
+                <span class="fhp-chip">A4용지, 볼펜, 사진, 영화, 잡지, 카메라, 휴대폰</span>
+                
+              </div>
+            </div>
+
+            <div class="fhp-block">
+              <h4 class="fhp-block-title">움직임과 표현 활동</h4>
+              <ul class="fhp-list">
+                <li> 인생줄 풀기 (능동적/수동적)</li>
+                <li> 중심 잡기 (나뭇가지, 모빌 )</li>
+                <li> 복사하기/붙여넣기 (상대방 것 따라하기)</li>
+                <li> 맨땅에 그림 (비온뒤 나뭇가지로 땅에 얼굴그리기)</li>
+              </ul>
+              <div class="fhp-material">
+                <span class="fhp-chip">생태줄</span>
+              </div>
+            </div>
+
+            <div class="fhp-block">
+              <h4 class="fhp-block-title">생태와 산책</h4>
+              <ul class="fhp-list">
+                <li> 생물 해설 (나무/풀, 생태/생리, 당산목, 쓸모, 효용)</li>
+                <li> 비생물 해설 (태양,비,바람, 계절, 운기, 기작)</li>
+                <li> 산림 해설 (숲생태, 토양생태, 임상 )</li>
+                <li> 마을 산책 (논뚝 콩한알, 주인과 하인)</li>
+                <li> 산책 (둘레길, 임도, 산책코스, 공원, 해변, 강변)</li>
+              </ul>
+            </div>
+
+            <div class="fhp-block">
+              <h4 class="fhp-block-title">자연물 놀이와 채취</h4>
+              <ul class="fhp-list">
+                <li> 풀싸움 (풀을 갖고 끊기 놀이)</li>
+                <li> 메뚜기 잡기 (가을에 메뚜기를 잡아 볶아 먹기)</li>
+                <li> 꽃씨앗 채취/심기 (자연씨앗/꽃씨앗 채취와 심기)</li>
+                <li> 풀 키우기 (4계절, 살갈퀴/별꽃/쇠별꽃/새완두)</li>
+              </ul>
+              <div class="fhp-material">
+                <span class="fhp-chip">식수패트병</span>
+              </div>
+            </div>
+
+            <div class="fhp-block">
+              <h4 class="fhp-block-title">대나무와 산나물 체험</h4>
+              <ul class="fhp-list">
+                <li> 죽순 캐기와 요리 (5월에 죽순을 캐서 요리하기)</li>
+                <li> 죽순 발효액 (죽순과 설탕, 발효)</li>
+                <li> 죽순 담근주 (소주와 죽순)</li>
+                <li> 댓잎 발효액 (대나무잎과 설탕)</li>
+                <li>댓잎 담금주 (소주와 대나무잎)</li>
+              </ul>
+              <div class="fhp-material">
+                <span class="fhp-chip">칼, 가위, 유리병, 설탕</span>
+              </div>
+            </div>
+
+            <div class="fhp-block">
+              <h4 class="fhp-block-title">산과 들의 채취 체험</h4>
+              <ul class="fhp-list">
+                <li> 산나물/들나물 (산과 들에서 나는 푸새 채취)</li>
+                <li> 50가지 나물 발효액 (봄이 나는 50가지 나물)</li>
+                <li> 30가지 새가지 발효액/담금주 (봄 새가지 30종)</li>
+                <li> 산약초 캐기 (4계절 약초 체험)</li>
+                <li> 열매 채취 (산야의 자연 열매 채취)</li>
+              </ul>
+              <div class="fhp-material">
+                <span class="fhp-chip">칼, 가위, 유리병, 설탕, 소주</span>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="fhp-stage fhp-reveal">
+        <div class="fhp-stage-grid">
+          <div class="fhp-stage-side">
+            <div>
+              <!-- <div class="fhp-stage-step">STEP 03</div> -->
+              <h3 class="fhp-stage-name">치유 체험 3 (절정)</h3>
+              <p class="fhp-stage-sub">감정을 밖으로 표현하고, 숲 안에서 규칙과 바람을 함께 만드는 몰입의 단계</p>
+            </div>
+          </div>
+          <div class="fhp-stage-content">
+            <div class="fhp-block">
+              <h4 class="fhp-block-title">절정 프로그램</h4>
+              <ul class="fhp-list">
+                <li> 숲을 사랑 하십니까? (규칙을 만들며)</li>
+                <li> 사냥꾼이 나타났다 (3인 1조)</li>
+                <li> 나무 만들기 (이쁜 것 미운 것)</li>
+                <li> 얼굴만들기 (망초와 같은 풀 이용)</li>
+                <li> 욕받이 (나뭇/죽순 잎, 사진, 욕/악담 쓰기)</li>
+                <li> 소원/희망/바램 쓰기 (엽서,사진,돌멩이,나뭇잎)</li>
+                <li> 버리기 (미움, 싫음, 절망, 돌맹이에 써서 버림)</li>
+              </ul>
+              <div class="fhp-material">
+                <span class="fhp-chip">네임펜, 페인트마커</span>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="fhp-stage fhp-reveal">
+        <div class="fhp-stage-grid">
+          <div class="fhp-stage-side">
+            <div>
+              <!-- <div class="fhp-stage-step">STEP 04</div> -->
+              <h3 class="fhp-stage-name">치유 체험 4 (마무리)</h3>
+              <p class="fhp-stage-sub">서로를 응원하고, 소감을 나누고, 기억에 남는 마무리 작업으로 정리하는 단계</p>
+            </div>
+          </div>
+          <div class="fhp-stage-content">
+            <div class="fhp-block">
+              <h4 class="fhp-block-title">마무리 프로그램 1</h4>
+              <ul class="fhp-list">
+                <li> 응원하기 (엽서 - 내가 나에게)</li>
+                <li> 욕받이 (나뭇/죽순 잎, 사진, 욕/악담 쓰기)</li>
+                <li> 소원/희망/바램 쓰기 (엽서, 사진, 돌멩이, 나뭇잎, 대나무, 땅바닥)</li>
+                <li> 버리기 (미움, 싫음, 절망, 돌맹이에 써서 버림)</li>
+                <li> #해시태그 (활동에 대한 소감 나누기)</li>
+                <li> 자연물 선물하기 (함께 한 동료에게 위로 선물)</li>
+                <li> 안아주기 (응원하며 안아주기)</li>
+              </ul>
+            </div>
+
+            <div class="fhp-block">
+              <h4 class="fhp-block-title">마무리 프로그램 2</h4>
+              <ul class="fhp-list">
+                <li> 죽책 만들기 (대나무 4등분, 노끈 엮어 글쓰기)</li>
+                <li> 약속하기 (대나무에 약속을 쓰고 걸어두기)</li>
+                <li> 꼴라쥬 (사진과 잡지를 이용한 재구성)</li>
+                <li> 피드백 (활동중 참가자의 사진 촬영후 프로그램 종료 직전 촬영된 사진을 보며 본인 기분상태를 직면하고 소감을 발표함)</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+
+  <script>
+    (function(){
+      var scope = document.getElementById('forestHealingProgramSection');
+      if(!scope) return;
+      var targets = scope.querySelectorAll('.fhp-reveal, .fhp-reveal-left, .fhp-reveal-right');
+      if(!('IntersectionObserver' in window)){
+        targets.forEach(function(el){ el.classList.add('is-visible'); });
+        return;
+      }
+      var io = new IntersectionObserver(function(entries){
+        entries.forEach(function(entry){
+          if(entry.isIntersecting){
+            entry.target.classList.add('is-visible');
+            io.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.16, rootMargin: '0px 0px -6% 0px' });
+      targets.forEach(function(el){ io.observe(el); });
+    })();
+  </script>
+</section>
+
+
+
+
+
+
+
+</body>
+
+<div id="footerContainer"></div>
+
+
+<script src="./js/menu.js"></script>
+<script src="./js/footer.js"></script>
+<script src="./js/main.js"></script>
+
+</html>

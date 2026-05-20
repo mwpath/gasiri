@@ -1,0 +1,339 @@
+<section id="forestTeam">
+  <style>
+    #forestTeam{box-sizing:border-box}
+    #forestTeam *,#forestTeam *::before,#forestTeam *::after{box-sizing:inherit}
+
+    #forestTeam{
+      --green-deep:#1f3b2a;
+      --green:#3f7a4d;
+      --green-light:#eef6f1;
+      --bg:#f3f7f4;
+      --ink:#111827;
+
+      font-family:"Pretendard","Noto Sans KR",system-ui,-apple-system,sans-serif;
+      background:radial-gradient(circle at top left,#e4f4e6 0,#f9fcfa 40%,#f3f7f4 100%);
+      padding:80px 20px;
+      color:var(--ink);
+    }
+    #forestTeam .inner{
+      max-width:1180px;
+      margin:0 auto;
+    }
+
+    /* 헤더 */
+    #forestTeam .section-head{
+      text-align:center;
+      margin-bottom:40px;
+    }
+    #forestTeam .section-head h2{
+      font-size:36px;font-weight:800;color:var(--green-deep);
+    }
+    #forestTeam .section-head p{
+      margin-top:8px;font-size:16px;color:#4b5563;
+    }
+
+    /* 카드 전체 그리드 — PC에서는 연속(대표 옆에 바로 산림치유사) */
+    #forestTeam .team-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fill,minmax(260px,1fr));
+      gap:26px;
+    }
+
+    /* 카드 */
+    #forestTeam .team-card{
+      background:#ffffff;
+      border-radius:22px;
+      box-shadow:0 15px 38px rgba(15,23,42,0.15);
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      transition:transform .18s ease, box-shadow .18s ease;
+    }
+    #forestTeam .team-card:hover{
+      transform:translateY(-4px);
+      box-shadow:0 22px 48px rgba(15,23,42,0.18);
+    }
+
+    /* 정사각형 사진 */
+    #forestTeam .team-img{
+      width:100%;
+      aspect-ratio:1/1;
+      background-size:cover;
+      background-position:center;
+    }
+
+    /* 기본 이미지 (실제 사진으로 교체 가능) */
+    #forestTeam .img-rep{background-image:url("https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=1000");}
+    #forestTeam .img-healing{background-image:url("https://images.unsplash.com/photo-1544441893-675973e31985?w=1000");}
+    #forestTeam .img-kids{background-image:url("https://images.unsplash.com/photo-1529193591184-b1d58069ecdd?w=1000");}
+
+    /* 이름/직책 정보바 */
+    #forestTeam .info-bar{
+      padding:16px 18px 12px;
+      background:var(--green-light);
+      border-bottom:1px solid #dce9e0;
+    }
+    #forestTeam .info-name{
+      font-size:19px;font-weight:800;color:var(--green-deep);line-height:1.2;
+      margin-bottom:2px;
+    }
+    #forestTeam .info-role{
+      font-size:14px;font-weight:600;color:var(--green);
+    }
+
+    /* 설명 */
+    #forestTeam .team-body{
+      padding:16px 18px 20px;
+      flex:1 1 auto;
+      display:flex;
+      flex-direction:column;
+    }
+    #forestTeam .team-desc{
+      font-size:13.5px;color:#4b5563;line-height:1.6;margin-bottom:12px;
+    }
+
+    /* 전문 분야 chip */
+    #forestTeam .chip-row{
+      display:flex;flex-wrap:wrap;gap:6px;margin-bottom:12px;
+    }
+    #forestTeam .chip{
+      padding:5px 10px;
+      border-radius:999px;
+      background:#ecfdf3;
+      border:1px solid #bbf7d0;
+      font-size:11px;
+      font-weight:600;
+      color:#166534;
+    }
+
+    /* 역할/전문분야 detail */
+    #forestTeam .meta-grid{
+      padding-top:12px;
+      border-top:1px solid #e5e7eb;
+      display:grid;
+      grid-template-columns:repeat(2,minmax(0,1fr));
+      gap:12px;
+      font-size:12.5px;
+    }
+    #forestTeam .meta-label{
+      font-size:11px;color:#6b7280;font-weight:700;margin-bottom:2px;
+    }
+    #forestTeam .meta-value{
+      color:#111827;line-height:1.4;
+    }
+
+    @media(max-width:720px){
+      #forestTeam{padding:60px 16px;}
+      #forestTeam .info-name{font-size:17px;}
+      #forestTeam .meta-grid{grid-template-columns:1fr;}
+    }
+  </style>
+
+  <div class="inner">
+    <div class="section-head">
+      <h2>함께하는 사람들</h2>
+      <p>숲과 명상, 유아숲 교육을 함께 만들어가는 동행자들입니다.</p>
+    </div>
+
+    <!-- ====================== 🔥 하나의 그리드에 연속 배치 ====================== -->
+    <div class="team-grid">
+
+      <!-- 대표 -->
+      <article class="team-card">
+        <div class="team-img img-rep"></div>
+        <div class="info-bar">
+          <div class="info-name">이미미</div>
+          <div class="info-role">대표</div>
+        </div>
+        <div class="team-body">
+          <p class="team-desc">생태명상연구소 설립자이자 프로그램 총괄 디렉터로 전체 운영·연구·기획을 담당합니다.</p>
+          <div class="chip-row">
+            <span class="chip">프로그램 총괄</span>
+            <span class="chip">생태명상</span>
+            <span class="chip">교육 기획</span>
+          </div>
+          <div class="meta-grid">
+            <div><div class="meta-label">역할</div><div class="meta-value">기관 운영 · 교육 총괄</div></div>
+            <div><div class="meta-label">전문 분야</div><div class="meta-value">생태명상 · 치유 프로그램</div></div>
+          </div>
+        </div>
+      </article>
+
+      <!-- 산림치유지도사 1 -->
+      <article class="team-card">
+        <div class="team-img img-healing"></div>
+        <div class="info-bar">
+          <div class="info-name">여수영</div>
+          <div class="info-role">산림치유지도사</div>
+        </div>
+        <div class="team-body">
+          <p class="team-desc">걷기명상과 호흡을 활용해 심신의 균형 회복을 돕는 치유 세션을 운영합니다.</p>
+          <div class="chip-row">
+            <span class="chip">걷기 명상</span>
+            <span class="chip">호흡 지도</span>
+          </div>
+          <div class="meta-grid">
+            <div><div class="meta-label">역할</div><div class="meta-value">성인 산림치유 운영</div></div>
+            <div><div class="meta-label">전문 분야</div><div class="meta-value">호흡 · 신체 이완</div></div>
+          </div>
+        </div>
+      </article>
+
+      <!-- 산림치유지도사 2 -->
+      <article class="team-card">
+        <div class="team-img img-healing"></div>
+        <div class="info-bar">
+          <div class="info-name">박현정</div>
+          <div class="info-role">산림치유지도사</div>
+        </div>
+        <div class="team-body">
+          <p class="team-desc">정서 안정과 스트레스 완화를 중심으로 한 그룹 치유 프로그램을 운영합니다.</p>
+          <div class="chip-row">
+            <span class="chip">정서 치유</span>
+            <span class="chip">그룹 워크숍</span>
+          </div>
+          <div class="meta-grid">
+            <div><div class="meta-label">역할</div><div class="meta-value">그룹 치유 운영</div></div>
+            <div><div class="meta-label">전문 분야</div><div class="meta-value">심리 안정 · 집단치유</div></div>
+          </div>
+        </div>
+      </article>
+
+      <!-- 산림치유지도사 3 -->
+      <article class="team-card">
+        <div class="team-img img-healing"></div>
+        <div class="info-bar">
+          <div class="info-name">남문희</div>
+          <div class="info-role">산림치유지도사</div>
+        </div>
+        <div class="team-body">
+          <p class="team-desc">암환자·취약계층 대상 맞춤형 산림치유를 전문적으로 운영합니다.</p>
+          <div class="chip-row">
+            <span class="chip">맞춤형 치유</span>
+            <span class="chip">회복 지원</span>
+          </div>
+          <div class="meta-grid">
+            <div><div class="meta-label">역할</div><div class="meta-value">취약계층 치유 담당</div></div>
+            <div><div class="meta-label">전문 분야</div><div class="meta-value">심리안정 · 회복프로세스</div></div>
+          </div>
+        </div>
+      </article>
+
+      <!-- 유아숲 지도사 6명 (아래 동일 구조) -->
+      <!-- 김재희 -->
+      <article class="team-card">
+        <div class="team-img img-kids"></div>
+        <div class="info-bar">
+          <div class="info-name">김재희</div>
+          <div class="info-role">유아숲지도사</div>
+        </div>
+        <div class="team-body">
+          <p class="team-desc">놀이 중심 숲 활동을 통해 아이들의 자신감과 생태 감수성을 키웁니다.</p>
+          <div class="chip-row">
+            <span class="chip">유아숲 체험</span><span class="chip">놀이 설계</span>
+          </div>
+          <div class="meta-grid">
+            <div><div class="meta-label">역할</div><div class="meta-value">유아 대상 숲활동</div></div>
+            <div><div class="meta-label">전문 분야</div><div class="meta-value">유아놀이 · 생태교육</div></div>
+          </div>
+        </div>
+      </article>
+
+      <!-- 이숙 -->
+      <article class="team-card">
+        <div class="team-img img-kids"></div>
+        <div class="info-bar">
+          <div class="info-name">이숙</div>
+          <div class="info-role">유아숲지도사</div>
+        </div>
+        <div class="team-body">
+          <p class="team-desc">자연물 감각놀이와 이야기 활동으로 생태 감수성을 키웁니다.</p>
+          <div class="chip-row">
+            <span class="chip">감각놀이</span><span class="chip">자연물 교육</span>
+          </div>
+          <div class="meta-grid">
+            <div><div class="meta-label">역할</div><div class="meta-value">감각 기반 숲놀이</div></div>
+            <div><div class="meta-label">전문 분야</div><div class="meta-value">감각 통합 · 자연체험</div></div>
+          </div>
+        </div>
+      </article>
+
+      <!-- 이재강 -->
+      <article class="team-card">
+        <div class="team-img img-kids"></div>
+        <div class="info-bar">
+          <div class="info-name">이재강</div>
+          <div class="info-role">유아숲지도사</div>
+        </div>
+        <div class="team-body">
+          <p class="team-desc">안전 기반의 모험 활동 설계와 숲놀이 구성을 담당합니다.</p>
+          <div class="chip-row">
+            <span class="chip">안전 관리</span><span class="chip">모험 놀이</span>
+          </div>
+          <div class="meta-grid">
+            <div><div class="meta-label">역할</div><div class="meta-value">모험활동 안전 지도</div></div>
+            <div><div class="meta-label">전문 분야</div><div class="meta-value">동선설계 · 활동안전</div></div>
+          </div>
+        </div>
+      </article>
+
+      <!-- 정아윤 -->
+      <article class="team-card">
+        <div class="team-img img-kids"></div>
+        <div class="info-bar">
+          <div class="info-name">정아윤</div>
+          <div class="info-role">유아숲지도사</div>
+        </div>
+        <div class="team-body">
+          <p class="team-desc">이야기·그림책과 숲활동을 연결한 창의적 프로그램을 운영합니다.</p>
+          <div class="chip-row">
+            <span class="chip">그림책 연계</span><span class="chip">상상력 확장</span>
+          </div>
+          <div class="meta-grid">
+            <div><div class="meta-label">역할</div><div class="meta-value">스토리 기반 활동</div></div>
+            <div><div class="meta-label">전문 분야</div><div class="meta-value">문학·숲놀이 융합</div></div>
+          </div>
+        </div>
+      </article>
+
+      <!-- 황선주 -->
+      <article class="team-card">
+        <div class="team-img img-kids"></div>
+        <div class="info-bar">
+          <div class="info-name">황선주</div>
+          <div class="info-role">유아숲지도사</div>
+        </div>
+        <div class="team-body">
+          <p class="team-desc">세밀한 자연 관찰과 생태기록 활동을 통해 자연친화적 감수성을 기릅니다.</p>
+          <div class="chip-row">
+            <span class="chip">생태 기록</span><span class="chip">자연 관찰</span>
+          </div>
+          <div class="meta-grid">
+            <div><div class="meta-label">역할</div><div class="meta-value">자연관찰 지도</div></div>
+            <div><div class="meta-label">전문 분야</div><div class="meta-value">생태노트 작성</div></div>
+          </div>
+        </div>
+      </article>
+
+      <!-- 박해련 -->
+      <article class="team-card">
+        <div class="team-img img-kids"></div>
+        <div class="info-bar">
+          <div class="info-name">박해련</div>
+          <div class="info-role">유아숲지도사</div>
+        </div>
+        <div class="team-body">
+          <p class="team-desc">협동 놀이와 마음 나누기 중심의 활동으로 정서 안정과 사회성을 돕습니다.</p>
+          <div class="chip-row">
+            <span class="chip">정서 지원</span><span class="chip">협동 활동</span>
+          </div>
+          <div class="meta-grid">
+            <div><div class="meta-label">역할</div><div class="meta-value">관계 형성 활동</div></div>
+            <div><div class="meta-label">전문 분야</div><div class="meta-value">정서 발달 · 의사소통</div></div>
+          </div>
+        </div>
+      </article>
+
+    </div><!-- end team-grid -->
+  </div>
+</section>

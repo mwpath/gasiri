@@ -1,0 +1,381 @@
+
+  <style>
+    /* Styles scoped to #ethics-section */
+    #ethics-section {
+      background: linear-gradient(90deg, #778806 0%, #6a7e08 35%, #566d0e 70%, #4b5e23 100%);
+      color: white;
+      padding: 50px 20px;
+      font-family: Arial, sans-serif;
+      line-height: 1.5;
+      margin: 0 auto;
+      border-radius: 10px;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.25);
+    }
+
+    #ethics-section .header {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    #ethics-section .curve {
+      width: 200px;
+      height: 50px;
+      margin: 0 auto 20px;
+    }
+
+    #ethics-section .title {
+      font-size: 36px;
+      margin-bottom: 10px;
+    }
+
+    #ethics-section .subtitle {
+      font-size: 18px;
+      margin-bottom: 40px;
+    }
+
+    #ethics-section .values-title {
+      font-size: 24px;
+      margin-bottom: 30px;
+      max-width:1200px;
+      margin:0 auto 30px;
+    }
+
+    #ethics-section .timeline {
+      position: relative;
+      list-style: none;
+      padding: 0;
+       max-width:1200px;
+      margin:0 auto ;
+    }
+
+    #ethics-section .timeline::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 20px;
+      width: 2px;
+      background-color: rgba(255, 255, 255, 0.7);
+      z-index: 1;
+    }
+
+    #ethics-section .timeline li {
+      position: relative;
+      margin-bottom: 30px;
+    }
+
+    #ethics-section .timeline li .icon-circle {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background-color: white;
+      color: #4CAF50;
+      text-align: center;
+      line-height: 40px;
+      font-size: 20px;
+      z-index: 2;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+
+    #ethics-section .timeline li .content {
+      margin-left: 60px;
+    }
+
+    #ethics-section .timeline li .value-name {
+      font-size: 20px;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    #ethics-section .timeline li .description {
+      font-size: 16px;
+      color: rgba(255, 255, 255, 0.9);
+    }
+  </style>
+</head>
+<body>
+  <div id="ethics-section">
+    <div class="header">
+      <svg class="curve" viewBox="0 0 200 50" preserveAspectRatio="none">
+        <path d="M10 40 C 50 10, 100 10, 140 40 S 190 40, 190 40" stroke="white" stroke-width="2" fill="none"/>
+      </svg>
+      <h1 class="title">Code of Ethics</h1>
+      <p class="subtitle">We live by a set of values and adhere to a code of ethics that guide us every single day.</p>
+    </div>
+    <h2 class="values-title">Our Values</h2>
+    <ul class="timeline">
+      <li>
+        <div class="icon-circle">👤</div>
+        <div class="content">
+          <div class="value-name">Integrity:</div>
+          <div class="description">We act ethically and transparently, prioritizing doing the right thing over business interests. We do the right thing even when no one is watching.</div>
+        </div>
+      </li>
+      <li>
+        <div class="icon-circle">💡</div>
+        <div class="content">
+          <div class="value-name">Innovation:</div>
+          <div class="description">We are in a constant state of inquiry constantly exploring how to make our training even better. We are curious and open to new possibilities.</div>
+        </div>
+      </li>
+      <li>
+        <div class="icon-circle">🙏</div>
+        <div class="content">
+          <div class="value-name">Humility:</div>
+          <div class="description">There is no innovation without humility. We acknowledge that we know very little and that our perspective and point of view is just one in many. We honour every story equally and learn from each and every being and situation that crosses our path.</div>
+        </div>
+      </li>
+      <li>
+        <div class="icon-circle">😇</div>
+        <div class="content">
+          <div class="value-name">Honesty:</div>
+          <div class="description">We are transparent and honest with information and processes and in our relationships with others. We create a culture where truth is at the forefront, where everyone can express their opinion openly without fear.</div>
+        </div>
+      </li>
+      <li>
+        <div class="icon-circle">🌍</div>
+        <div class="content">
+          <div class="value-name">Respect:</div>
+          <div class="description">Respect for all living beings, humans and beings of the More-than-Human World. This is at the core of Relational Forest Therapy, where we respect nature as kin, instead of solely using her for our personal Benefit and wellbeing.</div>
+        </div>
+      </li>
+      <li>
+        <div class="icon-circle">🔄</div>
+        <div class="content">
+          <div class="value-name">Reciprocity:</div>
+          <div class="description">We believe in a culture of healthy relationships with humans and More-than-Humans. Every action that we take is followed by the question, how can we give back?</div>
+        </div>
+      </li>
+      <li>
+        <div class="icon-circle">❤️</div>
+        <div class="content">
+          <div class="value-name">Kindness:</div>
+          <div class="description">Every being deserves being treated in a kind way. Everyone is living their lives the best they can, we know very little about their struggles. One single Word of Kindness can change a life.</div>
+        </div>
+      </li>
+      <li>
+        <div class="icon-circle">🤝</div>
+        <div class="content">
+          <div class="value-name">Compassion:</div>
+          <div class="description">When we know about someone else's situation, we try to put ourselves in their shoes to actively understand and empathize without judgment or assumptions.</div>
+        </div>
+      </li>
+      <li>
+        <div class="icon-circle">🔥</div>
+        <div class="content">
+          <div class="value-name">Passion:</div>
+          <div class="description">We believe in what we do with all of our being, heart and soul. We live for what we do. We believe that there is a powerful ripple effect going into the world when we do things with passion.</div>
+        </div>
+      </li>
+      <li>
+        <div class="icon-circle">⭐</div>
+        <div class="content">
+          <div class="value-name">Excellence:</div>
+          <div class="description">We take what we do very seriously. We review our curriculum and pedagogy constantly, we receive feedback with gratitude to improve every day.</div>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+
+
+  <section id="teamSection" aria-label="Administrative and Operations Team">
+  <style>
+    /* ================= Scope: #teamSection only ================= */
+    #teamSection {
+      --bg1:#d29700;
+      --bg2:#8d8e09;
+      --card:#ffffff;
+      --ink:#222;
+      --muted:#666;
+      --accent:#b28b00;
+      --radius:18px;
+      --shadow:0 10px 25px rgba(0,0,0,0.15);
+      --font:'Pretendard', 'Noto Sans KR', system-ui, sans-serif;
+      background:linear-gradient(135deg,var(--bg1),var(--bg2));
+      color:var(--ink);
+      font-family:var(--font);
+      padding:100px 20px;
+      text-align:center;
+    }
+
+    #teamSection .title-wrap {
+      max-width:900px;
+      margin:0 auto 60px;
+    }
+
+    #teamSection .title-wrap h2 {
+      font-size:1.8rem;
+      font-weight:600;
+      color:#fff;
+      margin-bottom:8px;
+    }
+
+    #teamSection .title-wrap .divider {
+      width:80px;
+      height:3px;
+      background-color:rgba(255,255,255,0.8);
+      margin:0 auto 25px;
+      border-radius:3px;
+    }
+
+    #teamSection .cards {
+      display:grid;
+      grid-template-columns:repeat(auto-fit, minmax(240px, 1fr));
+      gap:28px;
+      max-width:1100px;
+      margin:0 auto;
+    }
+
+    #teamSection .card {
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      overflow:hidden;
+      transition:transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    #teamSection .card:hover {
+      transform:translateY(-6px);
+      box-shadow:0 14px 40px rgba(0,0,0,0.18);
+    }
+
+    #teamSection .photo {
+      width:100%;
+      height:220px;
+      object-fit:cover;
+      display:block;
+    }
+
+    #teamSection .info {
+      padding:22px 18px 28px;
+    }
+
+    #teamSection .name {
+      font-size:1.05rem;
+      font-weight:600;
+      margin-bottom:4px;
+    }
+
+    #teamSection .role {
+      font-size:0.9rem;
+      color:var(--accent);
+      margin-bottom:10px;
+    }
+
+    #teamSection .desc {
+      font-size:0.85rem;
+      color:var(--muted);
+      line-height:1.5;
+      min-height:60px;
+      margin-bottom:14px;
+    }
+
+    #teamSection .email {
+      font-size:0.8rem;
+      color:#555;
+      display:inline-flex;
+      align-items:center;
+      gap:6px;
+      background:#f8f8f8;
+      padding:6px 10px;
+      border-radius:8px;
+      transition:background 0.3s;
+    }
+
+    #teamSection .email:hover {
+      background:#eee;
+    }
+
+    #teamSection .email::before {
+      content:"📧";
+      font-size:0.9rem;
+    }
+
+    @media(max-width:640px){
+      #teamSection {padding:70px 15px;}
+      #teamSection .photo {height:190px;}
+    }
+  </style>
+
+  <div class="title-wrap">
+    <h2>Administrative and Operations Team</h2>
+    <div class="divider"></div>
+  </div>
+
+  <div class="cards">
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1614280930505-b5a9cf46d5ec?q=80&w=500&auto=format" alt="Amos Clifford" class="photo">
+      <div class="info">
+        <div class="name">Amos Clifford</div>
+        <div class="role">Founder / CEO</div>
+        <div class="desc">Amos' current focus is on building scalable systems to support ANFT's training, membership, and global initiatives.</div>
+        <a href="mailto:amos@anft.earth" class="email">amos@anft.earth</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?q=80&w=500&auto=format" alt="Jackie Kuang" class="photo">
+      <div class="info">
+        <div class="name">Jackie Kuang</div>
+        <div class="role">Business Director and Trainer</div>
+        <div class="desc">Jackie oversees operations and strategy as the Business Director of ANFT.</div>
+        <a href="mailto:jackie@anft.earth" class="email">jackie@anft.earth</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1607746882042-944635dfe10e?q=80&w=500&auto=format" alt="Mish Moore" class="photo">
+      <div class="info">
+        <div class="name">Mish Moore</div>
+        <div class="role">Operations and Extensions Manager</div>
+        <div class="desc">Mish manages student extensions and ensures smooth operational flow at ANFT.</div>
+        <a href="mailto:admissions@anft.earth" class="email">admissions@anft.earth</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?q=80&w=500&auto=format" alt="Aaliyah Stilson" class="photo">
+      <div class="info">
+        <div class="name">Aaliyah Stilson</div>
+        <div class="role">Administrative Assistant</div>
+        <div class="desc">Aaliyah fields calls and inquiries, supporting internal communications and daily administration.</div>
+        <a href="mailto:info@anft.earth" class="email">info@anft.earth</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1601597111158-2fceff292cdc?q=80&w=500&auto=format" alt="Geeta Stilwell" class="photo">
+      <div class="info">
+        <div class="name">Geeta Stilwell</div>
+        <div class="role">Training Director and Trainer</div>
+        <div class="desc">Geeta coordinates ANFT’s comprehensive training programs and curriculum development.</div>
+        <a href="mailto:geeta@anft.earth" class="email">geeta@anft.earth</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=500&auto=format" alt="Suzanne Burrows" class="photo">
+      <div class="info">
+        <div class="name">Suzanne Burrows</div>
+        <div class="role">Marketing Outreach Lead</div>
+        <div class="desc">Suzanne leads marketing initiatives and communication strategy for ANFT.</div>
+        <a href="mailto:outreach@anft.earth" class="email">outreach@anft.earth</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1612197527762-1b89253c5312?q=80&w=500&auto=format" alt="Holly Jo Walters" class="photo">
+      <div class="info">
+        <div class="name">Holly Jo Walters</div>
+        <div class="role">Program Director - Forest Therapy Trails</div>
+        <div class="desc">Holly leads the Certified Forest Therapy Trails Program and supports training coordination.</div>
+        <a href="mailto:trails@anft.earth" class="email">trails@anft.earth</a>
+      </div>
+    </div>
+  </div>
+</section>
+

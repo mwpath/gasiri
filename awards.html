@@ -1,0 +1,278 @@
+<section id="forestAwards">
+  <style>
+    /* ===== Reset (섹션 내부 한정) ===== */
+    #forestAwards{box-sizing:border-box}
+    #forestAwards *,#forestAwards *::before,#forestAwards *::after{box-sizing:inherit}
+
+    #forestAwards {
+      --green-deep:#23492f;
+      --green:#3f7a4d;
+      --green-soft:#dfeee0;
+      --gold:#cfa750;
+      --bg:#f5fbf4;
+      --ink:#1f2933;
+
+      font-family:"Pretendard","Noto Sans KR",sans-serif;
+      background:radial-gradient(circle at top left,#e7f6ea 0,#f9fdf7 45%,#f4fbf3 100%);
+      padding:80px 20px;
+      color:var(--ink);
+    }
+
+    #forestAwards .inner{
+      max-width:1100px;
+      margin:0 auto;
+    }
+
+    #forestAwards .titleWrap{
+      text-align:center;
+      margin-bottom:40px;
+    }
+    #forestAwards .titleWrap h2{
+      font-size:36px;
+      font-weight:800;
+      color:var(--green-deep);
+      letter-spacing:-0.5px;
+    }
+    #forestAwards .titleWrap p{
+      color:var(--green);
+      margin-top:6px;
+      font-size:16px;
+    }
+
+    /* ===== 공통 카드 리스트 (PC+모바일 공용) ===== */
+    #forestAwards .award-card-list{
+      display:grid;
+      gap:18px;
+    }
+
+    #forestAwards .award-card{
+      position:relative;
+      padding:18px 18px 16px 18px;
+      background:linear-gradient(135deg,#ffffff 0,#f6fbf4 55%,#eef7ee 100%);
+      border-radius:16px;
+      box-shadow:0 10px 30px rgba(0,0,0,0.08);
+      overflow:hidden;
+      transition:transform .2s ease,box-shadow .2s ease,background .2s ease;
+    }
+    #forestAwards .award-card::before{
+      content:"";
+      position:absolute;
+      right:-30px;
+      top:-30px;
+      width:120px;
+      height:120px;
+      border-radius:50%;
+      background:
+        radial-gradient(circle at 30% 30%,rgba(207,167,80,.45),rgba(207,167,80,0));
+      pointer-events:none;
+    }
+    #forestAwards .award-card:hover{
+      transform:translateY(-4px);
+      box-shadow:0 14px 36px rgba(0,0,0,0.12);
+      background:linear-gradient(135deg,#ffffff 0,#f3fbf2 50%,#eaf5ea 100%);
+    }
+
+    /* 헤더 : 메달 배지 + 날짜 */
+    #forestAwards .award-header{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:10px;
+      margin-bottom:10px;
+      position:relative;
+      z-index:1;
+    }
+    #forestAwards .award-badge{
+      display:inline-flex;
+      align-items:center;
+      gap:6px;
+      padding:4px 11px;
+      border-radius:999px;
+      background:linear-gradient(90deg,#fbe7a2,#f5c86d);
+      box-shadow:0 2px 6px rgba(207,167,80,.55);
+      font-size:12px;
+      font-weight:700;
+      color:#6b4b12;
+      white-space:nowrap;
+    }
+    #forestAwards .award-badge .medal-icon{
+      width:16px;
+      height:16px;
+      border-radius:50%;
+      background:radial-gradient(circle at 30% 30%,#ffe7a3,#e7a937);
+      border:1px solid rgba(143,100,25,.85);
+    }
+    #forestAwards .award-date{
+      font-size:12px;
+      color:var(--green-deep);
+      font-weight:600;
+      padding:4px 9px;
+      border-radius:999px;
+      background:rgba(35,73,47,.06);
+      white-space:nowrap;
+    }
+
+    /* 제목 & 메타 */
+    #forestAwards .award-title{
+      position:relative;
+      z-index:1;
+      font-size:15px;
+      font-weight:700;
+      color:#102a43;
+      line-height:1.5;
+      margin-bottom:8px;
+    }
+    #forestAwards .award-meta{
+      position:relative;
+      z-index:1;
+      font-size:13px;
+      color:#374151;
+      line-height:1.5;
+    }
+    #forestAwards .award-meta .label{
+      font-size:11px;
+      font-weight:600;
+      color:var(--green-deep);
+      margin-right:4px;
+    }
+
+    /* ===== 반응형 ===== */
+    @media (min-width:768px){
+      #forestAwards .award-card-list{
+        grid-template-columns:repeat(2,minmax(0,1fr));
+      }
+    }
+    @media (min-width:1100px){
+      #forestAwards{
+        padding:90px 20px;
+      }
+    }
+    @media (max-width:767px){
+      #forestAwards{
+        padding:60px 16px;
+      }
+      #forestAwards .award-card{
+        padding:16px 16px 14px;
+      }
+      #forestAwards .award-title{
+        font-size:14.5px;
+      }
+    }
+  </style>
+
+  <div class="inner">
+    <div class="titleWrap">
+      <h2>수상 내역</h2>
+      <p>숲과 명상을 통한 치유 활동이 인정받은 발자취</p>
+    </div>
+
+    <div class="award-card-list">
+      <!-- 1 -->
+      <div class="award-card">
+        <div class="award-header">
+          <div class="award-badge">
+            <span class="medal-icon"></span>
+            <span>우수상</span>
+          </div>
+          <div class="award-date">2019.08</div>
+        </div>
+        <div class="award-title">꿈알 명상을 통한 청소년 자살예방</div>
+        <div class="award-meta">
+          <span class="label">시행(발행) 기관</span>
+          <span>문화체육관광부</span>
+        </div>
+      </div>
+
+      <!-- 2 -->
+      <div class="award-card">
+        <div class="award-header">
+          <div class="award-badge">
+            <span class="medal-icon"></span>
+            <span>최우수상</span>
+          </div>
+          <div class="award-date">2019.11</div>
+        </div>
+        <div class="award-title">
+          Effects forest Healing Program on Depression, Stress and Changes of Cancer Patients
+        </div>
+        <div class="award-meta">
+          <span class="label">시행(발행) 기관</span>
+          <span>Society of People, Plant and Environment</span>
+        </div>
+      </div>
+
+      <!-- 3 -->
+      <div class="award-card">
+        <div class="award-header">
+          <div class="award-badge">
+            <span class="medal-icon"></span>
+            <span>최우수상</span>
+          </div>
+          <div class="award-date">2020.06</div>
+        </div>
+        <div class="award-title">
+          Requirements Analysis for Forest Healing Program Development
+        </div>
+        <div class="award-meta">
+          <span class="label">시행(발행) 기관</span>
+          <span>Society of People, Plant and Environment</span>
+        </div>
+      </div>
+
+      <!-- 4 -->
+      <div class="award-card">
+        <div class="award-header">
+          <div class="award-badge">
+            <span class="medal-icon"></span>
+            <span>우수상</span>
+          </div>
+          <div class="award-date">2021.04</div>
+        </div>
+        <div class="award-title">
+          2021년 국민참여 숲체험교육지원사업 비대면 산림복지프로그램
+          (작은 도토리 속의 커다란 참나무)
+        </div>
+        <div class="award-meta">
+          <span class="label">시행(발행) 기관</span>
+          <span>산림복지진흥원</span>
+        </div>
+      </div>
+
+      <!-- 5 -->
+      <div class="award-card">
+        <div class="award-header">
+          <div class="award-badge">
+            <span class="medal-icon"></span>
+            <span>우수논문상</span>
+          </div>
+          <div class="award-date">2021.06</div>
+        </div>
+        <div class="award-title">
+          Requirements Analysis for Forest Healing Program Development – Targeting cancer patients
+        </div>
+        <div class="award-meta">
+          <span class="label">시행(발행) 기관</span>
+          <span>Society of People, Plant and Environment</span>
+        </div>
+      </div>
+
+      <!-- 6 -->
+      <div class="award-card">
+        <div class="award-header">
+          <div class="award-badge">
+            <span class="medal-icon"></span>
+            <span>우수상</span>
+          </div>
+          <div class="award-date">2021.06</div>
+        </div>
+        <div class="award-title">
+          The Effects of Forest Healing Programs for Suicide Prevention on Adolescents’ Self-esteem and Depression Reduction
+        </div>
+        <div class="award-meta">
+          <span class="label">시행(발행) 기관</span>
+          <span>Society of People, Plant and Environment</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

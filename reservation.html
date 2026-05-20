@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+<head>
+  <!-- ===== 기본 메타 ===== -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>생태명상 &amp; 가시리 포레스트 | 숲을 통한 치유와 회복</title>
+  <meta name="description" content="제주 가시리 포레스트에서 자연과 연결되는 생태명상·산림치유 프로그램을 경험하세요. 숲속 걷기, 명상, 이완 활동 등으로 몸과 마음을 회복합니다.">
+  <meta name="keywords" content="생태명상, 산림치유, 숲치유, 제주 치유여행, 가시리 포레스트, 명상 프로그램, 자연 치유">
+  <meta name="author" content="Gasir i Forest">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <link rel="canonical" href="https://example.com/"> <!-- TODO: 실제 도메인으로 교체 -->
+
+  <!-- ===== 색상/테마 ===== -->
+  <meta name="theme-color" content="#0f1112">
+  <meta name="msapplication-TileColor" content="#0f1112">
+
+  <!-- ===== 성능 최적화: 프리커넥트/폰트 ===== -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Pretendard를 CDN으로 쓰는 경우 아래 예시 사용(프로젝트 정책에 맞게 교체 가능) -->
+  <!-- <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@400;600;700;800&display=swap" rel="stylesheet"> -->
+
+  <!-- ===== 파비콘/아이콘 ===== -->
+  <!-- TODO: 경로를 실제 아이콘 파일로 교체 -->
+  <link rel="icon" href="/icons/favicon.ico" sizes="any">
+  <link rel="icon" href="/icons/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+
+  <!-- ===== Open Graph / Facebook ===== -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ko_KR">
+  <meta property="og:site_name" content="GASIRI FOREST">
+  <meta property="og:title" content="생태명상 &amp; 가시리 포레스트 | 숲을 통한 치유와 회복">
+  <meta property="og:description" content="자연과 연결되는 생태명상·산림치유 프로그램으로 몸과 마음을 회복하세요.">
+  <meta property="og:url" content="https://example.com/">
+  <meta property="og:image" content="https://example.com/og/forest-1200x630.jpg"> <!-- 1200x630 권장 -->
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+
+  <!-- ===== Twitter Card ===== -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="생태명상 &amp; 가시리 포레스트 | 숲을 통한 치유와 회복">
+  <meta name="twitter:description" content="숲속 걷기, 명상, 이완 활동 등으로 자연과 깊이 연결되는 시간. 제주 가시리 포레스트.">
+  <meta name="twitter:image" content="https://example.com/og/forest-1200x630.jpg">
+
+  <!-- ===== 프리로드(Above-the-fold 이미지) ===== -->
+  <!-- TODO: 실제 경로로 교체 -->
+  <link rel="preload" as="image" href="./img/intro-1.png" imagesrcset="./img/intro-1.png" fetchpriority="high">
+  <link rel="preload" as="image" href="./img/wood-1.jpg">
+  <link rel="preload" as="image" href="./img/wood.jpg">
+
+  <!-- ===== 구조화 데이터(JSON-LD) : 사이트/조직 ===== -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "name": "GASIRI FOREST",
+        "url": "https://example.com/",
+        "inLanguage": "ko-KR",
+        "description": "제주 가시리 포레스트의 생태명상·산림치유 프로그램 안내"
+      },
+      {
+        "@type": "Organization",
+        "name": "가시리 포레스트",
+        "url": "https://example.com/",
+        "logo": "https://example.com/icons/logo.png",
+        "sameAs": [
+          "https://www.instagram.com/example",
+          "https://www.facebook.com/example"
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <!-- ===== 기본 스타일 리셋(선택) : 필요시 사용자 프로젝트 리셋 사용 ===== -->
+  <style>
+    /* 시스템 폰트 스택 + 한글 가독성 개선 */
+    html { -webkit-text-size-adjust: 100%; }
+    body { margin:0; font-synthesis-weight: none; text-rendering: optimizeLegibility; }
+    img { max-width: 100%; height: auto; }
+    button { font: inherit; }
+  </style>
+</head>
+<body>
+
+<div id="menu_a"></div>
+
+
+
+<section id="eduProgramV2">
+  <style>
+    #eduProgramV2{box-sizing:border-box}
+    #eduProgramV2 *,#eduProgramV2 *::before,#eduProgramV2 *::after{box-sizing:inherit}
+
+    #eduProgramV2{
+      --green-deep:#1f3b2a;
+      --green:#3f7a4d;
+      --green-soft:#e8f3ed;
+      --bg:#f4f7f5;
+      --ink:#1f2937;
+
+      font-family:"Pretendard","Noto Sans KR",system-ui,-apple-system,sans-serif;
+      padding:180px 20px 100px;
+      background:#3f7a4d;
+      color:var(--ink);
+    }
+
+    #eduProgramV2 .inner{
+      max-width:1100px;
+      margin:0 auto;
+    }
+
+    /* 헤더 */
+    #eduProgramV2 .header{
+      text-align:center;
+      margin-bottom:60px;
+    }
+    #eduProgramV2 .header h2{
+      font-size:38px;
+      font-weight:800;
+      color:#fff;
+      margin-bottom:10px;
+    }
+    #eduProgramV2 .header p{
+      font-size:16px;
+      color:#fff;
+    }
+
+    /* 프로그램 큰 제목 */
+    #eduProgramV2 .section-title{
+      font-size:28px;
+      font-weight:800;
+      color:var(--green);
+      margin:50px 0 25px;
+      border-left:8px solid var(--green);
+      padding-left:14px;
+    }
+
+    /* 주요 박스 (사진 + 설명) */
+    #eduProgramV2 .program-box{
+      display:flex;
+      gap:30px;
+      background:#ffffff;
+      border-radius:28px;
+      overflow:hidden;
+      margin-bottom:40px;
+      box-shadow:0 18px 40px rgba(15,23,42,0.14);
+      border:1px solid #e6eee8;
+    }
+
+    /* 사진 영역 */
+    #eduProgramV2 .program-img{
+      flex:0 0 360px;
+      background-size:cover;
+      background-position:center;
+      min-height:260px;
+    }
+
+    /* 각 프로그램 사진 */
+    .img-eco-play{background-image:url('https://images.unsplash.com/photo-1501004318641-b39e6451bec6?q=80&w=1200');}
+    .img-plant{background-image:url('https://images.unsplash.com/photo-1501004318641-b39e6451bec6?q=80&w=1200');}
+    .img-movement{background-image:url('https://images.unsplash.com/photo-1469474968028-56623f02e42e?q=80&w=1200');}
+
+    .img-pro-eco{background-image:url('https://images.unsplash.com/photo-1500534623283-312aade485b7?q=80&w=1200');}
+    .img-pro-meditation{background-image:url('https://images.unsplash.com/photo-1498579809087-ef1e558fd1da?q=80&w=1200');}
+    .img-pro-mandala{background-image:url('https://images.unsplash.com/photo-1501004318641-b39e6451bec6?q=80&w=1200');}
+    .img-pro-photo{background-image:url('https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?q=80&w=1200');}
+
+    /* 텍스트 영역 */
+    #eduProgramV2 .program-content{
+      flex:1;
+      padding:30px 34px;
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+    }
+
+    #eduProgramV2 .program-title{
+      font-size:22px;
+      font-weight:800;
+      color:var(--green-deep);
+      margin-bottom:14px;
+    }
+
+    #eduProgramV2 .program-content p{
+      font-size:15px;
+      color:#374151;
+      line-height:1.7;
+      margin-bottom:12px;
+    }
+
+    #eduProgramV2 .highlight{
+      color:var(--green);
+      font-weight:700;
+    }
+
+    @media(max-width:820px){
+      #eduProgramV2 .program-box{
+        flex-direction:column;
+      }
+      #eduProgramV2 .program-img{
+        width:100%;
+        flex:none;
+        min-height:220px;
+      }
+    }
+  </style>
+
+  <div class="inner">
+    <div class="header">
+      <h2>참여 및 문의</h2>
+    </div>
+
+    <!-- 어린이 숲 -->
+    <!-- <h3 class="section-title">어린이 숲 프로그램</h3> -->
+
+  </div>
+</section>
+
+<section id="contactSection" aria-label="Contact us">
+  <style>
+    /* ================= Scope: #contactSection only ================= */
+    #contactSection{
+      --ink:#ffffff;
+      --muted:rgba(255,255,255,.85);
+      --accent:#ffffff;
+      --bg:url('./img/p-2-2.jpg') center/cover no-repeat;
+
+      --brightness:0.85;
+
+      position:relative;
+      font-family:Pretendard,"Noto Sans KR",system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
+      color:var(--ink);
+      height:500px;
+      display:flex;
+      align-items:center;
+    }
+
+    #contactSection::before{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:var(--bg);
+      filter:brightness(var(--brightness));
+    }
+
+    #contactSection .inner{
+      position:relative;
+      z-index:1;
+      max-width:1200px;
+      margin:0 auto;
+      padding:80px 20px;
+    }
+
+    #contactSection h2{
+      font-size:2.5rem;
+      font-weight:600;
+      margin-bottom:16px;
+    }
+
+    #contactSection p.sub{
+      font-size:1rem;
+      color:var(--muted);
+      margin-bottom:32px;
+    }
+
+    /* ==================== NEW BUTTON STYLE ==================== */
+    #contactSection .moreBtn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      padding:14px 32px;
+      font-size:1rem;
+      font-weight:600;
+      border-radius:40px;
+
+      background:rgba(255,255,255,0.2);
+      backdrop-filter:blur(10px);
+      -webkit-backdrop-filter:blur(10px);
+
+      color:#fff;
+      border:1px solid rgba(255,255,255,0.4);
+      transition:all .35s ease;
+      text-decoration:none;
+      cursor:pointer;
+    }
+
+    #contactSection .moreBtn:hover{
+      background:rgba(255,255,255,0.32);
+      transform:translateY(-3px);
+      box-shadow:0 8px 20px rgba(0,0,0,0.25);
+    }
+    /* =========================================================== */
+
+    /* 우측 하단 Top 버튼 */
+    #contactSection .topBtn{
+      position:fixed;
+      right:24px; bottom:24px;
+      width:46px; height:46px;
+      background:#0d2238;
+      display:flex; align-items:center; justify-content:center;
+      border-radius:4px;
+      cursor:pointer;
+      z-index:10;
+    }
+    #contactSection .topBtn svg{
+      width:20px; height:20px; stroke:#fff;
+    }
+
+    @media(max-width:768px){
+      #contactSection h2{font-size:2rem;}
+      #contactSection p.sub{font-size:.95rem;}
+    }
+  </style>
+
+  <div class="inner">
+    <h2>네이버 예약 문의</h2>
+    <p class="sub">새로운 공간에서 펼쳐지는 이야기의 시작</p>
+    <a href="#" class="moreBtn">네이버 예약하기</a>
+  </div>
+
+  <div class="topBtn" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="맨 위로">
+    <svg fill="none" stroke-width="2" viewBox="0 0 24 24">
+      <path d="M5 15l7-7 7 7" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </div>
+</section>
+
+
+
+
+<section id="contactSection1" aria-label="Contact us">
+  <style>
+    /* ================= Scope: #contactSection1 only ================= */
+    #contactSection1{
+      --ink:#ffffff;
+      --muted:rgba(255,255,255,.85);
+      --accent:#ffffff;
+      --bg:url('./img/p-2.png') center/cover no-repeat;
+
+      --brightness:0.75;
+
+      position:relative;
+      font-family:Pretendard,"Noto Sans KR",system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
+      color:var(--ink);
+      height:500px;
+      display:flex;
+      align-items:center;
+    }
+
+    #contactSection1::before{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:var(--bg);
+      filter:brightness(var(--brightness));
+    }
+
+    #contactSection1 .inner{
+      position:relative;
+      z-index:1;
+      max-width:1200px;
+      margin:0 auto;
+      padding:80px 20px;
+    }
+
+    #contactSection1 h2{
+      font-size:2.5rem;
+      font-weight:600;
+      margin-bottom:16px;
+    }
+    
+    #contactSection1 p.sub{
+      font-size:1rem;
+      color:var(--muted);
+      margin-bottom:32px;
+    }
+
+    /* ==================== NEW BUTTON STYLE ==================== */
+    #contactSection1 .moreBtn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      padding:14px 32px;
+      font-size:1rem;
+      font-weight:600;
+      border-radius:40px;
+
+      background:rgba(255,255,255,0.2);
+      backdrop-filter:blur(10px);
+      -webkit-backdrop-filter:blur(10px);
+
+      color:#fff;
+      border:1px solid rgba(255,255,255,0.4);
+      transition:all .35s ease;
+      text-decoration:none;
+      cursor:pointer;
+    }
+
+    #contactSection1 .moreBtn:hover{
+      background:rgba(255,255,255,0.32);
+      transform:translateY(-3px);
+      box-shadow:0 8px 20px rgba(0,0,0,0.25);
+    }
+    /* =========================================================== */
+
+    /* Top 버튼 */
+    #contactSection1 .topBtn{
+      position:fixed;
+      right:24px; bottom:24px;
+      width:46px; height:46px;
+      background:#0d2238;
+      display:flex; align-items:center; justify-content:center;
+      border-radius:4px;
+      cursor:pointer;
+      z-index:10;
+    }
+    #contactSection1 .topBtn svg{
+      width:20px; height:20px; stroke:#fff;
+    }
+
+    @media(max-width:768px){
+      #contactSection1 h2{font-size:2rem;}
+      #contactSection1 p.sub{font-size:.95rem;}
+    }
+  </style>
+
+  <div class="inner">
+    <h2>전화 문의</h2>
+    <p class="sub">새로운 공간에서 펼쳐지는 이야기의 시작</p>
+    <a href="#" class="moreBtn">전화 연결하기</a>
+  </div>
+
+  <div class="topBtn" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="맨 위로">
+    <svg fill="none" stroke-width="2" viewBox="0 0 24 24">
+      <path d="M5 15l7-7 7 7" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </div>
+</section>
+
+
+
+
+
+
+</body>
+
+<div id="footerContainer"></div>
+
+
+<script src="./js/menu.js"></script>
+<script src="./js/footer.js"></script>
+<script src="./js/main.js"></script>
+
+</html>

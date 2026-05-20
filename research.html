@@ -1,0 +1,442 @@
+<section id="forestPapers">
+  <style>
+    #forestPapers {
+      --green-dark: #2f5d3a;
+      --green: #5f8f63;
+      --green-light: #d6e9d2;
+      --bg: #f8fcf7;
+
+      font-family: "Pretendard","Noto Sans KR",sans-serif;
+      background: var(--bg);
+      padding: 80px 20px;
+    }
+
+    #forestPapers .titleWrap {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    #forestPapers .titleWrap h2 {
+      font-size: 36px;
+      font-weight: 800;
+      color: var(--green-dark);
+      letter-spacing: -0.5px;
+    }
+    #forestPapers .titleWrap p {
+      color: var(--green);
+      margin-top: 6px;
+      font-size: 17px;
+    }
+
+    /* ===== PC TABLE ===== */
+    #forestPapers table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 15px;
+      background: #ffffff;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 6px 24px rgba(0,0,0,0.08);
+    }
+    #forestPapers thead {
+      background: var(--green-dark);
+      color: #fff;
+    }
+    #forestPapers th {
+      padding: 14px;
+      font-weight: 600;
+      text-align: center;
+      border-right: 1px solid rgba(255,255,255,0.2);
+    }
+    #forestPapers th:last-child {
+      border-right: none;
+    }
+
+    #forestPapers td {
+      padding: 14px;
+      border-bottom: 1px solid var(--green-light);
+      border-right: 1px solid #e8f3e6;
+      line-height: 1.5;
+      background: #ffffff;
+    }
+    #forestPapers tr:nth-child(even) td {
+      background: #fbfdfb;
+    }
+    #forestPapers tr:last-child td {
+      border-bottom: none;
+    }
+    #forestPapers td:last-child {
+      border-right: none;
+    }
+
+    #forestPapers td:nth-child(1),
+    #forestPapers th:nth-child(1),
+    #forestPapers td:nth-child(2),
+    #forestPapers th:nth-child(2),
+    #forestPapers td:nth-child(5),
+    #forestPapers th:nth-child(5),
+    #forestPapers td:nth-child(6),
+    #forestPapers th:nth-child(6),
+    #forestPapers td:nth-child(7),
+    #forestPapers th:nth-child(7) {
+      text-align: center;
+      white-space: nowrap;
+    }
+
+    /* hover */
+    #forestPapers tbody tr:hover td {
+      background: #eef6ee;
+    }
+
+    /* ===== MOBILE CARD 기본 숨김 ===== */
+    #forestPapers .paper-card {
+      display: none;
+    }
+
+    /* ===== 모바일: 카드형 ===== */
+    @media (max-width: 900px) {
+      #forestPapers table {
+        display: none;
+      }
+      #forestPapers .paper-card {
+        display: block;
+        background: #ffffff;
+        border-left: 6px solid var(--green);
+        padding: 16px 18px;
+        margin-bottom: 16px;
+        border-radius: 10px;
+        box-shadow: 0 4px 18px rgba(0,0,0,0.07);
+        font-size: 14px;
+      }
+      #forestPapers .paper-card .row {
+        margin-bottom: 4px;
+        line-height: 1.5;
+      }
+      #forestPapers .paper-card .label {
+        font-weight: 700;
+        color: var(--green-dark);
+        margin-right: 4px;
+      }
+      #forestPapers .paper-card .value {
+        color: #333;
+      }
+      #forestPapers .paper-card .title {
+        margin: 6px 0 4px;
+        font-weight: 700;
+        color: #1e293b;
+      }
+      #forestPapers .paper-card .meta {
+        color: #4b5563;
+      }
+    }
+  </style>
+
+  <div class="titleWrap">
+    <h2>연구 실적</h2>
+    <p>자연과 숲을 바탕으로 한 치유·명상 연구의 발자취</p>
+  </div>
+
+  <!-- ================= PC TABLE ================= -->
+  <table>
+    <thead>
+      <tr>
+        <th>번호</th>
+        <th>발표유형</th>
+        <th>연구논문 제목</th>
+        <th>게재지</th>
+        <th>저자</th>
+        <th>발표일</th>
+        <th>등급/호수</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>포스터</td>
+        <td>성인지적 장애인의 정서행동변화</td>
+        <td>인간사랑환경학회</td>
+        <td>이미미</td>
+        <td>2016.05</td>
+        <td>졸업</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>포스터</td>
+        <td>창의·인성 사고기법을 적용한 생태 원예 프로그램이 아동의 창의적 인성에 미치는 영향</td>
+        <td>인간사랑환경학회</td>
+        <td>이미미</td>
+        <td>2016.10</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>학위논문</td>
+        <td>원예치료 프로그램을 통한 성인지적 장애인의 정서행동변화</td>
+        <td>고려대학교 대학원</td>
+        <td>이미미</td>
+        <td>2017.01</td>
+        <td>석사 졸업</td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>자료집</td>
+        <td>꿈 열람활동 통한 청소년 자살예방</td>
+        <td>문화체육관광부</td>
+        <td>이미미</td>
+        <td>2019.10</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>5</td>
+        <td>포스터</td>
+        <td>Effects forest Healing Program on Depression, Stress and Changes of Cancer Patients</td>
+        <td>Society of People, Plant and Environment</td>
+        <td>이미미</td>
+        <td>2019.11</td>
+        <td>SCOPUS</td>
+      </tr>
+      <tr>
+        <td>6</td>
+        <td>학술지</td>
+        <td>Effects forest Healing Program on Depression, Stress and Changes of Cancer Patients</td>
+        <td>Society of People, Plant and Environment</td>
+        <td>이미미</td>
+        <td>2020.04</td>
+        <td>23권 2호</td>
+      </tr>
+      <tr>
+        <td>7</td>
+        <td>포스터</td>
+        <td>Requirements Analysis for Forest Healing Program Development</td>
+        <td>Society of People, Plant and Environment</td>
+        <td>이미미</td>
+        <td>2020.06</td>
+        <td>SCOPUS</td>
+      </tr>
+      <tr>
+        <td>8</td>
+        <td>학술지</td>
+        <td>사회심리적 스트레스가 회복환경지각을 매개로 정서적 웰빙에 미치는 영향: 코로나19 이용자 중심</td>
+        <td>산림휴양학회</td>
+        <td>이도찬 / 이미미</td>
+        <td>2020.10</td>
+        <td>24권 3호</td>
+      </tr>
+      <tr>
+        <td>9</td>
+        <td>학술지</td>
+        <td>A needs analysis of the development of forest healing programs: Focusing on cancer patients</td>
+        <td>Society of People, Plant and Environment</td>
+        <td>이미미</td>
+        <td>2020.12</td>
+        <td>23권 4호 / SCOPUS</td>
+      </tr>
+      <tr>
+        <td>10</td>
+        <td>학술지</td>
+        <td>도시숲 활용 산림치유프로그램이 여성노인의 걷기운동, 내장지방 및 우울에 미치는 영향</td>
+        <td>휴양 및 경관학회</td>
+        <td>안광구 외</td>
+        <td>2021.01</td>
+        <td>15권 1호</td>
+      </tr>
+      <tr>
+        <td>11</td>
+        <td>학술지</td>
+        <td>Influence of Forest Visitors' Perceived Restorativeness on Social-Psychological Stress</td>
+        <td>International Journal of Environmental Research and Public Health</td>
+        <td>이도찬 / 이미미</td>
+        <td>2021.05</td>
+        <td>SSCI / 18권 12호</td>
+      </tr>
+      <tr>
+        <td>12</td>
+        <td>학위논문</td>
+        <td>암환자 대상 산림치유 프로그램 개발 및 효과 검증</td>
+        <td>충북대학교 대학원</td>
+        <td>이미미</td>
+        <td>2023.07</td>
+        <td>박사 졸업</td>
+      </tr>
+      <tr>
+        <td>13</td>
+        <td>학술지</td>
+        <td>도시 숲에서의 맨발 걷기가 스트레스, 기본 생리학, 수면 만족도에 미치는 영향</td>
+        <td>웰니스 학회</td>
+        <td>김재혁 / 이미미</td>
+        <td>2024.08</td>
+        <td>17권 3호</td>
+      </tr>
+      <tr>
+        <td>14</td>
+        <td>학술지</td>
+        <td>Effects of Barefoot Walking in Urban Forests on CRP, IFN-γ, and Serotonin</td>
+        <td>International Journal of Environmental Research and Public Health</td>
+        <td>김재혁 / 이미미</td>
+        <td>2024.12</td>
+        <td>SSCI / 12권 33호</td>
+      </tr>
+      <tr>
+        <td>15</td>
+        <td>학술지</td>
+        <td>Effect of Forest Meditation Therapy Program on Reducing Daily Stress and Promoting Coping</td>
+        <td>Society of People, Plant and Environment</td>
+        <td>여수영 / 이미미</td>
+        <td>2025.01</td>
+        <td>SCOPUS / 27권 6호</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- ================= MOBILE CARDS ================= -->
+  <div id="mobileCards">
+    <!-- 1 -->
+    <div class="paper-card">
+      <div class="row meta"><span class="label">번호</span><span class="value">1 · 포스터</span></div>
+      <div class="title">성인지적 장애인의 정서행동변화</div>
+      <div class="row"><span class="label">게재지</span><span class="value">인간사랑환경학회</span></div>
+      <div class="row"><span class="label">저자</span><span class="value">이미미</span></div>
+      <div class="row"><span class="label">발표일</span><span class="value">2016.05</span></div>
+      <div class="row"><span class="label">등급/호수</span><span class="value">졸업</span></div>
+    </div>
+
+    <!-- 2 -->
+    <div class="paper-card">
+      <div class="row meta"><span class="label">번호</span><span class="value">2 · 포스터</span></div>
+      <div class="title">창의·인성 사고기법을 적용한 생태 원예 프로그램이 아동의 창의적 인성에 미치는 영향</div>
+      <div class="row"><span class="label">게재지</span><span class="value">인간사랑환경학회</span></div>
+      <div class="row"><span class="label">저자</span><span class="value">이미미</span></div>
+      <div class="row"><span class="label">발표일</span><span class="value">2016.10</span></div>
+      <div class="row"><span class="label">등급/호수</span><span class="value">-</span></div>
+    </div>
+
+    <!-- 3 -->
+    <div class="paper-card">
+      <div class="row meta"><span class="label">번호</span><span class="value">3 · 학위논문</span></div>
+      <div class="title">원예치료 프로그램을 통한 성인지적 장애인의 정서행동변화</div>
+      <div class="row"><span class="label">게재지</span><span class="value">고려대학교 대학원</span></div>
+      <div class="row"><span class="label">저자</span><span class="value">이미미</span></div>
+      <div class="row"><span class="label">발표일</span><span class="value">2017.01</span></div>
+      <div class="row"><span class="label">등급/호수</span><span class="value">석사 졸업</span></div>
+    </div>
+
+    <!-- 4 -->
+    <div class="paper-card">
+      <div class="row meta"><span class="label">번호</span><span class="value">4 · 자료집</span></div>
+      <div class="title">꿈 열람활동 통한 청소년 자살예방</div>
+      <div class="row"><span class="label">게재지</span><span class="value">문화체육관광부</span></div>
+      <div class="row"><span class="label">저자</span><span class="value">이미미</span></div>
+      <div class="row"><span class="label">발표일</span><span class="value">2019.10</span></div>
+      <div class="row"><span class="label">등급/호수</span><span class="value">-</span></div>
+    </div>
+
+    <!-- 5 -->
+    <div class="paper-card">
+      <div class="row meta"><span class="label">번호</span><span class="value">5 · 포스터</span></div>
+      <div class="title">Effects forest Healing Program on Depression, Stress and Changes of Cancer Patients</div>
+      <div class="row"><span class="label">게재지</span><span class="value">Society of People, Plant and Environment</span></div>
+      <div class="row"><span class="label">저자</span><span class="value">이미미</span></div>
+      <div class="row"><span class="label">발표일</span><span class="value">2019.11</span></div>
+      <div class="row"><span class="label">등급/호수</span><span class="value">SCOPUS</span></div>
+    </div>
+
+    <!-- 6 -->
+    <div class="paper-card">
+      <div class="row meta"><span class="label">번호</span><span class="value">6 · 학술지</span></div>
+      <div class="title">Effects forest Healing Program on Depression, Stress and Changes of Cancer Patients</div>
+      <div class="row"><span class="label">게재지</span><span class="value">Society of People, Plant and Environment</span></div>
+      <div class="row"><span class="label">저자</span><span class="value">이미미</span></div>
+      <div class="row"><span class="label">발표일</span><span class="value">2020.04</span></div>
+      <div class="row"><span class="label">등급/호수</span><span class="value">23권 2호</span></div>
+    </div>
+
+    <!-- 7 -->
+    <div class="paper-card">
+      <div class="row meta"><span class="label">번호</span><span class="value">7 · 포스터</span></div>
+      <div class="title">Requirements Analysis for Forest Healing Program Development</div>
+      <div class="row"><span class="label">게재지</span><span class="value">Society of People, Plant and Environment</span></div>
+      <div class="row"><span class="label">저자</span><span class="value">이미미</span></div>
+      <div class="row"><span class="label">발표일</span><span class="value">2020.06</span></div>
+      <div class="row"><span class="label">등급/호수</span><span class="value">SCOPUS</span></div>
+    </div>
+
+    <!-- 8 -->
+    <div class="paper-card">
+      <div class="row meta"><span class="label">번호</span><span class="value">8 · 학술지</span></div>
+      <div class="title">사회심리적 스트레스가 회복환경지각을 매개로 정서적 웰빙에 미치는 영향: 코로나19 이용자 중심</div>
+      <div class="row"><span class="label">게재지</span><span class="value">산림휴양학회</span></div>
+      <div class="row"><span class="label">저자</span><span class="value">이도찬 / 이미미</span></div>
+      <div class="row"><span class="label">발표일</span><span class="value">2020.10</span></div>
+      <div class="row"><span class="label">등급/호수</span><span class="value">24권 3호</span></div>
+    </div>
+
+    <!-- 9 -->
+    <div class="paper-card">
+      <div class="row meta"><span class="label">번호</span><span class="value">9 · 학술지</span></div>
+      <div class="title">A needs analysis of the development of forest healing programs: Focusing on cancer patients</div>
+      <div class="row"><span class="label">게재지</span><span class="value">Society of People, Plant and Environment</span></div>
+      <div class="row"><span class="label">저자</span><span class="value">이미미</span></div>
+      <div class="row"><span class="label">발표일</span><span class="value">2020.12</span></div>
+      <div class="row"><span class="label">등급/호수</span><span class="value">23권 4호 / SCOPUS</span></div>
+    </div>
+
+    <!-- 10 -->
+    <div class="paper-card">
+      <div class="row meta"><span class="label">번호</span><span class="value">10 · 학술지</span></div>
+      <div class="title">도시숲 활용 산림치유프로그램이 여성노인의 걷기운동, 내장지방 및 우울에 미치는 영향</div>
+      <div class="row"><span class="label">게재지</span><span class="value">휴양 및 경관학회</span></div>
+      <div class="row"><span class="label">저자</span><span class="value">안광구 외</span></div>
+      <div class="row"><span class="label">발표일</span><span class="value">2021.01</span></div>
+      <div class="row"><span class="label">등급/호수</span><span class="value">15권 1호</span></div>
+    </div>
+
+    <!-- 11 -->
+    <div class="paper-card">
+      <div class="row meta"><span class="label">번호</span><span class="value">11 · 학술지</span></div>
+      <div class="title">Influence of Forest Visitors' Perceived Restorativeness on Social-Psychological Stress</div>
+      <div class="row"><span class="label">게재지</span><span class="value">Int. J. of Environmental Research and Public Health</span></div>
+      <div class="row"><span class="label">저자</span><span class="value">이도찬 / 이미미</span></div>
+      <div class="row"><span class="label">발표일</span><span class="value">2021.05</span></div>
+      <div class="row"><span class="label">등급/호수</span><span class="value">SSCI / 18권 12호</span></div>
+    </div>
+
+    <!-- 12 -->
+    <div class="paper-card">
+      <div class="row meta"><span class="label">번호</span><span class="value">12 · 학위논문</span></div>
+      <div class="title">암환자 대상 산림치유 프로그램 개발 및 효과 검증</div>
+      <div class="row"><span class="label">게재지</span><span class="value">충북대학교 대학원</span></div>
+      <div class="row"><span class="label">저자</span><span class="value">이미미</span></div>
+      <div class="row"><span class="label">발표일</span><span class="value">2023.07</span></div>
+      <div class="row"><span class="label">등급/호수</span><span class="value">박사 졸업</span></div>
+    </div>
+
+    <!-- 13 -->
+    <div class="paper-card">
+      <div class="row meta"><span class="label">번호</span><span class="value">13 · 학술지</span></div>
+      <div class="title">도시 숲에서의 맨발 걷기가 스트레스, 기본 생리학, 수면 만족도에 미치는 영향</div>
+      <div class="row"><span class="label">게재지</span><span class="value">웰니스 학회</span></div>
+      <div class="row"><span class="label">저자</span><span class="value">김재혁 / 이미미</span></div>
+      <div class="row"><span class="label">발표일</span><span class="value">2024.08</span></div>
+      <div class="row"><span class="label">등급/호수</span><span class="value">17권 3호</span></div>
+    </div>
+
+    <!-- 14 -->
+    <div class="paper-card">
+      <div class="row meta"><span class="label">번호</span><span class="value">14 · 학술지</span></div>
+      <div class="title">Effects of Barefoot Walking in Urban Forests on CRP, IFN-γ, and Serotonin</div>
+      <div class="row"><span class="label">게재지</span><span class="value">Int. J. of Environmental Research and Public Health</span></div>
+      <div class="row"><span class="label">저자</span><span class="value">김재혁 / 이미미</span></div>
+      <div class="row"><span class="label">발표일</span><span class="value">2024.12</span></div>
+      <div class="row"><span class="label">등급/호수</span><span class="value">SSCI / 12권 33호</span></div>
+    </div>
+
+    <!-- 15 -->
+    <div class="paper-card">
+      <div class="row meta"><span class="label">번호</span><span class="value">15 · 학술지</span></div>
+      <div class="title">Effect of Forest Meditation Therapy Program on Reducing Daily Stress and Promoting Coping</div>
+      <div class="row"><span class="label">게재지</span><span class="value">Society of People, Plant and Environment</span></div>
+      <div class="row"><span class="label">저자</span><span class="value">여수영 / 이미미</span></div>
+      <div class="row"><span class="label">발표일</span><span class="value">2025.01</span></div>
+      <div class="row"><span class="label">등급/호수</span><span class="value">SCOPUS / 27권 6호</span></div>
+    </div>
+  </div>
+</section>

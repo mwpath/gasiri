@@ -1,0 +1,1267 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+<head>
+  <!-- ===== 기본 메타 ===== -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>생태명상 &amp; 가시리 포레스트 | 숲을 통한 치유와 회복</title>
+  <meta name="description" content="제주 가시리 포레스트에서 자연과 연결되는 생태명상·산림치유 프로그램을 경험하세요. 숲속 걷기, 명상, 이완 활동 등으로 몸과 마음을 회복합니다.">
+  <meta name="keywords" content="생태명상, 산림치유, 숲치유, 제주 치유여행, 가시리 포레스트, 명상 프로그램, 자연 치유">
+  <meta name="author" content="Gasir i Forest">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <link rel="canonical" href="https://example.com/"> <!-- TODO: 실제 도메인으로 교체 -->
+
+  <!-- ===== 색상/테마 ===== -->
+  <meta name="theme-color" content="#0f1112">
+  <meta name="msapplication-TileColor" content="#0f1112">
+
+  <!-- ===== 성능 최적화: 프리커넥트/폰트 ===== -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Pretendard를 CDN으로 쓰는 경우 아래 예시 사용(프로젝트 정책에 맞게 교체 가능) -->
+  <!-- <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@400;600;700;800&display=swap" rel="stylesheet"> -->
+
+  <!-- ===== 파비콘/아이콘 ===== -->
+  <!-- TODO: 경로를 실제 아이콘 파일로 교체 -->
+  <link rel="icon" href="/icons/favicon.ico" sizes="any">
+  <link rel="icon" href="/icons/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+
+  <!-- ===== Open Graph / Facebook ===== -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ko_KR">
+  <meta property="og:site_name" content="GASIRI FOREST">
+  <meta property="og:title" content="생태명상 &amp; 가시리 포레스트 | 숲을 통한 치유와 회복">
+  <meta property="og:description" content="자연과 연결되는 생태명상·산림치유 프로그램으로 몸과 마음을 회복하세요.">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="./img/bg01.jpg"> <!-- 1200x630 권장 -->
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+
+  <!-- ===== Twitter Card ===== -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="생태명상 &amp; 가시리 포레스트 | 숲을 통한 치유와 회복">
+  <meta name="twitter:description" content="숲속 걷기, 명상, 이완 활동 등으로 자연과 깊이 연결되는 시간. 제주 가시리 포레스트.">
+  <meta name="twitter:image" content="./img/bg01.jpg">
+
+  <!-- ===== 프리로드(Above-the-fold 이미지) ===== -->
+  <!-- TODO: 실제 경로로 교체 -->
+  <link rel="preload" as="image" href="./img/intro-1.png" imagesrcset="./img/intro-1.png" fetchpriority="high">
+  <link rel="preload" as="image" href="./img/wood-1.jpg">
+  <link rel="preload" as="image" href="./img/wood.jpg">
+
+  <!-- ===== 구조화 데이터(JSON-LD) : 사이트/조직 ===== -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "name": "GASIRI FOREST",
+        "url": "https://example.com/",
+        "inLanguage": "ko-KR",
+        "description": "제주 가시리 포레스트의 생태명상·산림치유 프로그램 안내"
+      },
+      {
+        "@type": "Organization",
+        "name": "가시리 포레스트",
+        "url": "https://example.com/",
+        "logo": "https://example.com/icons/logo.png",
+        "sameAs": [
+          "https://www.instagram.com/example",
+          "https://www.facebook.com/example"
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <!-- ===== 기본 스타일 리셋(선택) : 필요시 사용자 프로젝트 리셋 사용 ===== -->
+  <style>
+    /* 시스템 폰트 스택 + 한글 가독성 개선 */
+    html { -webkit-text-size-adjust: 100%; }
+    body { margin:0; font-synthesis-weight: none; text-rendering: optimizeLegibility; }
+    img { max-width: 100%; height: auto; }
+    button { font: inherit; }
+  </style>
+</head>
+<body>
+
+<div id="menu_a"></div>
+
+
+<section id="whoWeAre" aria-label="Who We Are">
+  <style>
+    /* ================= Scope: #whoWeAre only ================= */
+    #whoWeAre {
+      --ink: #ffffff; /* 글자색 */
+      --overlay: rgba(0, 0, 0, 0.35); /* 어두운 오버레이 */
+      --border:#6a8b2e; /* 하단 라인 */
+      font-family: Pretendard, "Noto Sans KR", system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+      position: relative;
+      width: 100%;
+      min-height: 296px;
+      color: var(--ink);
+      background: url('./img/b19.jpg') center/cover no-repeat; /* 👉 여기에 배경 이미지 교체 */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      overflow: hidden;
+      border-bottom: 6px solid var(--border);
+    }
+
+    #whoWeAre::before {
+  
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: var(--overlay);
+      z-index: 1;
+    }
+
+    #whoWeAre .textBox {
+      position: relative;
+      z-index: 2;
+    }
+
+    #whoWeAre h2 {
+      font-size: 2.4rem;
+      font-weight: 500;
+      line-height: 1.3;
+      margin: 0;
+    }
+
+    /* ===== 반응형 ===== */
+    @media (max-width: 768px) {
+      #whoWeAre {
+        min-height: 260px;
+      }
+      #whoWeAre h2 {
+        font-size: 1.8rem;
+      }
+    }
+  </style>
+
+  <div class="textBox">
+    <h2>연간 프로그램</h2>
+  </div>
+</section>
+
+<section id="eventCalendarSection">
+  <style>
+    #eventCalendarSection{
+      --ecs-bg:#f4f4f4;
+      --ecs-text:#111111;
+      --ecs-muted:#666666;
+      --ecs-line:#cfcfcf;
+      --ecs-line-strong:#111111;
+      --ecs-sun:#ff2b1c;
+      --ecs-sat:#2e6fc1;
+      --ecs-performance:#43b53f;
+      --ecs-exhibit:#f3a000;
+      --ecs-festival:#f27bb1;
+      --ecs-white:#ffffff;
+      position:relative;
+      width:100%;
+      background:var(--ecs-bg);
+      color:var(--ecs-text);
+      font-family:Pretendard,"Noto Sans KR",sans-serif;
+      overflow:hidden;
+      isolation:isolate;
+    }
+
+    #eventCalendarSection,
+    #eventCalendarSection::before,
+    #eventCalendarSection::after,
+    #eventCalendarSection * ,
+    #eventCalendarSection *::before,
+    #eventCalendarSection *::after{
+      box-sizing:border-box;
+    }
+
+    #eventCalendarSection .ecs-shell{
+      width:min(1600px,calc(100% - 56px));
+      margin:0 auto;
+      padding:26px 0 48px;
+      opacity:0;
+      transform:translateY(28px);
+      animation:ecsFadeInUp .9s cubic-bezier(.22,1,.36,1) forwards;
+    }
+
+    #eventCalendarSection .ecs-toolbar{
+      display:flex;
+      align-items:flex-start;
+      justify-content:space-between;
+      gap:24px;
+      margin-bottom:28px;
+      flex-wrap:wrap;
+    }
+
+    #eventCalendarSection .ecs-toolbar-left{
+      display:flex;
+      align-items:center;
+      gap:18px;
+      min-height:64px;
+    }
+
+    #eventCalendarSection .ecs-nav-btn,
+    #eventCalendarSection .ecs-year-btn,
+    #eventCalendarSection .ecs-today-btn,
+    #eventCalendarSection .ecs-view-btn{
+      border:0;
+      background:transparent;
+      color:var(--ecs-text);
+      cursor:pointer;
+      transition:transform .25s ease,opacity .25s ease,background-color .25s ease,color .25s ease;
+      font-family:inherit;
+    }
+
+    #eventCalendarSection .ecs-nav-btn{
+      width:42px;
+      height:42px;
+      display:none;
+      place-items:center;
+      border-radius:999px;
+      font-size:20px;
+      flex:0 0 auto;
+    }
+
+    #eventCalendarSection .ecs-nav-btn:hover,
+    #eventCalendarSection .ecs-year-btn:hover,
+    #eventCalendarSection .ecs-today-btn:hover,
+    #eventCalendarSection .ecs-view-btn:hover{
+      background:rgba(17,17,17,.06);
+    }
+
+    #eventCalendarSection .ecs-nav-btn:active,
+    #eventCalendarSection .ecs-year-btn:active,
+    #eventCalendarSection .ecs-today-btn:active,
+    #eventCalendarSection .ecs-view-btn:active{
+      transform:scale(.96);
+    }
+
+    #eventCalendarSection .ecs-title-wrap{
+      display:flex;
+      align-items:center;
+      gap:16px;
+      flex-wrap:wrap;
+    }
+
+    #eventCalendarSection .ecs-title{
+      margin:0;
+      font-size:56px;
+      line-height:1;
+      letter-spacing:-.06em;
+      font-weight:800;
+      white-space:nowrap;
+    }
+
+    #eventCalendarSection .ecs-subtools{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      flex-wrap:wrap;
+    }
+
+    #eventCalendarSection .ecs-year-picker{
+      display:flex;
+      align-items:center;
+      gap:6px;
+      padding:6px;
+      border:1px solid rgba(17,17,17,.09);
+      border-radius:999px;
+      background:rgba(255,255,255,.72);
+      backdrop-filter:blur(10px);
+      -webkit-backdrop-filter:blur(10px);
+    }
+
+    #eventCalendarSection .ecs-year-btn,
+    #eventCalendarSection .ecs-today-btn,
+    #eventCalendarSection .ecs-view-btn{
+      border-radius:999px;
+      padding:10px 14px;
+      font-size:14px;
+      line-height:1;
+      font-weight:700;
+      color:var(--ecs-muted);
+    }
+
+    #eventCalendarSection .ecs-year-btn.is-active,
+    #eventCalendarSection .ecs-view-btn.is-active{
+      background:var(--ecs-text);
+      color:var(--ecs-white);
+    }
+
+    #eventCalendarSection .ecs-legend{
+      display:flex;
+      align-items:center;
+      gap:30px;
+      flex-wrap:wrap;
+      padding-top:12px;
+    }
+
+    #eventCalendarSection .ecs-legend-item{
+      display:flex;
+      align-items:center;
+      gap:14px;
+      color:var(--ecs-muted);
+      font-size:19px;
+      font-weight:700;
+      white-space:nowrap;
+    }
+
+    #eventCalendarSection .ecs-pattern{
+      width:28px;
+      height:40px;
+      border-radius:2px;
+      flex:0 0 auto;
+      box-shadow:inset 0 0 0 1px rgba(0,0,0,.04);
+    }
+
+    #eventCalendarSection .ecs-pattern--performance{
+      background:repeating-linear-gradient(to bottom,var(--ecs-performance) 0 3px,transparent 3px 6px);
+    }
+
+    #eventCalendarSection .ecs-pattern--exhibit{
+      background:
+        radial-gradient(circle at 25% 25%, var(--ecs-white) 0 2.4px, transparent 2.5px),
+        radial-gradient(circle at 75% 25%, var(--ecs-white) 0 2.4px, transparent 2.5px),
+        radial-gradient(circle at 25% 75%, var(--ecs-white) 0 2.4px, transparent 2.5px),
+        radial-gradient(circle at 75% 75%, var(--ecs-white) 0 2.4px, transparent 2.5px),
+        var(--ecs-exhibit);
+      background-size:14px 14px,14px 14px,14px 14px,14px 14px,auto;
+      background-position:0 0,0 0,0 0,0 0,0 0;
+    }
+
+    #eventCalendarSection .ecs-pattern--festival{
+      background:repeating-linear-gradient(135deg,var(--ecs-festival) 0 4px,transparent 4px 8px);
+    }
+
+    #eventCalendarSection .ecs-main{
+      margin-top:18px;
+    }
+
+    #eventCalendarSection .ecs-grid-wrap{
+      border-top:4px solid var(--ecs-line-strong);
+      background:rgba(255,255,255,.28);
+      box-shadow:0 18px 40px rgba(0,0,0,.035);
+    }
+
+    #eventCalendarSection .ecs-weekdays,
+    #eventCalendarSection .ecs-grid{
+      display:grid;
+      grid-template-columns:repeat(7,minmax(0,1fr));
+    }
+
+    #eventCalendarSection .ecs-weekday{
+      min-height:72px;
+      border-right:1px solid var(--ecs-line);
+      border-bottom:2px solid var(--ecs-line-strong);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-size:20px;
+      font-weight:700;
+      letter-spacing:-.02em;
+      background:rgba(255,255,255,.18);
+    }
+
+    #eventCalendarSection .ecs-weekday:first-child{ color:var(--ecs-sun); }
+    #eventCalendarSection .ecs-weekday:last-child{ color:var(--ecs-sat); }
+
+    #eventCalendarSection .ecs-day{
+      position:relative;
+      min-height:144px;
+      border-right:1px solid var(--ecs-line);
+      border-bottom:1px solid var(--ecs-line);
+      padding:18px 12px 12px;
+      display:flex;
+      flex-direction:column;
+      gap:10px;
+      background:transparent;
+      transition:background-color .25s ease, transform .25s ease;
+      overflow:hidden;
+    }
+
+    #eventCalendarSection .ecs-day:hover{
+      background:rgba(255,255,255,.35);
+    }
+
+    #eventCalendarSection .ecs-day.is-outside{
+      opacity:.42;
+      cursor:pointer;
+    }
+
+    #eventCalendarSection .ecs-day.is-outside:hover{
+      background:rgba(255,255,255,.42);
+    }
+
+    #eventCalendarSection .ecs-day.is-today{
+      background:rgba(17,17,17,.04);
+    }
+
+    #eventCalendarSection .ecs-day.is-selected{
+      box-shadow:inset 0 0 0 2px rgba(17,17,17,.88);
+      background:rgba(255,255,255,.52);
+    }
+
+    #eventCalendarSection .ecs-date{
+      display:flex;
+      justify-content:flex-end;
+      font-size:18px;
+      line-height:1;
+      font-weight:700;
+      color:#555;
+      letter-spacing:-.02em;
+      user-select:none;
+    }
+
+    #eventCalendarSection .ecs-day[data-weekday="0"] .ecs-date{ color:var(--ecs-sun); }
+    #eventCalendarSection .ecs-day[data-weekday="6"] .ecs-date{ color:var(--ecs-sat); }
+
+    #eventCalendarSection .ecs-items{
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+      min-height:0;
+    }
+
+    #eventCalendarSection .ecs-item{
+      display:flex;
+      align-items:flex-start;
+      gap:8px;
+      min-width:0;
+      border:0;
+      background:transparent;
+      padding:0;
+      cursor:pointer;
+      text-align:left;
+      color:inherit;
+      font-family:inherit;
+      opacity:0;
+      transform:translateY(12px);
+      animation:ecsFadeInUp .55s cubic-bezier(.22,1,.36,1) forwards;
+    }
+
+    #eventCalendarSection .ecs-item:hover .ecs-item-text{
+      opacity:.78;
+    }
+
+    #eventCalendarSection .ecs-item-badge{
+      width:26px;
+      height:26px;
+      flex:0 0 auto;
+      border-radius:2px;
+      margin-top:1px;
+    }
+
+    #eventCalendarSection .ecs-item-badge--performance{
+      background:repeating-linear-gradient(to bottom,var(--ecs-performance) 0 3px,transparent 3px 6px);
+    }
+
+    #eventCalendarSection .ecs-item-badge--exhibit{
+      background:
+        radial-gradient(circle at 25% 25%, var(--ecs-white) 0 2.2px, transparent 2.3px),
+        radial-gradient(circle at 75% 25%, var(--ecs-white) 0 2.2px, transparent 2.3px),
+        radial-gradient(circle at 25% 75%, var(--ecs-white) 0 2.2px, transparent 2.3px),
+        radial-gradient(circle at 75% 75%, var(--ecs-white) 0 2.2px, transparent 2.3px),
+        var(--ecs-exhibit);
+      background-size:13px 13px,13px 13px,13px 13px,13px 13px,auto;
+    }
+
+    #eventCalendarSection .ecs-item-badge--festival{
+      background:repeating-linear-gradient(135deg,var(--ecs-festival) 0 4px,transparent 4px 8px);
+    }
+
+    #eventCalendarSection .ecs-item-text{
+      min-width:0;
+      font-size:14px;
+      line-height:1.35;
+      font-weight:700;
+      letter-spacing:-.02em;
+      color:#4c4c4c;
+      white-space:nowrap;
+      overflow:hidden;
+      text-overflow:ellipsis;
+      transition:opacity .25s ease;
+    }
+
+    #eventCalendarSection .ecs-more-btn{
+      margin-top:2px;
+      align-self:flex-start;
+      border:0;
+      background:rgba(17,17,17,.06);
+      color:#4e4e4e;
+      border-radius:999px;
+      padding:6px 10px;
+      font-size:12px;
+      line-height:1;
+      font-weight:700;
+      cursor:pointer;
+      transition:background-color .25s ease, transform .25s ease;
+      font-family:inherit;
+    }
+
+    #eventCalendarSection .ecs-more-btn:hover{
+      background:rgba(17,17,17,.1);
+    }
+
+    #eventCalendarSection .ecs-more-btn:active{
+      transform:scale(.97);
+    }
+
+    #eventCalendarSection .ecs-mobile-list{
+      display:none;
+      margin-top:28px;
+      border-top:4px solid var(--ecs-line-strong);
+      background:rgba(255,255,255,.22);
+    }
+
+    #eventCalendarSection .ecs-mobile-row{
+      display:flex;
+      align-items:flex-start;
+      gap:16px;
+      padding:20px 0;
+      border-bottom:1px solid var(--ecs-line);
+      opacity:0;
+      transform:translateY(12px);
+      animation:ecsFadeInUp .55s cubic-bezier(.22,1,.36,1) forwards;
+      text-decoration:none;
+      color:inherit;
+      scroll-margin-top:18px;
+    }
+
+    #eventCalendarSection .ecs-mobile-row-date{
+      min-width:102px;
+      font-size:15px;
+      line-height:1.5;
+      font-weight:800;
+      letter-spacing:-.02em;
+      color:#4a2a92;
+    }
+
+    #eventCalendarSection .ecs-mobile-row-date.is-today{
+      color:#d63a2f;
+    }
+
+    #eventCalendarSection .ecs-mobile-row-content{
+      min-width:0;
+      flex:1 1 auto;
+      display:flex;
+      align-items:flex-start;
+      gap:14px;
+    }
+
+    #eventCalendarSection .ecs-mobile-row-title{
+      margin:0;
+      font-size:18px;
+      line-height:1.55;
+      letter-spacing:-.03em;
+      font-weight:700;
+      word-break:keep-all;
+      color:#2d6a4f;
+      text-decoration:none;
+    }
+
+    #eventCalendarSection .ecs-mobile-row-meta{
+      margin-top:4px;
+      font-size:13px;
+      line-height:1.5;
+      color:#5f6f64;
+      font-weight:600;
+    }
+
+    #eventCalendarSection .ecs-mobile-row:focus,
+    #eventCalendarSection .ecs-mobile-row:hover{
+      text-decoration:none;
+    }
+
+    #eventCalendarSection .ecs-mobile-row.is-focus-target{
+      background:linear-gradient(90deg, rgba(45,106,79,.10), rgba(45,106,79,.03));
+      transition:background .35s ease;
+    }
+
+    #eventCalendarSection .ecs-empty{
+      padding:40px 0;
+      text-align:center;
+      color:var(--ecs-muted);
+      font-size:15px;
+      font-weight:600;
+    }
+
+    #eventCalendarSection .ecs-admin{
+      margin-top:34px;
+      padding:22px;
+      border:1px solid rgba(17,17,17,.08);
+      background:rgba(255,255,255,.6);
+      border-radius:20px;
+      box-shadow:0 18px 40px rgba(0,0,0,.03);
+      opacity:0;
+      transform:translateY(24px);
+      animation:ecsFadeInUp .9s .12s cubic-bezier(.22,1,.36,1) forwards;
+    }
+
+    #eventCalendarSection .ecs-admin-title{
+      margin:0 0 8px;
+      font-size:20px;
+      line-height:1.3;
+      letter-spacing:-.03em;
+      font-weight:800;
+    }
+
+    #eventCalendarSection .ecs-admin-desc{
+      margin:0;
+      color:var(--ecs-muted);
+      font-size:14px;
+      line-height:1.6;
+      font-weight:600;
+      word-break:keep-all;
+    }
+
+    #eventCalendarSection .ecs-admin-grid{
+      margin-top:18px;
+      display:grid;
+      grid-template-columns:repeat(2,minmax(0,1fr));
+      gap:18px;
+    }
+
+    #eventCalendarSection .ecs-admin-card{
+      padding:18px;
+      border-radius:16px;
+      background:rgba(255,255,255,.7);
+      border:1px solid rgba(17,17,17,.07);
+    }
+
+    #eventCalendarSection .ecs-admin-card h4{
+      margin:0 0 10px;
+      font-size:15px;
+      line-height:1.4;
+      font-weight:800;
+      letter-spacing:-.02em;
+    }
+
+    #eventCalendarSection .ecs-admin-code{
+      margin:0;
+      padding:14px 16px;
+      border-radius:14px;
+      background:#f9f9f9;
+      border:1px solid rgba(17,17,17,.08);
+      font-size:12px;
+      line-height:1.7;
+      color:#333;
+      overflow:auto;
+      white-space:pre-wrap;
+      word-break:break-word;
+    }
+
+    #eventCalendarSection .ecs-tooltip{
+      position:absolute;
+      z-index:20;
+      min-width:240px;
+      max-width:340px;
+      padding:14px 14px 12px;
+      border-radius:16px;
+      background:rgba(17,17,17,.96);
+      color:#fff;
+      box-shadow:0 16px 34px rgba(0,0,0,.18);
+      pointer-events:none;
+      opacity:0;
+      transform:translateY(10px);
+      transition:opacity .25s ease, transform .25s ease;
+    }
+
+    #eventCalendarSection .ecs-tooltip.is-visible{
+      opacity:1;
+      transform:translateY(0);
+    }
+
+    #eventCalendarSection .ecs-tooltip-kicker{
+      display:flex;
+      align-items:center;
+      gap:8px;
+      font-size:12px;
+      color:rgba(255,255,255,.7);
+      font-weight:700;
+      letter-spacing:.02em;
+      margin-bottom:8px;
+    }
+
+    #eventCalendarSection .ecs-tooltip-title{
+      margin:0;
+      font-size:15px;
+      line-height:1.45;
+      font-weight:800;
+      letter-spacing:-.02em;
+      word-break:keep-all;
+    }
+
+    #eventCalendarSection .ecs-tooltip-meta{
+      margin-top:8px;
+      font-size:12px;
+      line-height:1.55;
+      color:rgba(255,255,255,.74);
+      font-weight:600;
+      word-break:keep-all;
+    }
+
+    #eventCalendarSection .ecs-tooltip-badge{
+      width:18px;
+      height:18px;
+      border-radius:2px;
+      flex:0 0 auto;
+    }
+
+    #eventCalendarSection .ecs-tooltip-badge--performance{
+      background:repeating-linear-gradient(to bottom,var(--ecs-performance) 0 3px,transparent 3px 6px);
+    }
+
+    #eventCalendarSection .ecs-tooltip-badge--exhibit{
+      background:
+        radial-gradient(circle at 25% 25%, var(--ecs-white) 0 1.8px, transparent 1.9px),
+        radial-gradient(circle at 75% 25%, var(--ecs-white) 0 1.8px, transparent 1.9px),
+        radial-gradient(circle at 25% 75%, var(--ecs-white) 0 1.8px, transparent 1.9px),
+        radial-gradient(circle at 75% 75%, var(--ecs-white) 0 1.8px, transparent 1.9px),
+        var(--ecs-exhibit);
+      background-size:9px 9px,9px 9px,9px 9px,9px 9px,auto;
+    }
+
+    #eventCalendarSection .ecs-tooltip-badge--festival{
+      background:repeating-linear-gradient(135deg,var(--ecs-festival) 0 4px,transparent 4px 8px);
+    }
+
+    @keyframes ecsFadeInUp{
+      from{
+        opacity:0;
+        transform:translateY(28px);
+      }
+      to{
+        opacity:1;
+        transform:translateY(0);
+      }
+    }
+
+    @media (max-width: 1180px){
+      #eventCalendarSection .ecs-shell{
+        width:min(100%,calc(100% - 34px));
+      }
+
+      #eventCalendarSection .ecs-title{
+        font-size:48px;
+      }
+
+      #eventCalendarSection .ecs-day{
+        min-height:130px;
+      }
+
+      #eventCalendarSection .ecs-item-text{
+        font-size:13px;
+      }
+    }
+
+    @media (max-width: 860px){
+      #eventCalendarSection .ecs-shell{
+        width:min(100%,calc(100% - 28px));
+        padding:20px 0 38px;
+      }
+
+      #eventCalendarSection .ecs-toolbar{
+        align-items:center;
+        justify-content:center;
+        gap:18px;
+        margin-bottom:20px;
+      }
+
+      #eventCalendarSection .ecs-toolbar-left{
+        width:100%;
+        justify-content:center;
+        gap:14px;
+      }
+
+      #eventCalendarSection .ecs-title-wrap{
+        justify-content:center;
+      }
+
+      #eventCalendarSection .ecs-title{
+        font-size:36px;
+        text-align:center;
+      }
+
+      #eventCalendarSection .ecs-subtools{
+        width:100%;
+        justify-content:center;
+      }
+
+      #eventCalendarSection .ecs-year-picker{
+        width:100%;
+        justify-content:center;
+        flex-wrap:wrap;
+        border-radius:20px;
+      }
+
+      #eventCalendarSection .ecs-legend{
+        width:100%;
+        justify-content:flex-start;
+        gap:18px 24px;
+      }
+
+      #eventCalendarSection .ecs-legend-item{
+        font-size:16px;
+        gap:12px;
+      }
+
+      #eventCalendarSection .ecs-pattern{
+        width:24px;
+        height:36px;
+      }
+
+      #eventCalendarSection .ecs-weekday{
+        min-height:58px;
+        font-size:18px;
+      }
+
+      #eventCalendarSection .ecs-day{
+        min-height:98px;
+        padding:12px 8px 10px;
+      }
+
+      #eventCalendarSection .ecs-date{
+        justify-content:left;
+        font-size:20px;
+      }
+
+      #eventCalendarSection .ecs-items{
+        align-items:left;
+        gap:6px;
+      }
+
+      #eventCalendarSection .ecs-item{
+        gap:0;
+      }
+
+      #eventCalendarSection .ecs-item-badge{
+        width:22px;
+        height:22px;
+      }
+
+      #eventCalendarSection .ecs-item-text,
+      #eventCalendarSection .ecs-more-btn,
+      #eventCalendarSection .ecs-tooltip,
+      #eventCalendarSection .ecs-admin{
+        display:none;
+      }
+
+      #eventCalendarSection .ecs-grid[style*="repeat(4"]{
+        grid-template-columns:repeat(2,minmax(0,1fr)) !important;
+      }
+
+      #eventCalendarSection .ecs-grid[style*="repeat(4"] .ecs-day{
+        min-height:210px !important;
+        padding:18px 14px 16px !important;
+      }
+
+      #eventCalendarSection .ecs-grid[style*="repeat(4"] .ecs-item-text{
+        display:block;
+        font-size:12px;
+      }
+
+      #eventCalendarSection .ecs-grid[style*="repeat(4"] .ecs-item{
+        gap:8px;
+      }
+
+      #eventCalendarSection .ecs-mobile-list{
+        display:block;
+      }
+    }
+
+    @media (max-width: 560px){
+      #eventCalendarSection .ecs-shell{
+        width:min(100%,calc(100% - 20px));
+        padding:18px 0 30px;
+      }
+
+      #eventCalendarSection .ecs-toolbar{
+        gap:14px;
+      }
+
+      #eventCalendarSection .ecs-toolbar-left{
+        gap:8px;
+      }
+
+      #eventCalendarSection .ecs-title-wrap{
+        gap:10px;
+      }
+
+      #eventCalendarSection .ecs-nav-btn{
+        width:38px;
+        height:38px;
+        font-size:18px;
+      }
+
+      #eventCalendarSection .ecs-title{
+        font-size:30px;
+      }
+
+      #eventCalendarSection .ecs-year-picker{
+        padding:5px;
+        gap:4px;
+      }
+
+      #eventCalendarSection .ecs-year-btn,
+      #eventCalendarSection .ecs-today-btn,
+      #eventCalendarSection .ecs-view-btn{
+        padding:9px 11px;
+        font-size:12px;
+      }
+
+      #eventCalendarSection .ecs-legend{
+        gap:12px 20px;
+      }
+
+      #eventCalendarSection .ecs-legend-item{
+        font-size:15px;
+      }
+
+      #eventCalendarSection .ecs-weekday{
+        font-size:17px;
+        min-height:52px;
+      }
+
+      #eventCalendarSection .ecs-day{
+        min-height:92px;
+      }
+
+      #eventCalendarSection .ecs-date{
+        font-size:18px;
+      }
+
+      #eventCalendarSection .ecs-mobile-row{
+        gap:12px;
+        padding:17px 0;
+      }
+
+      #eventCalendarSection .ecs-mobile-row-date{
+        min-width:88px;
+        font-size:13px;
+      }
+
+      #eventCalendarSection .ecs-mobile-row-title{
+        font-size:16px;
+      }
+
+      #eventCalendarSection .ecs-mobile-row-meta{
+        font-size:12px;
+      }
+    }
+  </style>
+
+  <div class="ecs-shell">
+    <div class="ecs-toolbar">
+      <div class="ecs-toolbar-left">
+        <button type="button" class="ecs-nav-btn" data-ecs-prev aria-label="이전 달"></button>
+        <div class="ecs-title-wrap">
+          <h2 class="ecs-title" data-ecs-title>2026년 3월</h2>
+        </div>
+        <button type="button" class="ecs-nav-btn" data-ecs-next aria-label="다음 달"></button>
+      </div>
+
+
+
+      <div class="ecs-legend" aria-label="범례">
+        <div class="ecs-legend-item"><span class="ecs-pattern ecs-pattern--performance" aria-hidden="true"></span><span>숲치료</span></div>
+        <div class="ecs-legend-item"><span class="ecs-pattern ecs-pattern--exhibit" aria-hidden="true"></span><span>교육</span></div>
+        <div class="ecs-legend-item"><span class="ecs-pattern ecs-pattern--festival" aria-hidden="true"></span><span>행사</span></div>
+      </div>
+    </div>
+
+    <div class="ecs-main" data-ecs-main></div>
+
+    <!-- <div class="ecs-admin">
+      <h3 class="ecs-admin-title">프로그램을 쉽게 추가하는 방법</h3>
+      <p class="ecs-admin-desc">아래처럼 <strong>날짜 / 구분 / 제목 / url</strong>만 넣으면 바로 달력과 모바일 리스트에 자동 반영됩니다. url을 넣으면 아이콘이나 행사 제목을 눌렀을 때 해당 페이지로 이동하고, 비워두거나 <code>#</code>로 두면 링크 없이 표시됩니다. 날짜 범위를 넣고 싶으면 start / end 를 함께 쓰면 됩니다.</p>
+      <div class="ecs-admin-grid">
+        <div class="ecs-admin-card">
+          <h4>단일 날짜 등록 예시</h4>
+          <pre class="ecs-admin-code">{ date: '2026-03-07', category: 'performance', title: '2026 부활 40주년 콘서트 – 세종시', area: '세종', link: 'https://example.com/program-1' }</pre>
+        </div>
+        <div class="ecs-admin-card">
+          <h4>기간 등록 예시</h4>
+          <pre class="ecs-admin-code">{ start: '2026-03-13', end: '2026-03-22', category: 'performance', title: '연극 &lt;벙커 트릴로지 THE BUNKER TRILOGY&gt;', area: '서울', link: 'https://example.com/program-2' }</pre>
+        </div>
+      </div>
+    </div> -->
+  </div>
+
+  <div class="ecs-tooltip" data-ecs-tooltip></div>
+
+  <script>
+    (function(){
+      var section = document.getElementById('eventCalendarSection');
+      if(!section) return;
+
+      var monthNames = ['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'];
+      var categoryMap = {
+        performance: { label: '공연', className: 'performance' },
+        exhibit: { label: '전시', className: 'exhibit' },
+        festival: { label: '행사', className: 'festival' }
+      };
+
+      var programData = [
+        { date: '2026-03-07', category: 'performance', title: '2026 부활 40주년 콘서트 – 세종시', area: '세종', link: 'https://example.com/program-1' },
+        { date: '2026-03-13', category: 'performance', title: '스타인웨이 위너콘서트 인 코리아 〈이판 우 리사이틀〉', area: '서울', link: '#' },
+        { start: '2026-03-13', end: '2026-03-22', category: 'performance', title: '연극 <벙커 트릴로지 THE BUNKER TRILOGY>', area: '서울', link: 'https://example.com/program-2' },
+        { date: '2026-03-21', category: 'performance', title: '뮤지컬 <어쩌면 해피엔딩>', area: '서울', link: '#' },
+        { start: '2026-03-27', end: '2026-03-28', category: 'performance', title: '연극 <그때도 오늘2: 꽃신>', area: '대전', link: '#' },
+        { date: '2026-03-31', category: 'performance', title: '국립심포니콘서트오케스트라 2026 시즌오프닝콘서트 <Re:Formation>', area: '서울', link: '#' },
+        { start: '2026-05-03', end: '2026-05-18', category: 'exhibit', title: '빛과 면의 정원 展', area: '부산', link: '#' },
+        { date: '2026-05-21', category: 'festival', title: '도시문화 야외 아트페스티벌', area: '인천', link: '#' },
+        { start: '2026-08-11', end: '2026-08-16', category: 'festival', title: '여름 감성 뮤직 페스티벌', area: '강릉', link: '#' },
+        { date: '2026-11-06', category: 'performance', title: '오페라 갈라 콘서트', area: '대구', link: '#' },
+        { start: '2027-02-05', end: '2027-02-12', category: 'performance', title: '클래식 위크 서울 2027', area: '서울', link: '#' },
+        { date: '2027-04-17', category: 'festival', title: '봄빛 아트마켓 페어', area: '전주', link: '#' },
+        { start: '2027-09-02', end: '2027-09-28', category: 'exhibit', title: '현대공예 큐레이션 展', area: '서울', link: '#' },
+        { date: '2028-01-15', category: 'performance', title: '신년 챔버 콘서트', area: '서울', link: '#' },
+        { start: '2028-06-08', end: '2028-06-10', category: 'festival', title: '서울 리듬 페스타', area: '서울', link: '#' },
+        { date: '2028-10-03', category: 'exhibit', title: '미디어아트 파노라마', area: '광주', link: '#' },
+        { start: '2029-03-22', end: '2029-03-24', category: 'festival', title: '도심 봄 페스티벌', area: '부산', link: '#' },
+        { date: '2029-07-19', category: 'performance', title: '한여름 오케스트라 나이트', area: '제주', link: '#' },
+        { start: '2029-11-01', end: '2029-11-30', category: 'exhibit', title: '디자인 아카이브 기획전', area: '서울', link: '#' },
+        { date: '2030-02-14', category: 'performance', title: '러브 인 클래식 콘서트', area: '서울', link: '#' },
+        { start: '2030-05-01', end: '2030-05-05', category: 'festival', title: '패밀리 컬처 위크', area: '수원', link: '#' },
+        { date: '2030-12-24', category: 'performance', title: '윈터 갈라 스페셜', area: '서울', link: '#' }
+      ];
+
+      var titleEl = section.querySelector('[data-ecs-title]');
+      var mainEl = section.querySelector('[data-ecs-main]');
+      var tooltipEl = section.querySelector('[data-ecs-tooltip]');
+      var prevBtn = section.querySelector('[data-ecs-prev]');
+      var nextBtn = section.querySelector('[data-ecs-next]');
+      var yearBtns = Array.prototype.slice.call(section.querySelectorAll('[data-ecs-year]'));
+
+      var now = new Date();
+      var initialYear = now.getFullYear();
+      var state = { current: new Date(initialYear, 0, 1) };
+
+      function toISO(date){
+        var y = date.getFullYear();
+        var m = String(date.getMonth()+1).padStart(2,'0');
+        var d = String(date.getDate()).padStart(2,'0');
+        return y + '-' + m + '-' + d;
+      }
+
+      function fromISO(value){
+        var parts = value.split('-').map(Number);
+        return new Date(parts[0], parts[1]-1, parts[2]);
+      }
+
+      function clampYear(year){
+        return Math.min(2030, Math.max(2026, year));
+      }
+
+      function escapeHtml(str){
+        return String(str)
+          .replace(/&/g, '&amp;')
+          .replace(/</g, '&lt;')
+          .replace(/>/g, '&gt;')
+          .replace(/\"/g, '&quot;')
+          .replace(/'/g, '&#39;');
+      }
+
+      function escapeAttr(str){
+        return escapeHtml(str || '#');
+      }
+
+      function expandPrograms(data){
+        var out = [];
+        data.forEach(function(item, index){
+          if(item.date){
+            out.push({ id: index + '-' + item.date, date: item.date, category: item.category, title: item.title, area: item.area || '', link: item.link || '#' });
+            return;
+          }
+          if(item.start && item.end){
+            var current = fromISO(item.start);
+            var end = fromISO(item.end);
+            while(current <= end){
+              out.push({ id: index + '-' + toISO(current), date: toISO(current), category: item.category, title: item.title, area: item.area || '', link: item.link || '#' });
+              current.setDate(current.getDate()+1);
+            }
+          }
+        });
+        return out;
+      }
+
+      function getProgramsForMonth(year, month){
+        return expandedPrograms.filter(function(item){
+          var d = fromISO(item.date);
+          return d.getFullYear() === year && d.getMonth() === month;
+        }).sort(function(a,b){ return a.date.localeCompare(b.date); });
+      }
+
+      function buildProgramRanges(items){
+        var grouped = {};
+        items.forEach(function(item){
+          var key = [item.category, item.title, item.area || '', item.link || '#'].join('||');
+          if(!grouped[key]) grouped[key] = [];
+          grouped[key].push(item);
+        });
+        return Object.keys(grouped).map(function(key){
+          var list = grouped[key].slice().sort(function(a,b){ return a.date.localeCompare(b.date); });
+          var ranges = [];
+          var start = fromISO(list[0].date);
+          var prev = fromISO(list[0].date);
+          for(var i=1; i<list.length; i++){
+            var current = fromISO(list[i].date);
+            var expected = new Date(prev.getFullYear(), prev.getMonth(), prev.getDate()+1);
+            if(current.getTime() === expected.getTime()){
+              prev = current;
+            } else {
+              ranges.push({ start: new Date(start), end: new Date(prev) });
+              start = current;
+              prev = current;
+            }
+          }
+          ranges.push({ start: new Date(start), end: new Date(prev) });
+          return { id: list[0].id, category: list[0].category, title: list[0].title, area: list[0].area || '', link: list[0].link || '#', ranges: ranges, firstDate: list[0].date };
+        }).sort(function(a,b){ return a.firstDate.localeCompare(b.firstDate); });
+      }
+
+      function formatRangeLabel(startDate, endDate, compact){
+        var s = typeof startDate === 'string' ? fromISO(startDate) : startDate;
+        var e = typeof endDate === 'string' ? fromISO(endDate) : endDate;
+        var sameDay = s.getFullYear() === e.getFullYear() && s.getMonth() === e.getMonth() && s.getDate() === e.getDate();
+        var sameMonth = s.getFullYear() === e.getFullYear() && s.getMonth() === e.getMonth();
+        if(compact){
+          if(sameDay) return (s.getMonth()+1) + '월 ' + s.getDate() + '일';
+          if(sameMonth) return (s.getMonth()+1) + '월 ' + s.getDate() + '일 ~ ' + e.getDate() + '일';
+          return (s.getMonth()+1) + '월 ' + s.getDate() + '일 ~ ' + (e.getMonth()+1) + '월 ' + e.getDate() + '일';
+        }
+        if(sameDay) return s.getDate() + '일';
+        if(sameMonth) return s.getDate() + '일 ~ ' + e.getDate() + '일';
+        return (s.getMonth()+1) + '월 ' + s.getDate() + '일 ~ ' + (e.getMonth()+1) + '월 ' + e.getDate() + '일';
+      }
+
+      function updateYearButtons(){
+        var year = state.current.getFullYear();
+        yearBtns.forEach(function(btn){
+          btn.classList.toggle('is-active', Number(btn.getAttribute('data-ecs-year')) === year);
+        });
+      }
+
+      function renderYearView(){
+        var year = state.current.getFullYear();
+        titleEl.textContent = year + '년 전체 일정';
+        var html = '<div class="ecs-grid-wrap"><div class="ecs-grid" style="grid-template-columns:repeat(4,minmax(0,1fr));">';
+        for(var i=0; i<12; i++){
+          var monthPrograms = buildProgramRanges(getProgramsForMonth(year, i));
+          html += '<div class="ecs-day" style="min-height:250px;padding:22px 18px 18px;align-items:flex-start;">';
+          html += '<div class="ecs-date" style="justify-content:flex-start;font-size:32px;color:' + (i===0 ? 'var(--ecs-sun)' : (i===11 ? 'var(--ecs-sat)' : '#111')) + ';margin-bottom:8px;">' + (i+1) + '월</div>';
+          html += '<div class="ecs-items" style="width:100%;gap:10px;">';
+          if(monthPrograms.length){
+            monthPrograms.forEach(function(program, idx){
+              var rangeText = program.ranges.map(function(range){ return formatRangeLabel(range.start, range.end, false); }).join(' / ');
+              if(program.link && program.link !== '#'){
+                html += '<a class="ecs-item" style="animation-delay:' + (0.03 * idx) + 's;align-items:flex-start;" data-ecs-item-id="' + program.id + '" data-ecs-link="' + escapeAttr(program.link) + '" href="' + escapeAttr(program.link) + '" target="_blank" rel="noopener">';
+              } else {
+                html += '<button type="button" class="ecs-item" style="animation-delay:' + (0.03 * idx) + 's;align-items:flex-start;" data-ecs-item-id="' + program.id + '" data-ecs-link="#">';
+              }
+              html += '<span class="ecs-item-badge ecs-item-badge--' + categoryMap[program.category].className + '" aria-hidden="true"></span>';
+              html += '<span class="ecs-item-text" style="white-space:normal;overflow:visible;text-overflow:clip;line-height:1.45;">' + escapeHtml(rangeText) + ' · ' + escapeHtml(program.title) + '</span>';
+              html += program.link && program.link !== '#' ? '</a>' : '</button>';
+            });
+          } else {
+            html += '<div class="ecs-empty" style="padding:8px 0 0;text-align:left;">일정 없음</div>';
+          }
+          html += '</div></div>';
+        }
+        html += '</div></div>';
+        mainEl.innerHTML = html;
+      }
+
+      function hideTooltip(){
+        tooltipEl.classList.remove('is-visible');
+      }
+
+      function showTooltip(target){
+        if(window.innerWidth <= 860) return;
+        var itemId = target.getAttribute('data-ecs-item-id');
+        var program = expandedPrograms.find(function(item){ return item.id === itemId; });
+        if(!program) return;
+        tooltipEl.innerHTML = '<div class="ecs-tooltip-kicker"><span class="ecs-tooltip-badge ecs-tooltip-badge--' + categoryMap[program.category].className + '"></span><span>' + categoryMap[program.category].label + (program.area ? ' · ' + escapeHtml(program.area) : '') + '</span></div><h4 class="ecs-tooltip-title">' + escapeHtml(program.title) + '</h4><div class="ecs-tooltip-meta">일정: ' + escapeHtml(program.date) + '</div>';
+        var rect = target.getBoundingClientRect();
+        var sectionRect = section.getBoundingClientRect();
+        tooltipEl.style.left = Math.min(rect.left - sectionRect.left + 20, section.clientWidth - 360) + 'px';
+        tooltipEl.style.top = rect.top - sectionRect.top + 32 + 'px';
+        tooltipEl.classList.add('is-visible');
+      }
+
+      var expandedPrograms = expandPrograms(programData);
+
+      prevBtn.addEventListener('click', function(){
+        state.current = new Date(clampYear(state.current.getFullYear() - 1), 0, 1);
+        updateYearButtons();
+        renderYearView();
+      });
+
+      nextBtn.addEventListener('click', function(){
+        state.current = new Date(clampYear(state.current.getFullYear() + 1), 0, 1);
+        updateYearButtons();
+        renderYearView();
+      });
+
+      yearBtns.forEach(function(btn){
+        btn.addEventListener('click', function(){
+          state.current = new Date(Number(btn.getAttribute('data-ecs-year')), 0, 1);
+          updateYearButtons();
+          renderYearView();
+        });
+      });
+
+      mainEl.addEventListener('click', function(e){
+        var item = e.target.closest('[data-ecs-item-id]');
+        if(!item) return;
+        if(item.tagName.toLowerCase() === 'a') return;
+        var link = item.getAttribute('data-ecs-link');
+        if(link && link !== '#') window.open(link, '_blank');
+      });
+
+      mainEl.addEventListener('mouseover', function(e){
+        var item = e.target.closest('[data-ecs-item-id]');
+        if(item) showTooltip(item);
+      });
+
+      mainEl.addEventListener('mouseout', function(e){
+        var item = e.target.closest('[data-ecs-item-id]');
+        if(item) hideTooltip();
+      });
+
+      section.addEventListener('mouseleave', hideTooltip);
+      window.addEventListener('resize', hideTooltip);
+
+      updateYearButtons();
+      renderYearView();
+    })();
+  </script>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+<div id="footerContainer"></div>
+
+
+<script src="./js/menu.js"></script>
+<script src="./js/footer.js"></script>
+<script src="./js/main.js"></script>
+
+</html>

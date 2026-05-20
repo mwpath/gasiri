@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+<head>
+  <!-- ===== 기본 메타 ===== -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>생태명상 &amp; 가시리 포레스트 | 숲을 통한 치유와 회복</title>
+  <meta name="description" content="제주 가시리 포레스트에서 자연과 연결되는 생태명상·산림치유 프로그램을 경험하세요. 숲속 걷기, 명상, 이완 활동 등으로 몸과 마음을 회복합니다.">
+  <meta name="keywords" content="생태명상, 산림치유, 숲치유, 제주 치유여행, 가시리 포레스트, 명상 프로그램, 자연 치유">
+  <meta name="author" content="Gasir i Forest">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <link rel="canonical" href="https://example.com/"> <!-- TODO: 실제 도메인으로 교체 -->
+
+  <!-- ===== 색상/테마 ===== -->
+  <meta name="theme-color" content="#0f1112">
+  <meta name="msapplication-TileColor" content="#0f1112">
+
+  <!-- ===== 성능 최적화: 프리커넥트/폰트 ===== -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Pretendard를 CDN으로 쓰는 경우 아래 예시 사용(프로젝트 정책에 맞게 교체 가능) -->
+  <!-- <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@400;600;700;800&display=swap" rel="stylesheet"> -->
+
+  <!-- ===== 파비콘/아이콘 ===== -->
+  <!-- TODO: 경로를 실제 아이콘 파일로 교체 -->
+  <link rel="icon" href="/icons/favicon.ico" sizes="any">
+  <link rel="icon" href="/icons/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+
+  <!-- ===== Open Graph / Facebook ===== -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ko_KR">
+  <meta property="og:site_name" content="GASIRI FOREST">
+  <meta property="og:title" content="생태명상 &amp; 가시리 포레스트 | 숲을 통한 치유와 회복">
+  <meta property="og:description" content="자연과 연결되는 생태명상·산림치유 프로그램으로 몸과 마음을 회복하세요.">
+  <meta property="og:url" content="https://example.com/">
+  <meta property="og:image" content="https://example.com/og/forest-1200x630.jpg"> <!-- 1200x630 권장 -->
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+
+  <!-- ===== Twitter Card ===== -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="생태명상 &amp; 가시리 포레스트 | 숲을 통한 치유와 회복">
+  <meta name="twitter:description" content="숲속 걷기, 명상, 이완 활동 등으로 자연과 깊이 연결되는 시간. 제주 가시리 포레스트.">
+  <meta name="twitter:image" content="https://example.com/og/forest-1200x630.jpg">
+
+  <!-- ===== 프리로드(Above-the-fold 이미지) ===== -->
+  <!-- TODO: 실제 경로로 교체 -->
+  <link rel="preload" as="image" href="./img/intro-1.png" imagesrcset="./img/intro-1.png" fetchpriority="high">
+  <link rel="preload" as="image" href="./img/wood-1.jpg">
+  <link rel="preload" as="image" href="./img/wood.jpg">
+
+  <!-- ===== 구조화 데이터(JSON-LD) : 사이트/조직 ===== -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "name": "GASIRI FOREST",
+        "url": "https://example.com/",
+        "inLanguage": "ko-KR",
+        "description": "제주 가시리 포레스트의 생태명상·산림치유 프로그램 안내"
+      },
+      {
+        "@type": "Organization",
+        "name": "가시리 포레스트",
+        "url": "https://example.com/",
+        "logo": "https://example.com/icons/logo.png",
+        "sameAs": [
+          "https://www.instagram.com/example",
+          "https://www.facebook.com/example"
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <!-- ===== 기본 스타일 리셋(선택) : 필요시 사용자 프로젝트 리셋 사용 ===== -->
+  <style>
+    /* 시스템 폰트 스택 + 한글 가독성 개선 */
+    html { -webkit-text-size-adjust: 100%; }
+    body { margin:0; font-synthesis-weight: none; text-rendering: optimizeLegibility; }
+    img { max-width: 100%; height: auto; }
+    button { font: inherit; }
+  </style>
+</head>
+<body>
+
+<div id="menu_a"></div>
+
+
+<section id="whoWeAre" aria-label="Who We Are">
+  <style>
+    /* ================= Scope: #whoWeAre only ================= */
+    #whoWeAre {
+      --ink: #ffffff; /* 글자색 */
+      --overlay: rgba(0, 0, 0, 0.35); /* 어두운 오버레이 */
+      --border:#6a8b2e; /* 하단 라인 */
+      font-family: Pretendard, "Noto Sans KR", system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+      position: relative;
+      width: 100%;
+      min-height: 296px;
+      color: var(--ink);
+      background: url('./img/b06.jpg') center/cover no-repeat; /* 👉 여기에 배경 이미지 교체 */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      overflow: hidden;
+      border-bottom: 6px solid var(--border);
+    }
+
+    #whoWeAre::before {
+  
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: var(--overlay);
+      z-index: 1;
+    }
+
+    #whoWeAre .textBox {
+      position: relative;
+      z-index: 2;
+    }
+
+    #whoWeAre h2 {
+      font-size: 2.4rem;
+      font-weight: 500;
+      line-height: 1.3;
+      margin: 0;
+    }
+
+    /* ===== 반응형 ===== */
+    @media (max-width: 768px) {
+      #whoWeAre {
+        min-height: 260px;
+      }
+      #whoWeAre h2 {
+        font-size: 1.8rem;
+      }
+    }
+  </style>
+
+  <div class="textBox">
+    <h2>오시는 길</h2>
+  </div>
+</section>
+
+
+
+
+<!-- ===================== 오시는 길 섹션 (카카오맵 퍼가기 코드 적용 + 100% 너비/높이 · 모바일에서 글자(패널)가 지도 위로) ===================== -->
+<section id="RouteS1" aria-label="오시는 길 섹션 (지도 + 정보 패널)">
+  <style>
+    /* ===== Scope Reset: #RouteS1 내부만 초기화 (외부 레이아웃 간섭 방지) ===== */
+    #RouteS1{ box-sizing:border-box; }
+    #RouteS1 *, #RouteS1 *::before, #RouteS1 *::after{ box-sizing:inherit; }
+
+    /* ================= Scope: #RouteS1 only ================= */
+    #RouteS1{
+      --panel:#2b2c30;            /* 우측 패널 배경 */
+      --ink:#f4f4f5;              /* 본문 텍스트(다크 배경용) */
+      --muted:#c7c7cb;            /* 보조 텍스트 */
+      --label:#9ca3af;            /* 항목 라벨 색 */
+      --em:#d9b58a;               /* 포인트(전화번호) */
+      --line:rgba(255,255,255,.12);
+      --ring:rgba(255,255,255,.05);/* 워터마크 링 */
+      --maxW:1280px;
+      --gap:0;
+
+      font-family:"Pretendard","Noto Sans KR",system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
+      color:var(--ink);
+
+      /* Grid + 안전한 독립 섹션 */
+      display:grid;
+      grid-template-columns: 1fr 520px;   /* 좌: 지도 / 우: 패널 */
+      grid-template-areas: "map panel";   /* 데스크톱 기본 배치 */
+      gap:var(--gap);
+      align-items:stretch;
+
+      width:100%; max-width:var(--maxW);
+      margin:100px auto;         
+      background:#fff;
+      border-radius:18px;
+      overflow:hidden;
+      box-shadow:0 20px 60px rgba(0,0,0,.25);
+      position:relative; z-index:0;
+      contain:layout paint style;
+    }
+
+    /* 지도 영역 */
+    #RouteS1 .mapWrap{
+      grid-area:map;
+      position:relative;
+      min-height:clamp(420px, 70vh, 820px); /* 화면 높이에 자연스럽게 맞춤 */
+      background:#0e0e0f;
+      isolation:isolate;
+    }
+
+    /* kakao roughmap가 들어가는 컨테이너를 강제로 100% 채우도록 */
+    #RouteS1 #daumRoughmapContainer1763271317410.root_daum_roughmap{
+      position:absolute; inset:0;
+      width:100% !important; height:100% !important;
+    }
+    /* 내부 요소 높이 상쇄(카카오가 인라인 픽셀값을 줄 때가 있어서 강제 100%) */
+    #RouteS1 .root_daum_roughmap .wrap_map,
+    #RouteS1 .root_daum_roughmap .map_border,
+    #RouteS1 .root_daum_roughmap .map{
+      height:100% !important;
+    }
+
+    #RouteS1 .mapFallback{ /* iframe/지도 로드 실패 시 노출용 */
+      position:absolute; inset:0; display:grid; place-items:center;
+      color:#e5e7eb; background:linear-gradient(135deg,#202124,#16181d);
+      font-weight:600; letter-spacing:.05em; pointer-events:none;
+    }
+
+    /* 정보 패널 */
+    #RouteS1 .panel{
+      grid-area:panel;
+      background:
+        radial-gradient(480px 480px at 90% 20%, var(--ring) 0 60%, transparent 62%),
+        var(--panel);
+      padding:56px 48px 52px;
+      color:#f7f7f8;
+    }
+    #RouteS1 .title{
+      font-size:34px; line-height:1.15; font-weight:800; letter-spacing:-0.02em; margin:4px 0 36px;
+    }
+    #RouteS1 .rows{ display:grid; gap:22px; }
+    #RouteS1 .row{
+      display:grid; grid-template-columns: 96px 1fr; gap:18px; align-items:start;
+      padding:18px 0; border-top:1px solid var(--line);
+    }
+    #RouteS1 .row:first-child{ border-top:0; padding-top:0; }
+    #RouteS1 .label{ color:var(--label); font-size:14px; letter-spacing:.08em; font-weight:700; padding-top:2px; }
+    #RouteS1 .content{ color:var(--ink); font-size:16px; line-height:1.75; }
+    #RouteS1 .content .dim{ color:var(--muted); }
+
+    #RouteS1 .phoneBox{ padding-top:24px; margin-top:10px; }
+    #RouteS1 .phone{ font-size:32px; line-height:1.2; font-weight:800; letter-spacing:.02em; color:var(--em); white-space:nowrap; }
+
+    /* 반응형: 모바일에서 글자(패널)가 지도보다 위로 오도록 순서 전환 */
+    @media (max-width: 1100px){
+      #RouteS1{ grid-template-columns: 1fr 1fr;}
+    }
+    @media (max-width: 900px){
+      #RouteS1{
+        grid-template-columns: 1fr;
+        grid-template-areas:
+          "panel"   /* 1) 패널 먼저 */
+          "map";    /* 2) 지도 다음 */
+        border-radius:0px;
+        margin:0 auto;
+      }
+      #RouteS1 .mapWrap{ min-height:60vh; }
+      #RouteS1 .panel{ padding:36px 22px 32px; }
+      #RouteS1 .title{ font-size:34px; margin-bottom:26px; }
+      #RouteS1 .row{ grid-template-columns: 1fr; gap:14px; padding:16px 20px; }
+      #RouteS1 .phone{ font-size:34px; }
+    }
+
+      .border1{display:none;}
+  </style>
+
+  <!-- 좌측: 지도 (카카오 지도 퍼가기 - 화면 너비/높이에 맞춰 자동 확장) -->
+  <div class="mapWrap">
+    <!-- 1) 지도 노드 (요청하신 퍼가기 코드의 컨테이너/타임스탬프 적용) -->
+    <div id="daumRoughmapContainer1763271317410" class="root_daum_roughmap root_daum_roughmap_landing"></div>
+
+    <!-- 2) 설치 스크립트 (여러 지도를 쓸 경우, 페이지 전체에 1회만 포함하십시오) -->
+    <script charset="UTF-8" class="daum_roughmap_loader_script" src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
+
+    <!-- 3) 실행 스크립트 : 폭/높이를 100%로 세팅하여 섹션에 완전 맞춤 -->
+    <script charset="UTF-8">
+      (function(){
+        /* 카카오 퍼가기 실행 (요청하신 key/timestamp로 교체) */
+        new daum.roughmap.Lander({
+          "timestamp" : "1763271317410",
+          "key"       : "caczhbvvqtb",
+          "mapWidth"  : "100%",
+          "mapHeight" : "100%"
+        }).render();
+
+        /* 렌더 후에도 100% 유지 (일부 환경에서 인라인 px 강제되는 경우 보정) */
+        function fitKakaoMap(){
+          var sec  = document.getElementById('RouteS1');
+          if(!sec) return;
+          var wrap = sec.querySelector('.mapWrap');
+          var box  = sec.querySelector('#daumRoughmapContainer1763271317410');
+          if(wrap && box){
+            box.style.width  = '100%';
+            box.style.height = wrap.clientHeight + 'px';
+          }
+        }
+        window.addEventListener('resize', fitKakaoMap, {passive:true});
+        /* 초기/비동기 렌더링 대비 다회 호출 */
+        setTimeout(fitKakaoMap, 200);
+        setTimeout(fitKakaoMap, 800);
+        setTimeout(fitKakaoMap, 1600);
+      })();
+    </script>
+
+    <div class="mapFallback" aria-hidden="true">MAP PREVIEW</div>
+  </div>
+
+  <!-- 우측: 정보 패널 -->
+  <aside class="panel">
+    <h2 class="title">생태명상 & 가시리 포레스트</h2>
+    <div class="rows">
+      <div class="row">
+        <div class="label">주소</div>
+        <div class="content">
+          제주특별자치도 서귀포시 표선면 남조로 1487-73<br>
+          <span class="dim"></span>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="label">운영시간</div>
+        <div class="content">
+          월 <strong>오전 9시 ~ 오후 6시까지</strong> <!-- <span class="dim">(점심 오후 1:00 ~ 오후 2:00)</span> --> <br>
+         
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="label">주차이용</div>
+        <div class="content">
+          <strong>무료 주차 가능</strong> <!-- <span class="dim">(점심 오후 1:00 ~ 오후 2:00)</span> --> <br>
+         
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="label">상담전화</div>
+        <div class="content phoneBox">
+          <div class="phone"><a href="tel:010-3857-6685" style="color:#d9b58a;text-decoration:none;cursor:pointer;"><b>010-3857-6685</b></a></div>
+        </div>
+      </div>
+    </div>
+  </aside>
+</section>
+
+
+
+
+
+
+
+</body>
+
+<div id="footerContainer"></div>
+
+
+<script src="./js/menu.js"></script>
+<script src="./js/footer.js"></script>
+<script src="./js/main.js"></script>
+
+</html>
