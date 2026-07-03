@@ -501,8 +501,9 @@
     }
 
     @media (max-width: 768px) {
+      /* [수정] 900vh → 480vh : 슬라이드당 스크롤 거리 축소 (150vh → 80vh) */
       #exordiumHero {
-        height: 900vh;
+        height: 480vh;
       }
 
       #exordiumHero .exo-slide {
@@ -841,6 +842,15 @@
           : 1 - Math.pow(-2 * t + 2, 3) / 2;
       }
 
+      /* [추가] 텍스트 전용 이징 — 움직임은 길게 감속, 투명도는 사인 곡선으로 은은하게 */
+      function easeOutQuint(t) {
+        return 1 - Math.pow(1 - t, 5);
+      }
+
+      function easeInOutSine(t) {
+        return -(Math.cos(Math.PI * t) - 1) / 2;
+      }
+
       function isMobile() {
         return window.matchMedia('(max-width: 768px)').matches;
       }
@@ -869,21 +879,27 @@
         var enterY = mobile ? 22 : 42;
         var exitY = mobile ? -12 : -30;
 
+        /* [수정] 등장: 움직임(easeOutQuint)과 투명도(easeInOutSine)를 분리해
+           글자가 스르륵 떠오르며 은은하게 나타남.
+           퇴장: 전환 구간 전체에 걸쳐 사인 곡선으로 천천히 사라짐. */
         function apply(node, delayStart, enterYOffset, exitYOffset) {
           if (!node) return;
 
           var enterBase = clamp((t - delayStart) / (1 - delayStart || 1), 0, 1);
-          var exitBase = clamp(t / (1 - delayStart * 0.4 || 1), 0, 1);
 
-          var enterT = easeOutCubic(enterBase);
-          var exitT = easeInOutCubic(exitBase);
+          var exitStagger = delayStart * 0.5;
+          var exitBase = clamp((t - exitStagger) / (1 - exitStagger || 1), 0, 1);
 
           if (mode === 'enter') {
-            node.style.opacity = String(enterT);
-            node.style.transform = 'translate3d(0,' + ((1 - enterT) * enterYOffset) + 'px,0)';
+            var moveIn = easeOutQuint(enterBase);
+            var fadeIn = easeInOutSine(enterBase);
+            node.style.opacity = String(fadeIn);
+            node.style.transform = 'translate3d(0,' + ((1 - moveIn) * enterYOffset) + 'px,0)';
           } else if (mode === 'exit') {
-            node.style.opacity = String(1 - exitT);
-            node.style.transform = 'translate3d(0,' + (exitT * exitYOffset) + 'px,0)';
+            var moveOut = easeInOutSine(exitBase);
+            var fadeOut = easeInOutSine(exitBase);
+            node.style.opacity = String(1 - fadeOut);
+            node.style.transform = 'translate3d(0,' + (moveOut * exitYOffset) + 'px,0)';
           } else {
             node.style.opacity = '1';
             node.style.transform = 'translate3d(0,0,0)';
@@ -892,9 +908,9 @@
 
         apply(nodes.badge, 0.00, enterY, exitY);
         apply(nodes.title, 0.05, enterY, exitY);
-        apply(nodes.desc, 0.12, mobile ? 18 : 38, mobile ? -8 : -24);
-        apply(nodes.sub, 0.18, mobile ? 16 : 34, mobile ? -6 : -20);
-        apply(nodes.tags, 0.24, mobile ? 14 : 30, mobile ? -5 : -18);
+        apply(nodes.desc, 0.10, mobile ? 16 : 32, mobile ? -8 : -22);
+        apply(nodes.sub, 0.15, mobile ? 14 : 28, mobile ? -6 : -18);
+        apply(nodes.tags, 0.20, mobile ? 12 : 24, mobile ? -5 : -16);
       }
 
       function resetSlide(slide) {
@@ -947,7 +963,8 @@
         var activeIndex = Math.min(Math.floor(slideFloat), totalSlides - 1);
         var segmentProgress = slideFloat - activeIndex;
 
-        var holdRatio = mobile ? 0.76 : 0.60;
+        /* [수정] 모바일 holdRatio 0.76 → 0.50 : 전환이 더 일찍 시작되고 빨리 끝남 */
+        var holdRatio = mobile ? 0.50 : 0.60;
         var transitionT = 0;
 
         if (segmentProgress > holdRatio) {
@@ -983,7 +1000,7 @@
           var nextOverlay = nextSlide.querySelector('.exo-overlay');
 
           var eased = easeInOutCubic(transitionT);
-          var revealT = mobile ? (eased * 0.94) : (eased * 0.88);
+          var revealT = mobile ? (eased * 0.98) : (eased * 0.88);
 
           nextSlide.classList.add('exo-incoming');
           nextSlide.style.visibility = 'visible';
@@ -1021,7 +1038,10 @@
 
       function animate() {
         targetProgress = getRawProgress();
-        var smoothing = isMobile() ? 0.05 : 0.085;
+
+        /* [수정] 모바일 smoothing 0.05 → 0.22 : 스크롤 추적 딜레이 대폭 감소.
+           모바일은 브라우저 자체 관성 스크롤이 있어서 lerp를 강하게 걸면 이중 딜레이가 됨. */
+        var smoothing = isMobile() ? 0.22 : 0.085;
         renderProgress = lerp(renderProgress, targetProgress, smoothing);
 
         if (Math.abs(targetProgress - renderProgress) < 0.0006) {
