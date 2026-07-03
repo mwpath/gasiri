@@ -233,82 +233,112 @@
       --iaan-teal: #2D6B5E;
       --iaan-white: #ffffff;
       --iaan-gray: #f5f3ef;
-      --iaan-text-sub: rgba(255,255,255,0.8);
+      --iaan-text-sub: rgba(255,255,255,0.88);
       position: relative;
       width: 100%;
       font-family: 'Noto Sans KR', 'Pretendard', -apple-system, sans-serif;
       -webkit-font-smoothing: antialiased;
       overflow: visible;
-
-      /* 마지막 구간에서 혹시 배경이 비어도 검게 보이지 않도록 fallback 변경 */
-      background:
-        url('https://images.unsplash.com/photo-1513506003901-1e6a229e2d15?w=1920&q=85') center/cover no-repeat;
-      background-color: #1a1a1a;
+      background: #1a1a1a;
     }
 
+    /* ✅ JS가 --iaan-vh를 픽셀값으로 잠그면 모바일 주소창 변동에도 흔들리지 않음 */
     #HeroScroll .iaan-stage {
       position: sticky;
       top: 0;
-      height: 100vh;
+      height: 100vh; /* fallback */
+      height: var(--iaan-vh, 100vh);
       overflow: hidden;
       z-index: 1;
-      background:
-        url('https://images.unsplash.com/photo-1513506003901-1e6a229e2d15?w=1920&q=85') center/cover no-repeat;
-      background-color: #1a1a1a;
+      background: #1a1a1a;
+      contain: layout paint;
     }
 
+    /* ✅ spacer도 픽셀 기반 계산 — 모바일 리사이즈 jitter 차단 */
     #HeroScroll .iaan-scroll-spacer {
-      height: 620vh;
+      height: 340vh; /* fallback */
+      height: calc(var(--iaan-vh-raw, 1vh) * 340);
       pointer-events: none;
     }
 
+    @media (max-width: 768px) {
+      /* ✅ 모바일: 스크롤 양 축소 — 덜 내려도 다음 패널 도달 */
+      #HeroScroll .iaan-scroll-spacer {
+        height: 220vh; /* fallback */
+        height: calc(var(--iaan-vh-raw, 1vh) * 220);
+      }
+    }
+
+    /* ✅ CSS transition 제거 — JS lerp 보간이 매 프레임 직접 제어 */
     #HeroScroll .iaan-panel-bg {
       position: absolute;
       inset: 0;
       width: 100%;
       height: 100%;
       opacity: 0;
-      transform: scale(1.06);
+      transform: scale(1.05) translateZ(0);
       will-change: opacity, transform;
       pointer-events: none;
       z-index: 1;
-      transition:
-        opacity 0.6s cubic-bezier(0.22, 1, 0.36, 1),
-        transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+      transition: none;
       backface-visibility: hidden;
       -webkit-backface-visibility: hidden;
     }
 
-  #HeroScroll .iaan-bg-1 {
-  background:
-    linear-gradient(135deg, rgba(40,80,60,0.25) 0%, rgba(60,100,80,0.15) 50%, rgba(20,30,20,0.25) 100%),
-    linear-gradient(to bottom, rgba(0,0,0,0.05) 0%, rgba(0,0,0,0.15) 100%),
-    url('https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1920&q=85') center/cover no-repeat;
-  z-index: 1;
-}
+    #HeroScroll .iaan-bg-1 {
+      background:
+        linear-gradient(180deg, rgba(0,0,0,0.15) 0%, rgba(0,0,0,0.30) 100%),
+        linear-gradient(135deg, rgba(40,80,60,0.20) 0%, rgba(20,30,20,0.20) 100%),
+        url('https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1920&q=80') center/cover no-repeat;
+      z-index: 1;
+    }
 
-#HeroScroll .iaan-bg-2 {
-  background:
-    linear-gradient(to right, rgba(20,60,40,0.55) 0%, rgba(20,60,40,0.25) 45%, rgba(20,60,40,0.05) 100%),
-    url('https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1920&q=85') center/cover no-repeat;
-  z-index: 2;
-}
+    #HeroScroll .iaan-bg-2 {
+      background:
+        linear-gradient(90deg, rgba(15,40,30,0.62) 0%, rgba(15,40,30,0.30) 45%, rgba(15,40,30,0.10) 100%),
+        url('https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1920&q=80') center/cover no-repeat;
+      z-index: 2;
+    }
 
-#HeroScroll .iaan-bg-3 {
-  background:
-    linear-gradient(to left, rgba(30,60,40,0.55) 0%, rgba(30,60,40,0.25) 40%, rgba(30,60,40,0.05) 100%),
-    url('https://images.unsplash.com/photo-1473448912268-2022ce9509d8?w=1920&q=85') center/cover no-repeat;
-  z-index: 3;
-}
+    #HeroScroll .iaan-bg-3 {
+      background:
+        linear-gradient(270deg, rgba(20,45,30,0.62) 0%, rgba(20,45,30,0.30) 40%, rgba(20,45,30,0.10) 100%),
+        url('https://images.unsplash.com/photo-1473448912268-2022ce9509d8?w=1920&q=80') center/cover no-repeat;
+      z-index: 3;
+    }
 
-/* 마지막 슬라이드 (울창한 숲 - 물 없이 나무 중심) */
-#HeroScroll .iaan-bg-4 {
-  background:
-    linear-gradient(to right, rgba(20,40,30,0.18) 0%, rgba(20,40,30,0.08) 45%, rgba(20,40,30,0.00) 100%),
-    url('https://images.unsplash.com/photo-1476231682828-37e571bc172f?w=1920&q=85') center/cover no-repeat;
-  z-index: 4;
-}
+    #HeroScroll .iaan-bg-4 {
+      background:
+        linear-gradient(180deg, rgba(15,30,20,0.15) 0%, rgba(15,30,20,0.30) 100%),
+        linear-gradient(90deg, rgba(20,40,30,0.22) 0%, rgba(20,40,30,0.05) 100%),
+        url('https://images.unsplash.com/photo-1476231682828-37e571bc172f?w=1920&q=80') center/cover no-repeat;
+      z-index: 4;
+    }
 
+    @media (max-width: 768px) {
+      #HeroScroll .iaan-bg-1 {
+        background:
+          linear-gradient(180deg, rgba(0,0,0,0.20) 0%, rgba(0,0,0,0.40) 100%),
+          url('https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1024&q=75') center/cover no-repeat;
+      }
+      #HeroScroll .iaan-bg-2 {
+        background:
+          linear-gradient(180deg, rgba(15,40,30,0.55) 0%, rgba(15,40,30,0.35) 100%),
+          url('https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1024&q=75') center/cover no-repeat;
+      }
+      #HeroScroll .iaan-bg-3 {
+        background:
+          linear-gradient(180deg, rgba(20,45,30,0.55) 0%, rgba(20,45,30,0.35) 100%),
+          url('https://images.unsplash.com/photo-1473448912268-2022ce9509d8?w=1024&q=75') center/cover no-repeat;
+      }
+      #HeroScroll .iaan-bg-4 {
+        background:
+          linear-gradient(180deg, rgba(15,30,20,0.30) 0%, rgba(15,30,20,0.45) 100%),
+          url('https://images.unsplash.com/photo-1476231682828-37e571bc172f?w=1024&q=75') center/cover no-repeat;
+      }
+    }
+
+    /* ✅ 텍스트: Y 이동 없이 제자리 페이드만 — 떨림 원천 차단 */
     #HeroScroll .iaan-content-layer {
       position: absolute;
       inset: 0;
@@ -317,14 +347,12 @@
       display: flex;
       align-items: center;
       opacity: 0;
-      transform: translate3d(0, 54px, 0);
-      will-change: opacity, transform;
+      transform: translateZ(0);
+      will-change: opacity;
       pointer-events: none;
       z-index: 10;
       box-sizing: border-box;
-      transition:
-        opacity 0.42s cubic-bezier(0.22, 1, 0.36, 1),
-        transform 0.72s cubic-bezier(0.22, 1, 0.36, 1);
+      transition: none;
       backface-visibility: hidden;
       -webkit-backface-visibility: hidden;
     }
@@ -333,109 +361,106 @@
       pointer-events: auto;
     }
 
+    /* ===== Panel 1 ===== */
     #HeroScroll .iaan-p1-content {
       justify-content: center;
       text-align: center;
     }
-
     #HeroScroll .iaan-p1-inner {
       max-width: 800px;
-      padding: 0 40px;
+      padding: 0 32px;
     }
-
     #HeroScroll .iaan-p1-title {
-      font-size: clamp(30px, 4.2vw, 52px);
+      font-size: clamp(28px, 4.2vw, 52px);
       font-weight: 700;
       color: var(--iaan-white);
-      line-height: 1.4;
-      margin: 0 0 30px 0;
+      line-height: 1.35;
+      margin: 0 0 28px 0;
       letter-spacing: -0.025em;
-      text-shadow: 0 2px 30px rgba(0,0,0,0.25);
+      text-shadow: 0 2px 30px rgba(0,0,0,0.4);
     }
-
     #HeroScroll .iaan-p1-sub {
-      font-size: clamp(13px, 1.35vw, 16px);
-      color: #fff;
+      font-size: clamp(15px, 1.35vw, 16.5px);
+      color: var(--iaan-text-sub);
       line-height: 1.85;
-      font-weight: 700;
-      text-shadow: 0 1px 15px rgba(0,0,0,0.2);
+      font-weight: 500;
+      letter-spacing: 0.01em;
+      text-shadow: 0 1px 14px rgba(0,0,0,0.5);
     }
 
-    #HeroScroll .iaan-p2-content {
-      padding: 0 8%;
-    }
-
-    #HeroScroll .iaan-p2-inner {
-      max-width: 620px;
-    }
-
+    /* ===== Panel 2 ===== */
+    #HeroScroll .iaan-p2-content { padding: 0 8%; }
+    #HeroScroll .iaan-p2-inner { max-width: 620px; }
     #HeroScroll .iaan-p2-title {
-      font-size: clamp(28px, 3.8vw, 46px);
+      font-size: clamp(26px, 3.8vw, 46px);
       font-weight: 800;
       color: var(--iaan-white);
       line-height: 1.3;
-      margin: 0 0 26px 0;
-      letter-spacing: -0.015em;
+      margin: 0 0 24px 0;
+      letter-spacing: -0.018em;
+      text-shadow: 0 2px 26px rgba(0,0,0,0.4);
     }
-
     #HeroScroll .iaan-p2-sub {
-      font-size: clamp(13px, 1.3vw, 15.5px);
-      color: #fff;
+      font-size: clamp(15px, 1.3vw, 16px);
+      color: var(--iaan-text-sub);
       line-height: 1.9;
-      font-weight: 700;
+      font-weight: 500;
+      letter-spacing: 0.01em;
+      text-shadow: 0 1px 14px rgba(0,0,0,0.5);
     }
 
+    /* ===== Panel 3 ===== */
     #HeroScroll .iaan-p3-content {
       justify-content: flex-end;
       padding: 0 8%;
     }
-
     #HeroScroll .iaan-p3-inner {
       max-width: 620px;
       text-align: right;
     }
-
     #HeroScroll .iaan-p3-title {
-      font-size: clamp(28px, 3.8vw, 46px);
+      font-size: clamp(26px, 3.8vw, 46px);
       font-weight: 700;
       color: var(--iaan-white);
       line-height: 1.4;
-      margin: 0 0 26px 0;
+      margin: 0 0 24px 0;
+      letter-spacing: -0.015em;
+      text-shadow: 0 2px 26px rgba(0,0,0,0.4);
     }
-
     #HeroScroll .iaan-p3-sub {
-      font-size: clamp(13px, 1.3vw, 15.5px);
-      color: #fff;
+      font-size: clamp(15px, 1.3vw, 16px);
+      color: var(--iaan-text-sub);
       line-height: 1.9;
-      font-weight: 700;
+      font-weight: 500;
+      letter-spacing: 0.01em;
+      text-shadow: 0 1px 14px rgba(0,0,0,0.5);
     }
 
-    #HeroScroll .iaan-p4-content {
-      padding: 0 8%;
-    }
-
-    #HeroScroll .iaan-p4-inner {
-      max-width: 620px;
-    }
-
+    /* ===== Panel 4 ===== */
+    #HeroScroll .iaan-p4-content { padding: 0 8%; }
+    #HeroScroll .iaan-p4-inner { max-width: 620px; }
     #HeroScroll .iaan-p4-title {
-      font-size: clamp(28px, 3.8vw, 46px);
+      font-size: clamp(26px, 3.8vw, 46px);
       font-weight: 800;
       color: var(--iaan-white);
       line-height: 1.35;
       margin: 0 0 22px 0;
+      letter-spacing: -0.018em;
+      text-shadow: 0 2px 26px rgba(0,0,0,0.4);
     }
-
     #HeroScroll .iaan-p4-sub {
-      font-size: clamp(13px, 1.3vw, 15.5px);
-      color: #fff;
+      font-size: clamp(15px, 1.3vw, 16px);
+      color: var(--iaan-text-sub);
       line-height: 1.85;
-      font-weight: 700;
+      font-weight: 500;
+      letter-spacing: 0.01em;
+      text-shadow: 0 1px 14px rgba(0,0,0,0.5);
     }
 
+    /* Scroll Indicator */
     #HeroScroll .iaan-scroll-indicator {
       position: absolute;
-      bottom: 40px;
+      bottom: 36px;
       left: 50%;
       transform: translateX(-50%);
       z-index: 20;
@@ -447,40 +472,35 @@
       transition: opacity 0.5s ease;
       pointer-events: none;
     }
-
-    #HeroScroll .iaan-scroll-indicator.hidden {
-      opacity: 0;
-    }
-
+    #HeroScroll .iaan-scroll-indicator.hidden { opacity: 0; }
     #HeroScroll .iaan-scroll-text {
-      font-size: 11px;
-      color: rgba(255,255,255,0.5);
-      letter-spacing: 0.15em;
+      font-size: 10.5px;
+      color: rgba(255,255,255,0.55);
+      letter-spacing: 0.18em;
       text-transform: uppercase;
-      font-weight: 300;
+      font-weight: 400;
     }
-
     #HeroScroll .iaan-scroll-line {
       width: 1px;
-      height: 44px;
-      background: rgba(255,255,255,0.2);
+      height: 42px;
+      background: rgba(255,255,255,0.18);
       position: relative;
       overflow: hidden;
       border-radius: 1px;
     }
-
     #HeroScroll .iaan-scroll-line::after {
       content: '';
       display: block;
       width: 1px;
       height: 100%;
-      background: rgba(255,255,255,0.7);
+      background: rgba(255,255,255,0.75);
       animation: iaanScrollPulse 2s cubic-bezier(0.4, 0, 0.2, 1) infinite;
     }
 
+    /* Progress Dots */
     #HeroScroll .iaan-progress {
       position: absolute;
-      right: 32px;
+      right: 30px;
       top: 50%;
       transform: translateY(-50%);
       z-index: 20;
@@ -491,31 +511,30 @@
       transition: opacity 0.4s ease;
       pointer-events: auto;
     }
-
-    #HeroScroll .iaan-progress.visible {
-      opacity: 1;
-    }
+    #HeroScroll .iaan-progress.visible { opacity: 1; }
 
     #HeroScroll .iaan-dot {
       width: 8px;
       height: 8px;
       border-radius: 50%;
-      background: rgba(255,255,255,0.25);
-      transition: background 0.4s ease, transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.4s ease;
+      background: rgba(255,255,255,0.28);
+      transition: background 0.35s ease, transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.35s ease;
       cursor: pointer;
       border: none;
       outline: none;
       padding: 0;
+      position: relative;
     }
-
-    #HeroScroll .iaan-dot:hover {
-      transform: scale(1.5);
+    #HeroScroll .iaan-dot::before {
+      content: '';
+      position: absolute;
+      inset: -10px;
     }
-
+    #HeroScroll .iaan-dot:hover { transform: scale(1.5); }
     #HeroScroll .iaan-dot.active {
       background: var(--iaan-white);
       transform: scale(1.5);
-      box-shadow: 0 0 8px rgba(255,255,255,0.3);
+      box-shadow: 0 0 10px rgba(255,255,255,0.35);
     }
 
     @keyframes iaanScrollPulse {
@@ -524,28 +543,41 @@
     }
 
     @media (max-width: 768px) {
-      #HeroScroll .iaan-p3-inner {
-        text-align: left;
+      #HeroScroll .iaan-p1-inner { padding: 0 24px; }
+
+      #HeroScroll .iaan-p1-title { font-size: 30px; line-height: 1.35; margin-bottom: 22px; }
+      #HeroScroll .iaan-p2-title,
+      #HeroScroll .iaan-p3-title,
+      #HeroScroll .iaan-p4-title { font-size: 27px; line-height: 1.35; margin-bottom: 20px; }
+
+      #HeroScroll .iaan-p1-sub,
+      #HeroScroll .iaan-p2-sub,
+      #HeroScroll .iaan-p3-sub,
+      #HeroScroll .iaan-p4-sub {
+        font-size: 15px;
+        line-height: 1.85;
+        font-weight: 500;
       }
 
-      #HeroScroll .iaan-p3-content {
-        justify-content: flex-start;
-      }
-
-      #HeroScroll .iaan-progress {
-        right: 16px;
-        gap: 10px;
-      }
-
-      #HeroScroll .iaan-dot {
-        width: 6px;
-        height: 6px;
-      }
+      #HeroScroll .iaan-p3-inner { text-align: left; }
+      #HeroScroll .iaan-p3-content { justify-content: flex-start; }
 
       #HeroScroll .iaan-p2-content,
       #HeroScroll .iaan-p3-content,
-      #HeroScroll .iaan-p4-content {
-        padding: 0 6%;
+      #HeroScroll .iaan-p4-content { padding: 0 24px; }
+
+      #HeroScroll .iaan-progress {
+        right: 14px;
+        gap: 11px;
+      }
+      #HeroScroll .iaan-dot { width: 6px; height: 6px; }
+
+      #HeroScroll .iaan-scroll-indicator { bottom: 28px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      #HeroScroll .iaan-scroll-line::after {
+        animation: none;
       }
     }
   </style>
@@ -557,47 +589,47 @@
     <div class="iaan-panel-bg iaan-bg-4" data-panel="4"></div>
 
     <div class="iaan-content-layer iaan-p1-content" data-panel="1">
-  <div class="iaan-p1-inner">
-    <h2 class="iaan-p1-title">우리는 왜<br>숲을 찾게 될까요?</h2>
-    <p class="iaan-p1-sub">
-      지친 마음과 흐트러진 일상 속에서<br>
-      사람은 본능적으로 자연을 찾습니다.<br>
-      숲은 우리에게 쉼과 회복을 선물하는 공간입니다.
-    </p>
-  </div>
-</div>
+      <div class="iaan-p1-inner">
+        <h2 class="iaan-p1-title">우리는 왜<br>숲을 찾게 될까요?</h2>
+        <p class="iaan-p1-sub">
+          지친 마음과 흐트러진 일상 속에서<br>
+          사람은 본능적으로 자연을 찾습니다.<br>
+          숲은 우리에게 쉼과 회복을 선물하는 공간입니다.
+        </p>
+      </div>
+    </div>
 
-<div class="iaan-content-layer iaan-p2-content" data-panel="2">
-  <div class="iaan-p2-inner">
-    <h2 class="iaan-p2-title">가시리 포레스트는</h2>
-    <p class="iaan-p2-sub">
-      자연 속에서 몸과 마음을 치유하는<br>
-      숲치유 프로그램을 통해<br>
-      일상의 균형과 삶의 회복을 돕는 공간입니다.
-    </p>
-  </div>
-</div>
+    <div class="iaan-content-layer iaan-p2-content" data-panel="2">
+      <div class="iaan-p2-inner">
+        <h2 class="iaan-p2-title">가시리 포레스트는</h2>
+        <p class="iaan-p2-sub">
+          자연 속에서 몸과 마음을 치유하는<br>
+          숲치유 프로그램을 통해<br>
+          일상의 균형과 삶의 회복을 돕는 공간입니다.
+        </p>
+      </div>
+    </div>
 
-<div class="iaan-content-layer iaan-p3-content" data-panel="3">
-  <div class="iaan-p3-inner">
-    <h2 class="iaan-p3-title">숲 속에서의 시간은<br>단순한 휴식이 아닌</h2>
-    <p class="iaan-p3-sub">
-      자연의 소리와 공기, 빛을 통해<br>
-      몸의 긴장을 풀고 마음을 정화하며<br>
-      스스로를 회복하는 깊은 치유의 과정입니다.
-    </p>
-  </div>
-</div>
+    <div class="iaan-content-layer iaan-p3-content" data-panel="3">
+      <div class="iaan-p3-inner">
+        <h2 class="iaan-p3-title">숲 속에서의 시간은<br>단순한 휴식이 아닌</h2>
+        <p class="iaan-p3-sub">
+          자연의 소리와 공기, 빛을 통해<br>
+          몸의 긴장을 풀고 마음을 정화하며<br>
+          스스로를 회복하는 깊은 치유의 과정입니다.
+        </p>
+      </div>
+    </div>
 
-<div class="iaan-content-layer iaan-p4-content" data-panel="4">
-  <div class="iaan-p4-inner">
-    <h2 class="iaan-p4-title">가시리 포레스트에서</h2>
-    <p class="iaan-p4-sub">
-      자연과 연결된 진정한 휴식과<br>
-      다시 살아나는 나 자신을 경험해보세요.
-    </p>
-  </div>
-</div>
+    <div class="iaan-content-layer iaan-p4-content" data-panel="4">
+      <div class="iaan-p4-inner">
+        <h2 class="iaan-p4-title">가시리 포레스트에서</h2>
+        <p class="iaan-p4-sub">
+          자연과 연결된 진정한 휴식과<br>
+          다시 살아나는 나 자신을 경험해보세요.
+        </p>
+      </div>
+    </div>
 
     <div class="iaan-scroll-indicator" id="iaanScrollIndicator">
       <span class="iaan-scroll-text">Scroll</span>
@@ -627,9 +659,40 @@
       var scrollIndicator = section.querySelector('#iaanScrollIndicator');
       var progressNav = section.querySelector('#iaanProgress');
       var totalPanels = 4;
-      var ticking = false;
 
-      var panelStops = [0, 0.24, 0.50, 0.72, 1];
+      var panelStops = [0, 0.25, 0.50, 0.75, 1];
+
+      /* ✅ 배경 이미지 사전 로드 + 디코딩 — 전환 순간 디코딩 끊김 방지 */
+      var isMobile = window.innerWidth <= 768;
+      var imageUrls = isMobile ? [
+        'https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1024&q=75',
+        'https://images.unsplash.com/photo-1473448912268-2022ce9509d8?w=1024&q=75',
+        'https://images.unsplash.com/photo-1476231682828-37e571bc172f?w=1024&q=75'
+      ] : [
+        'https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1920&q=80',
+        'https://images.unsplash.com/photo-1473448912268-2022ce9509d8?w=1920&q=80',
+        'https://images.unsplash.com/photo-1476231682828-37e571bc172f?w=1920&q=80'
+      ];
+
+      imageUrls.forEach(function(url) {
+        var img = new Image();
+        img.src = url;
+        if (img.decode) {
+          img.decode().catch(function(){});
+        }
+      });
+
+      /* ✅ 핵심: 초기 viewport 높이를 픽셀로 고정 → 모바일 주소창 변동 무시 */
+      var lockedVh = window.innerHeight;
+      var lastWidth = window.innerWidth;
+
+      function lockViewportHeight() {
+        lockedVh = window.innerHeight;
+        section.style.setProperty('--iaan-vh', lockedVh + 'px');
+        section.style.setProperty('--iaan-vh-raw', (lockedVh / 100) + 'px');
+      }
+
+      lockViewportHeight();
 
       function clamp(val, min, max) {
         return Math.max(min, Math.min(max, val));
@@ -640,10 +703,11 @@
         return t * t * (3 - 2 * t);
       }
 
+      /* ✅ window.innerHeight 대신 잠긴 값 사용 → 진행도 jitter 차단 */
       function getScrollProgress() {
         var rect = section.getBoundingClientRect();
         var sectionTop = -rect.top;
-        var sectionHeight = section.offsetHeight - window.innerHeight;
+        var sectionHeight = section.offsetHeight - lockedVh;
         if (sectionHeight <= 0) return 0;
         return clamp(sectionTop / sectionHeight, 0, 1);
       }
@@ -652,7 +716,6 @@
         for (var i = 0; i < panelStops.length - 1; i++) {
           var start = panelStops[i];
           var end = panelStops[i + 1];
-
           if (progress >= start && progress <= end) {
             var local = (progress - start) / (end - start);
             return i + local;
@@ -670,92 +733,109 @@
         return totalPanels;
       }
 
+      /* ✅ 배경: 넓은 구간에서 스며들듯 크로스페이드 */
       function getBackgroundOpacity(distance) {
-        if (distance >= 0.92) return 0;
-        return 1 - smoothstep(0.18, 0.92, distance);
+        if (distance >= 1.0) return 0;
+        return 1 - smoothstep(0.15, 1.0, distance);
       }
 
+      /* ✅ 텍스트: 완만한 페이드 (0~0.22 또렷 → 0.22~0.72 서서히) */
       function getContentOpacity(distance) {
-        if (distance >= 0.62) return 0;
-        return 1 - smoothstep(0.06, 0.62, distance);
+        if (distance >= 0.72) return 0;
+        return 1 - smoothstep(0.22, 0.72, distance);
       }
 
-      function updatePanels() {
-        ticking = false;
+      /* ============================================================
+         ✅ 부드러운 스크롤 핵심: lerp(관성 보간) 루프
+         ============================================================ */
+      var targetProgress = 0;
+      var smoothedProgress = 0;
+      var rafId = null;
+      var running = false;
 
-        var progress = getScrollProgress();
+      var reduceMotion = false;
+      try {
+        reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      } catch (e) {}
+
+      var LERP = reduceMotion ? 0.5 : 0.12;
+
+      /* ✅ 더티 체크용 캐시 — 값이 실제로 바뀐 레이어만 스타일 기록 */
+      var bgCache = [];
+      var ctCache = [];
+      backgrounds.forEach(function(){ bgCache.push({op: -1, sc: -1}); });
+      contents.forEach(function(){ ctCache.push({op: -1}); });
+
+      function renderPanels(progress) {
         var rawIndex = getSegmentedRawIndex(progress);
         var activePanel = getActivePanel(progress);
 
         var exitFade = 1;
-        if (progress > 0.94) {
-          exitFade = 1 - smoothstep(0.94, 1.00, progress);
+        if (progress > 0.95) {
+          exitFade = 1 - smoothstep(0.95, 1.00, progress);
         }
 
         if (progressNav) {
           progressNav.classList.toggle('visible', progress > 0.02);
-          progressNav.style.opacity = (progress > 0.02 ? 1 : 0).toFixed(4);
         }
 
         if (scrollIndicator) {
           scrollIndicator.classList.toggle('hidden', progress > 0.025);
-          scrollIndicator.style.opacity = (progress <= 0.025 ? 1 : 0).toFixed(4);
         }
 
-        backgrounds.forEach(function(bg) {
+        backgrounds.forEach(function(bg, bi) {
           var p = parseInt(bg.dataset.panel, 10);
           var panelIndex = p - 1;
           var distance = Math.abs(rawIndex - panelIndex);
-          var opacity;
-          var scale;
+          var opacity, scale;
 
-          /* 마지막 패널은 끝까지 절대 어두워지지 않도록 고정 */
           if (p === totalPanels && progress >= panelStops[totalPanels - 1]) {
             opacity = 1;
-            scale = 1.015;
+            scale = 1.012;
           } else {
             var panelFade = (p === totalPanels) ? 1 : exitFade;
             opacity = getBackgroundOpacity(distance) * panelFade;
 
             var localT = clamp(1 - distance, 0, 1);
-            scale = 1.015 + (1 - smoothstep(0, 1, localT)) * 0.045;
+            scale = 1.012 + (1 - smoothstep(0, 1, localT)) * 0.035;
 
-            if (progress > 0.94 && p !== totalPanels) {
-              scale += smoothstep(0.94, 1.00, progress) * 0.03;
+            if (progress > 0.95 && p !== totalPanels) {
+              scale += smoothstep(0.95, 1.00, progress) * 0.025;
             }
           }
 
-          bg.style.opacity = opacity.toFixed(4);
-          bg.style.transform = 'scale(' + scale.toFixed(4) + ')';
+          /* ✅ 더티 체크: 실제 변화가 있을 때만 style 기록 */
+          var cache = bgCache[bi];
+          if (Math.abs(cache.op - opacity) > 0.002) {
+            bg.style.opacity = opacity.toFixed(3);
+            cache.op = opacity;
+          }
+          if (Math.abs(cache.sc - scale) > 0.0006) {
+            bg.style.transform = 'scale(' + scale.toFixed(4) + ') translateZ(0)';
+            cache.sc = scale;
+          }
         });
 
-        contents.forEach(function(content) {
+        /* ✅ 텍스트: transform 이동 없이 opacity만 제어 — 떨림 원천 차단 */
+        contents.forEach(function(content, ci) {
           var p = parseInt(content.dataset.panel, 10);
           var panelIndex = p - 1;
-          var signedDistance = rawIndex - panelIndex;
-          var distance = Math.abs(signedDistance);
+          var distance = Math.abs(rawIndex - panelIndex);
           var opacity;
-          var safeTranslate;
 
-          /* 마지막 텍스트도 마지막 구간에서 사라지지 않게 유지 */
           if (p === totalPanels && progress >= panelStops[totalPanels - 1]) {
             opacity = 1;
-            safeTranslate = 0;
           } else {
             var panelFade = (p === totalPanels) ? 1 : exitFade;
             opacity = getContentOpacity(distance) * panelFade;
-
-            var translateY = signedDistance * -78;
-            safeTranslate = clamp(translateY, -78, 78);
-
-            if (progress > 0.94 && p !== totalPanels) {
-              safeTranslate -= smoothstep(0.94, 1.00, progress) * 36;
-            }
           }
 
-          content.style.opacity = opacity.toFixed(4);
-          content.style.transform = 'translate3d(0,' + safeTranslate.toFixed(2) + 'px,0)';
-          content.classList.toggle('active', opacity > 0.12);
+          var cache = ctCache[ci];
+          if (Math.abs(cache.op - opacity) > 0.002) {
+            content.style.opacity = opacity.toFixed(3);
+            cache.op = opacity;
+            content.classList.toggle('active', opacity > 0.15);
+          }
         });
 
         dots.forEach(function(dot) {
@@ -764,11 +844,34 @@
         });
       }
 
-      function onScroll() {
-        if (!ticking) {
-          ticking = true;
-          requestAnimationFrame(updatePanels);
+      /* ✅ 매 프레임 보간 루프 — 목표 도달 시 자동 정지 (배터리 절약) */
+      function tick() {
+        targetProgress = getScrollProgress();
+
+        var diff = targetProgress - smoothedProgress;
+
+        if (Math.abs(diff) < 0.0004) {
+          smoothedProgress = targetProgress;
+          renderPanels(smoothedProgress);
+          running = false;
+          rafId = null;
+          return;
         }
+
+        smoothedProgress += diff * LERP;
+        renderPanels(smoothedProgress);
+        rafId = requestAnimationFrame(tick);
+      }
+
+      function startLoop() {
+        if (!running) {
+          running = true;
+          rafId = requestAnimationFrame(tick);
+        }
+      }
+
+      function onScroll() {
+        startLoop();
       }
 
       dots.forEach(function(dot) {
@@ -776,23 +879,47 @@
           var target = parseInt(this.dataset.target, 10);
           var sectionRect = section.getBoundingClientRect();
           var sectionTop = window.pageYOffset + sectionRect.top;
-          var sectionHeight = section.offsetHeight - window.innerHeight;
-          var targetProgress = panelStops[target - 1];
-          var targetScroll = sectionTop + targetProgress * sectionHeight;
+          var sectionHeight = section.offsetHeight - lockedVh;
+          /* 패널의 평탄 구간 중심으로 이동 (=글자가 또렷한 위치) */
+          var targetP = (panelStops[target - 1] + panelStops[target]) / 2;
+          var targetScroll = sectionTop + targetP * sectionHeight;
 
           window.scrollTo({
             top: targetScroll,
             behavior: 'smooth'
           });
+          startLoop();
         });
       });
 
       window.addEventListener('scroll', onScroll, { passive: true });
+      /* ✅ 아이폰 모멘텀 스크롤 중에도 프레임 유지 */
+      window.addEventListener('touchmove', onScroll, { passive: true });
+
+      /* ✅ 화면 회전 시에만 재계산 (주소창 변동에는 반응 X) */
+      window.addEventListener('orientationchange', function() {
+        setTimeout(function() {
+          lockViewportHeight();
+          smoothedProgress = getScrollProgress();
+          startLoop();
+        }, 200);
+      });
+
+      /* ✅ 가로폭이 바뀐 경우(데스크톱 리사이즈)에만 재계산 —
+         모바일 주소창 토글은 width가 그대로라 무시됨 */
       window.addEventListener('resize', function() {
-        requestAnimationFrame(updatePanels);
+        if (window.innerWidth !== lastWidth) {
+          lastWidth = window.innerWidth;
+          lockViewportHeight();
+          smoothedProgress = getScrollProgress();
+          startLoop();
+        }
       }, { passive: true });
 
-      requestAnimationFrame(updatePanels);
+      /* 초기 렌더 — 새로고침 시 중간 위치에서도 즉시 정확하게 표시 */
+      smoothedProgress = getScrollProgress();
+      targetProgress = smoothedProgress;
+      renderPanels(smoothedProgress);
     })();
   </script>
 </section>

@@ -346,15 +346,15 @@ document.write(`
         </a>
 
         <p class="tagline">
-          사람과 자연의 회복을 위한 활동과 교육, 그리고 관계의 숲을 가꾸는 여정.<br>
+          사람과 자연의 회복을 위한 활동과 교육<br>그리고 관계의 숲을 가꾸는 여정<br>
           우리는 자연과 함께 성장합니다.
         </p>
 
-        <div class="chips" aria-label="Contact chips">
+       <!-- <div class="chips" aria-label="Contact chips">
           <span class="chip">Tel. 02-000-0000</span>
           <span class="chip">Email. hello@domain.com</span>
           <span class="chip">Mon–Fri 10:00–18:00</span>
-        </div>
+        </div> -->
       </div>
 
       <nav class="sitemap" aria-label="Footer Sitemap">
@@ -401,17 +401,17 @@ document.write(`
         © <span id="nwFooterYear"></span> 생태명상 & 가시리 포레스트. All Rights Reserved.
       </div>
 
-      <div class="policy-links">
+      <!-- <div class="policy-links">
         <a href="#policy">개인정보처리방침</a>
         <a href="#terms">이용약관</a>
         <a href="#contact">고객센터</a>
-      </div>
+      </div> -->
 
-      <div class="sns">
+     <!-- <div class="sns">
         <a href="#" title="YouTube" aria-label="YouTube">▶</a>
         <a href="#" title="Instagram" aria-label="Instagram">◎</a>
         <a href="#" title="Facebook" aria-label="Facebook">f</a>
-      </div>
+      </div> -->
     </div>
   </div>
 </section>
