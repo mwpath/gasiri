@@ -501,9 +501,10 @@
     }
 
     @media (max-width: 768px) {
-      /* [수정] 900vh → 480vh : 슬라이드당 스크롤 거리 축소 (150vh → 80vh) */
+      /* [수정] 모바일 관성 스크롤에서 한 번에 2개 이상 넘어가지 않도록
+         슬라이드 1개당 약 1화면 이상의 스크롤 구간을 확보 */
       #exordiumHero {
-        height: 480vh;
+        height: 720vh;
       }
 
       #exordiumHero .exo-slide {
@@ -824,6 +825,25 @@
       var targetProgress = 0;
       var renderProgress = 0;
 
+      /* [추가] 모바일 터치 드래그 제어
+         - iPhone / Android의 관성 스크롤이 한 번에 여러 슬라이드 구간을 지나가는 문제 방지
+         - 한 번의 세로 드래그에는 최대 1개 슬라이드만 이동 */
+      var mobileTouch = {
+        active: false,
+        startX: 0,
+        startY: 0,
+        lastX: 0,
+        lastY: 0,
+        startIndex: 0,
+        handled: false,
+        locked: false,
+        timer: null
+      };
+
+      var MOBILE_MOVE_GUARD = 8;
+      var MOBILE_SWIPE_THRESHOLD = 36;
+      var MOBILE_LOCK_MS = 720;
+
       function clamp(v, min, max) {
         return Math.max(min, Math.min(max, v));
       }
@@ -853,6 +873,65 @@
 
       function isMobile() {
         return window.matchMedia('(max-width: 768px)').matches;
+      }
+
+      function getVisualSlideIndex() {
+        if (currentSlide >= 0) {
+          return clamp(currentSlide, 0, totalSlides - 1);
+        }
+
+        return clamp(Math.floor(getRawProgress() * totalSlides), 0, totalSlides - 1);
+      }
+
+      function getSlideStartProgress(index) {
+        index = clamp(index, 0, totalSlides - 1);
+
+        if (totalSlides <= 1) return 0;
+
+        return clamp(index / totalSlides, 0, (totalSlides - 1) / totalSlides);
+      }
+
+      function getScrollYByProgress(progress) {
+        var rect = section.getBoundingClientRect();
+        var pageY = window.pageYOffset || document.documentElement.scrollTop || 0;
+        var sectionPageTop = pageY + rect.top;
+        var scrollableHeight = section.offsetHeight - window.innerHeight;
+
+        if (scrollableHeight <= 0) return sectionPageTop;
+
+        return sectionPageTop + (scrollableHeight * clamp(progress, 0, 1));
+      }
+
+      function scrollToSlide(index, behavior) {
+        var progress = getSlideStartProgress(index);
+        var top = getScrollYByProgress(progress);
+
+        targetProgress = progress;
+
+        window.scrollTo({
+          top: Math.round(top),
+          behavior: behavior || 'smooth'
+        });
+      }
+
+      function isSectionStickyActive() {
+        var rect = section.getBoundingClientRect();
+
+        return rect.top <= 1 && rect.bottom >= window.innerHeight - 1;
+      }
+
+      function lockMobileTouch() {
+        mobileTouch.locked = true;
+        clearTimeout(mobileTouch.timer);
+
+        mobileTouch.timer = setTimeout(function () {
+          mobileTouch.locked = false;
+        }, MOBILE_LOCK_MS);
+      }
+
+      function resetMobileTouch() {
+        mobileTouch.active = false;
+        mobileTouch.handled = false;
       }
 
       function getRawProgress() {
@@ -1051,6 +1130,83 @@
         render(renderProgress);
         requestAnimationFrame(animate);
       }
+
+      function onMobileTouchStart(event) {
+        if (!isMobile()) return;
+        if (!event.touches || event.touches.length !== 1) return;
+
+        var touch = event.touches[0];
+
+        mobileTouch.active = true;
+        mobileTouch.startX = touch.clientX;
+        mobileTouch.startY = touch.clientY;
+        mobileTouch.lastX = touch.clientX;
+        mobileTouch.lastY = touch.clientY;
+        mobileTouch.startIndex = getVisualSlideIndex();
+        mobileTouch.handled = false;
+      }
+
+      function onMobileTouchMove(event) {
+        if (!isMobile()) return;
+        if (!mobileTouch.active) return;
+        if (!event.touches || event.touches.length !== 1) return;
+        if (!isSectionStickyActive()) return;
+
+        var touch = event.touches[0];
+
+        mobileTouch.lastX = touch.clientX;
+        mobileTouch.lastY = touch.clientY;
+
+        var deltaX = mobileTouch.startX - mobileTouch.lastX;
+        var deltaY = mobileTouch.startY - mobileTouch.lastY;
+        var absX = Math.abs(deltaX);
+        var absY = Math.abs(deltaY);
+
+        if (absY < MOBILE_MOVE_GUARD || absY <= absX * 1.15) return;
+
+        var direction = deltaY > 0 ? 1 : -1;
+        var isFirstAndGoingUp = mobileTouch.startIndex <= 0 && direction < 0;
+        var isLastAndGoingDown = mobileTouch.startIndex >= totalSlides - 1 && direction > 0;
+
+        /* 첫 슬라이드에서 위쪽 페이지로 나가거나, 마지막 슬라이드에서 다음 섹션으로 나갈 때는
+           기본 스크롤을 허용합니다. 그 외에는 네이티브 관성 스크롤을 막고 JS가 1장씩 이동시킵니다. */
+        if (!isFirstAndGoingUp && !isLastAndGoingDown) {
+          event.preventDefault();
+          mobileTouch.handled = true;
+        }
+      }
+
+      function onMobileTouchEnd(event) {
+        if (!isMobile()) {
+          resetMobileTouch();
+          return;
+        }
+
+        if (!mobileTouch.active) return;
+
+        var deltaX = mobileTouch.startX - mobileTouch.lastX;
+        var deltaY = mobileTouch.startY - mobileTouch.lastY;
+        var absX = Math.abs(deltaX);
+        var absY = Math.abs(deltaY);
+        var isVerticalSwipe = absY >= MOBILE_SWIPE_THRESHOLD && absY > absX * 1.15;
+
+        if (mobileTouch.handled && isVerticalSwipe && !mobileTouch.locked) {
+          var direction = deltaY > 0 ? 1 : -1;
+          var nextIndex = clamp(mobileTouch.startIndex + direction, 0, totalSlides - 1);
+
+          if (nextIndex !== mobileTouch.startIndex) {
+            lockMobileTouch();
+            scrollToSlide(nextIndex, 'smooth');
+          }
+        }
+
+        resetMobileTouch();
+      }
+
+      section.addEventListener('touchstart', onMobileTouchStart, { passive: true });
+      section.addEventListener('touchmove', onMobileTouchMove, { passive: false });
+      section.addEventListener('touchend', onMobileTouchEnd, { passive: true });
+      section.addEventListener('touchcancel', resetMobileTouch, { passive: true });
 
       window.addEventListener('scroll', function () {
         targetProgress = getRawProgress();
