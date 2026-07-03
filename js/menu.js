@@ -690,7 +690,7 @@
       <div class="tp-nav__item" data-menu="0"><a href="./introduce.html" class="tp-nav__link">소개&미션</a></div>
       <div class="tp-nav__item" data-menu="1"><a href="./nature.html" class="tp-nav__link">자연과 회복</a></div>
       <div class="tp-nav__item" data-menu="2"><a href="./kids-program.html" class="tp-nav__link">프로그램 소개</a></div>
-      <div class="tp-nav__item" data-menu="3"><a href="./program.html" class="tp-nav__link">진행 중인 프로그램</a></div>
+      <div class="tp-nav__item" data-menu="3"><a href="./live-program.html" class="tp-nav__link">진행 중인 프로그램</a></div>
     </nav>
 
     <div class="tp-lang">
@@ -721,6 +721,7 @@
         <a href="./expert-program.html" class="tp-dropdown__link">전문가 숲</a>
       </div>
       <div class="tp-dropdown__col" data-col="3">
+      <a href="./live-program.html" class="tp-dropdown__link">진행 중인 프로그램</a>
         <a href="./program.html" class="tp-dropdown__link">세부 프로그램</a>
         <a href="./calender.html" class="tp-dropdown__link">연간 프로그램</a>
         <a href="./nature.html" class="tp-dropdown__link">참여 및 문의</a>
@@ -794,6 +795,7 @@
         </svg>
       </button>
       <div class="tp-mobile-sub" data-mobile-sub="3">
+      <a href="./live-program.html" class="tp-dropdown__link">진행 중인 프로그램</a>
         <a href="./program.html" class="tp-mobile-sub__link">세부 프로그램</a>
         <a href="./calender.html" class="tp-mobile-sub__link">연간 프로그램</a>
         <a href="./nature.html" class="tp-mobile-sub__link">참여 및 문의</a>
