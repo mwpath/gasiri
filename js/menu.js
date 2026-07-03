@@ -721,7 +721,7 @@
         <a href="./expert-program.html" class="tp-dropdown__link">전문가 숲</a>
       </div>
       <div class="tp-dropdown__col" data-col="3">
-      <a href="./live-program.html" class="tp-dropdown__link">진행 중인 프로그램</a>
+
         <a href="./program.html" class="tp-dropdown__link">세부 프로그램</a>
         <a href="./calender.html" class="tp-dropdown__link">연간 프로그램</a>
         <a href="./nature.html" class="tp-dropdown__link">참여 및 문의</a>
