@@ -795,7 +795,6 @@
         </svg>
       </button>
       <div class="tp-mobile-sub" data-mobile-sub="3">
-      <a href="./live-program.html" class="tp-mobile-sub__link">진행 중인 프로그램</a>
         <a href="./program.html" class="tp-mobile-sub__link">세부 프로그램</a>
         <a href="./calender.html" class="tp-mobile-sub__link">연간 프로그램</a>
         <a href="./nature.html" class="tp-mobile-sub__link">참여 및 문의</a>
