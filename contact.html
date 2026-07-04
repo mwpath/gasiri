@@ -1,0 +1,948 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+<head>
+  <!-- ===== 기본 메타 ===== -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>생태명상 &amp; 가시리 포레스트 | 숲을 통한 치유와 회복</title>
+  <meta name="description" content="제주 가시리 포레스트에서 자연과 연결되는 생태명상·산림치유 프로그램을 경험하세요. 숲속 걷기, 명상, 이완 활동 등으로 몸과 마음을 회복합니다.">
+  <meta name="keywords" content="생태명상, 산림치유, 숲치유, 제주 치유여행, 가시리 포레스트, 명상 프로그램, 자연 치유">
+  <meta name="author" content="Gasir i Forest">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <link rel="canonical" href="https://example.com/"> <!-- TODO: 실제 도메인으로 교체 -->
+
+  <!-- ===== 색상/테마 ===== -->
+  <meta name="theme-color" content="#0f1112">
+  <meta name="msapplication-TileColor" content="#0f1112">
+
+  <!-- ===== 성능 최적화: 프리커넥트/폰트 ===== -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Pretendard를 CDN으로 쓰는 경우 아래 예시 사용(프로젝트 정책에 맞게 교체 가능) -->
+  <!-- <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@400;600;700;800&display=swap" rel="stylesheet"> -->
+
+  <!-- ===== 파비콘/아이콘 ===== -->
+  <!-- TODO: 경로를 실제 아이콘 파일로 교체 -->
+  <link rel="icon" href="/icons/favicon.ico" sizes="any">
+  <link rel="icon" href="/icons/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+
+  <!-- ===== Open Graph / Facebook ===== -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ko_KR">
+  <meta property="og:site_name" content="GASIRI FOREST">
+  <meta property="og:title" content="생태명상 &amp; 가시리 포레스트 | 숲을 통한 치유와 회복">
+  <meta property="og:description" content="자연과 연결되는 생태명상·산림치유 프로그램으로 몸과 마음을 회복하세요.">
+  <meta property="og:url" content="https://example.com/">
+  <meta property="og:image" content="https://example.com/og/forest-1200x630.jpg"> <!-- 1200x630 권장 -->
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+
+  <!-- ===== Twitter Card ===== -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="생태명상 &amp; 가시리 포레스트 | 숲을 통한 치유와 회복">
+  <meta name="twitter:description" content="숲속 걷기, 명상, 이완 활동 등으로 자연과 깊이 연결되는 시간. 제주 가시리 포레스트.">
+  <meta name="twitter:image" content="https://example.com/og/forest-1200x630.jpg">
+
+  <!-- ===== 프리로드(Above-the-fold 이미지) ===== -->
+  <!-- TODO: 실제 경로로 교체 -->
+  <link rel="preload" as="image" href="./img/intro-1.png" imagesrcset="./img/intro-1.png" fetchpriority="high">
+  <link rel="preload" as="image" href="./img/wood-1.jpg">
+  <link rel="preload" as="image" href="./img/wood.jpg">
+
+  <!-- ===== 구조화 데이터(JSON-LD) : 사이트/조직 ===== -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "name": "GASIRI FOREST",
+        "url": "https://example.com/",
+        "inLanguage": "ko-KR",
+        "description": "제주 가시리 포레스트의 생태명상·산림치유 프로그램 안내"
+      },
+      {
+        "@type": "Organization",
+        "name": "가시리 포레스트",
+        "url": "https://example.com/",
+        "logo": "https://example.com/icons/logo.png",
+        "sameAs": [
+          "https://www.instagram.com/example",
+          "https://www.facebook.com/example"
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <!-- ===== 기본 스타일 리셋(선택) : 필요시 사용자 프로젝트 리셋 사용 ===== -->
+  <style>
+    /* 시스템 폰트 스택 + 한글 가독성 개선 */
+    html { -webkit-text-size-adjust: 100%; }
+    body { margin:0; font-synthesis-weight: none; text-rendering: optimizeLegibility; }
+    img { max-width: 100%; height: auto; }
+    button { font: inherit; }
+  </style>
+</head>
+<body>
+
+<div id="menu_a"></div>
+
+
+
+<section id="eduProgramV2">
+  <style>
+    #eduProgramV2{box-sizing:border-box}
+    #eduProgramV2 *,#eduProgramV2 *::before,#eduProgramV2 *::after{box-sizing:inherit}
+
+    #eduProgramV2{
+      --green-deep:#1f3b2a;
+      --green:#3f7a4d;
+      --green-soft:#e8f3ed;
+      --bg:#f4f7f5;
+      --ink:#1f2937;
+
+      font-family:"Pretendard","Noto Sans KR",system-ui,-apple-system,sans-serif;
+      padding:180px 20px 100px;
+      background:#3f7a4d;
+      color:var(--ink);
+    }
+
+    #eduProgramV2 .inner{
+      max-width:1100px;
+      margin:0 auto;
+    }
+
+    /* 헤더 */
+    #eduProgramV2 .header{
+      text-align:center;
+      margin-bottom:60px;
+    }
+    #eduProgramV2 .header h2{
+      font-size:38px;
+      font-weight:800;
+      color:#fff;
+      margin-bottom:10px;
+    }
+    #eduProgramV2 .header p{
+      font-size:16px;
+      color:#fff;
+    }
+
+    /* 프로그램 큰 제목 */
+    #eduProgramV2 .section-title{
+      font-size:28px;
+      font-weight:800;
+      color:var(--green);
+      margin:50px 0 25px;
+      border-left:8px solid var(--green);
+      padding-left:14px;
+    }
+
+    /* 주요 박스 (사진 + 설명) */
+    #eduProgramV2 .program-box{
+      display:flex;
+      gap:30px;
+      background:#ffffff;
+      border-radius:28px;
+      overflow:hidden;
+      margin-bottom:40px;
+      box-shadow:0 18px 40px rgba(15,23,42,0.14);
+      border:1px solid #e6eee8;
+    }
+
+    /* 사진 영역 */
+    #eduProgramV2 .program-img{
+      flex:0 0 360px;
+      background-size:cover;
+      background-position:center;
+      min-height:260px;
+    }
+
+    /* 각 프로그램 사진 */
+    .img-eco-play{background-image:url('https://images.unsplash.com/photo-1501004318641-b39e6451bec6?q=80&w=1200');}
+    .img-plant{background-image:url('https://images.unsplash.com/photo-1501004318641-b39e6451bec6?q=80&w=1200');}
+    .img-movement{background-image:url('https://images.unsplash.com/photo-1469474968028-56623f02e42e?q=80&w=1200');}
+
+    .img-pro-eco{background-image:url('https://images.unsplash.com/photo-1500534623283-312aade485b7?q=80&w=1200');}
+    .img-pro-meditation{background-image:url('https://images.unsplash.com/photo-1498579809087-ef1e558fd1da?q=80&w=1200');}
+    .img-pro-mandala{background-image:url('https://images.unsplash.com/photo-1501004318641-b39e6451bec6?q=80&w=1200');}
+    .img-pro-photo{background-image:url('https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?q=80&w=1200');}
+
+    /* 텍스트 영역 */
+    #eduProgramV2 .program-content{
+      flex:1;
+      padding:30px 34px;
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+    }
+
+    #eduProgramV2 .program-title{
+      font-size:22px;
+      font-weight:800;
+      color:var(--green-deep);
+      margin-bottom:14px;
+    }
+
+    #eduProgramV2 .program-content p{
+      font-size:15px;
+      color:#374151;
+      line-height:1.7;
+      margin-bottom:12px;
+    }
+
+    #eduProgramV2 .highlight{
+      color:var(--green);
+      font-weight:700;
+    }
+
+    @media(max-width:820px){
+      #eduProgramV2 .program-box{
+        flex-direction:column;
+      }
+      #eduProgramV2 .program-img{
+        width:100%;
+        flex:none;
+        min-height:220px;
+      }
+    }
+  </style>
+
+  <div class="inner">
+    <div class="header">
+      <h2>참여 및 문의</h2>
+    </div>
+
+    <!-- 어린이 숲 -->
+    <!-- <h3 class="section-title">어린이 숲 프로그램</h3> -->
+
+  </div>
+</section>
+
+<!-- ================================================================
+  문의 신청폼 섹션 (개인/기업 전환 + 개인정보 동의 팝업 + Supabase 전송)
+  - CSS/JS 모두 #inquirySection 하위로만 스코프
+  - ⚠ 스크립트 상단 SUPABASE_ANON_KEY 를 실제 anon public 키로 교체하세요
+    (Supabase 대시보드 → Settings → API → anon public)
+================================================================= -->
+<section id="inquirySection" aria-label="문의 신청">
+  <style>
+    /* ================= Scope: #inquirySection only ================= */
+    #inquirySection{box-sizing:border-box}
+    #inquirySection *,#inquirySection *::before,#inquirySection *::after{box-sizing:inherit}
+
+    #inquirySection{
+      --green-deep:#1f3b2a;
+      --green:#3f7a4d;
+      --green-soft:#e8f3ed;
+      --ink:#1f2937;
+      --muted:rgba(255,255,255,.85);
+      --bg:url('./img/p-2-2.jpg') center/cover no-repeat;
+      --brightness:0.6;
+
+      position:relative;
+      font-family:Pretendard,"Noto Sans KR",system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
+      color:#fff;
+      padding:120px 20px;
+      overflow:hidden;
+    }
+
+    /* 배경 레이어를 섹션 높이와 분리:
+       탭 전환으로 섹션 높이가 변해도 배경 크기가 다시 계산되지 않도록
+       고정 높이(--bgH, JS가 로드/가로폭 변경 시에만 갱신)를 사용 */
+    #inquirySection::before{
+      content:"";
+      position:absolute;
+      top:0; left:0;
+      width:100%;
+      height:var(--bgH, 100%);
+      background:var(--bg);
+      filter:brightness(var(--brightness));
+    }
+
+    #inquirySection .inner{
+      position:relative;
+      z-index:1;
+      max-width:640px;
+      margin:0 auto;
+    }
+
+    /* 헤더 */
+    #inquirySection .head{text-align:center;margin-bottom:40px;}
+    #inquirySection .head h2{
+      font-size:2.5rem;font-weight:600;margin:0 0 14px;
+    }
+    #inquirySection .head p{
+      font-size:1rem;color:var(--muted);margin:0;
+    }
+
+    /* 등장 애니메이션 (JS 실패 시에도 콘텐츠 보임: 기본 opacity 1) */
+    #inquirySection .reveal{opacity:1;transform:none;}
+    #inquirySection.js-ready .reveal{
+      opacity:0;transform:translateY(24px);
+      transition:opacity .8s ease,transform .8s ease;
+    }
+    #inquirySection.js-ready .reveal.on{opacity:1;transform:none;}
+    @media (prefers-reduced-motion: reduce){
+      #inquirySection.js-ready .reveal{opacity:1;transform:none;transition:none;}
+    }
+
+    /* 글래스 카드 */
+    #inquirySection .card{
+      background:rgba(255,255,255,0.12);
+      backdrop-filter:blur(16px);
+      -webkit-backdrop-filter:blur(16px);
+      border:1px solid rgba(255,255,255,0.3);
+      border-radius:28px;
+      padding:40px 36px;
+      box-shadow:0 18px 40px rgba(15,23,42,0.25);
+    }
+
+    /* 개인/기업 탭 */
+    #inquirySection .type-tabs{
+      display:flex;gap:10px;margin-bottom:28px;
+    }
+    #inquirySection .type-tabs button{
+      flex:1;padding:13px 0;
+      font-size:1rem;font-weight:600;
+      border-radius:40px;cursor:pointer;
+      background:rgba(255,255,255,0.12);
+      color:rgba(255,255,255,0.75);
+      border:1px solid rgba(255,255,255,0.35);
+      transition:all .3s ease;
+    }
+    #inquirySection .type-tabs button.active{
+      background:#fff;color:var(--green-deep);
+      border-color:#fff;
+    }
+    #inquirySection .type-tabs button:not(.active):hover{
+      background:rgba(255,255,255,0.22);
+    }
+
+    /* 필드 */
+    #inquirySection .field{margin-bottom:20px;}
+    #inquirySection .field.hidden{display:none;}
+    #inquirySection label{
+      display:block;font-size:.88rem;font-weight:600;
+      margin-bottom:8px;color:rgba(255,255,255,0.9);
+    }
+    #inquirySection label .req{color:#ffd9a8;margin-left:2px;}
+    #inquirySection input[type="text"],
+    #inquirySection input[type="tel"],
+    #inquirySection textarea{
+      width:100%;
+      padding:14px 18px;
+      font:inherit;font-size:.95rem;
+      color:#fff;
+      background:rgba(255,255,255,0.1);
+      border:1px solid rgba(255,255,255,0.35);
+      border-radius:16px;
+      outline:none;
+      transition:border-color .25s ease, background .25s ease;
+    }
+    #inquirySection input::placeholder,
+    #inquirySection textarea::placeholder{color:rgba(255,255,255,0.5);}
+    #inquirySection input:focus,
+    #inquirySection textarea:focus{
+      border-color:#fff;
+      background:rgba(255,255,255,0.18);
+    }
+    #inquirySection textarea{min-height:130px;resize:vertical;}
+
+    /* 개인정보 동의 */
+    #inquirySection .privacy-row{
+      display:flex;align-items:center;gap:10px;
+      margin:6px 0 26px;flex-wrap:wrap;
+    }
+    #inquirySection .privacy-row input[type="checkbox"]{
+      width:19px;height:19px;accent-color:var(--green);cursor:pointer;flex:none;
+    }
+    #inquirySection .privacy-row label{
+      margin:0;font-size:.9rem;font-weight:500;cursor:pointer;
+      color:rgba(255,255,255,0.92);
+    }
+    #inquirySection .privacy-view{
+      font-size:.82rem;font-weight:600;
+      color:#fff;background:none;border:none;cursor:pointer;
+      text-decoration:underline;text-underline-offset:3px;
+      padding:0;opacity:.85;
+    }
+    #inquirySection .privacy-view:hover{opacity:1;}
+
+    /* 제출 버튼 (contactSection moreBtn 스타일 계승) */
+    #inquirySection .submitBtn{
+      display:inline-flex;align-items:center;justify-content:center;
+      width:100%;padding:16px 32px;
+      font-size:1.05rem;font-weight:600;
+      border-radius:40px;
+      background:rgba(255,255,255,0.2);
+      backdrop-filter:blur(10px);
+      -webkit-backdrop-filter:blur(10px);
+      color:#fff;
+      border:1px solid rgba(255,255,255,0.4);
+      transition:all .35s ease;
+      cursor:pointer;
+    }
+    #inquirySection .submitBtn:hover:not(:disabled){
+      background:rgba(255,255,255,0.32);
+      transform:translateY(-3px);
+      box-shadow:0 8px 20px rgba(0,0,0,0.25);
+    }
+    #inquirySection .submitBtn:disabled{opacity:.55;cursor:not-allowed;}
+
+    /* 결과 메시지 */
+    #inquirySection .form-msg{
+      margin-top:16px;text-align:center;
+      font-size:.92rem;font-weight:600;
+      min-height:1.4em;
+    }
+    #inquirySection .form-msg.ok{color:#c9f2d4;}
+    #inquirySection .form-msg.err{color:#ffc9c9;}
+
+    /* ============ 개인정보 동의 팝업 ============ */
+    #inquirySection .privacy-modal{
+      position:fixed;inset:0;z-index:1000;
+      display:none;align-items:center;justify-content:center;
+      padding:20px;
+      background:rgba(15,23,42,0.6);
+      backdrop-filter:blur(4px);
+      -webkit-backdrop-filter:blur(4px);
+    }
+    #inquirySection .privacy-modal.open{display:flex;}
+    #inquirySection .privacy-modal .box{
+      background:#fff;color:var(--ink);
+      max-width:560px;width:100%;max-height:80vh;
+      border-radius:24px;overflow:hidden;
+      display:flex;flex-direction:column;
+      box-shadow:0 24px 60px rgba(0,0,0,0.35);
+    }
+    #inquirySection .privacy-modal .box-head{
+      display:flex;align-items:center;justify-content:space-between;
+      padding:22px 26px;border-bottom:1px solid #e6eee8;
+    }
+    #inquirySection .privacy-modal .box-head h3{
+      margin:0;font-size:1.15rem;font-weight:800;color:var(--green-deep);
+    }
+    #inquirySection .privacy-modal .box-close{
+      width:36px;height:36px;border-radius:50%;
+      border:1px solid #d8e8da;background:#fff;
+      font-size:1.15rem;line-height:1;color:var(--green);
+      cursor:pointer;
+    }
+    #inquirySection .privacy-modal .box-close:hover{background:var(--green-soft);}
+    #inquirySection .privacy-modal .box-body{
+      padding:24px 26px;overflow-y:auto;
+      font-size:.9rem;line-height:1.75;color:#374151;
+    }
+    #inquirySection .privacy-modal .box-body h4{
+      margin:18px 0 6px;font-size:.95rem;color:var(--green-deep);
+    }
+    #inquirySection .privacy-modal .box-body h4:first-child{margin-top:0;}
+    #inquirySection .privacy-modal .box-body table{
+      width:100%;border-collapse:collapse;margin:8px 0 4px;font-size:.85rem;
+    }
+    #inquirySection .privacy-modal .box-body th,
+    #inquirySection .privacy-modal .box-body td{
+      border:1px solid #e6eee8;padding:8px 10px;text-align:left;vertical-align:top;
+    }
+    #inquirySection .privacy-modal .box-body th{
+      background:var(--green-soft);color:var(--green-deep);white-space:nowrap;
+    }
+    #inquirySection .privacy-modal .box-foot{
+      padding:16px 26px 22px;border-top:1px solid #e6eee8;
+      display:flex;gap:10px;justify-content:flex-end;
+    }
+    #inquirySection .privacy-modal .agreeBtn{
+      padding:11px 28px;border-radius:40px;border:none;cursor:pointer;
+      background:var(--green);color:#fff;font-size:.95rem;font-weight:700;
+      transition:background .25s ease;
+    }
+    #inquirySection .privacy-modal .agreeBtn:hover{background:var(--green-deep);}
+    #inquirySection .privacy-modal .closeBtn2{
+      padding:11px 24px;border-radius:40px;cursor:pointer;
+      background:#fff;color:#4b5563;border:1px solid #d1d5db;
+      font-size:.95rem;font-weight:600;
+    }
+
+    @media(max-width:768px){
+      #inquirySection{padding:90px 16px;}
+      #inquirySection .head h2{font-size:2rem;}
+      #inquirySection .card{padding:30px 22px;border-radius:22px;}
+    }
+  </style>
+
+  <div class="inner">
+    <div class="head reveal">
+      <h2>문의 신청</h2>
+      <p>숲을 통한 치유와 회복, 궁금하신 내용을 남겨주세요</p>
+    </div>
+
+    <div class="card reveal">
+      <!-- 개인 / 기업 전환 탭 -->
+      <div class="type-tabs" role="tablist" aria-label="문의 유형 선택">
+        <button type="button" class="active" data-type="individual" role="tab" aria-selected="true">개인 문의</button>
+        <button type="button" data-type="company" role="tab" aria-selected="false">기업·단체 문의</button>
+      </div>
+
+      <!-- 회사명 (기업 문의일 때만) -->
+      <div class="field hidden" data-field="company_name">
+        <label for="inq-company">회사명 <span class="req">*</span></label>
+        <input type="text" id="inq-company" placeholder="회사명 또는 단체명을 입력해 주세요" autocomplete="organization">
+      </div>
+
+      <!-- 이름 / 성함 -->
+      <div class="field">
+        <label for="inq-name"><span data-name-label>이름</span> <span class="req">*</span></label>
+        <input type="text" id="inq-name" placeholder="이름을 입력해 주세요" autocomplete="name">
+      </div>
+
+      <!-- 전화번호 -->
+      <div class="field">
+        <label for="inq-phone">전화번호 <span class="req">*</span></label>
+        <input type="tel" id="inq-phone" placeholder="01012345678" autocomplete="tel" inputmode="numeric" maxlength="11">
+      </div>
+
+      <!-- 문의 내용 -->
+      <div class="field">
+        <label for="inq-message">문의 내용 <span class="req">*</span></label>
+        <textarea id="inq-message" placeholder="프로그램, 일정, 단체 예약 등 궁금하신 내용을 자유롭게 작성해 주세요"></textarea>
+      </div>
+
+      <!-- 개인정보 동의 -->
+      <div class="privacy-row">
+        <input type="checkbox" id="inq-privacy">
+        <label for="inq-privacy">개인정보 수집·이용에 동의합니다 <span class="req">*</span></label>
+        <button type="button" class="privacy-view" data-open-privacy>전문 보기</button>
+      </div>
+
+      <button type="button" class="submitBtn" data-submit>문의 신청하기</button>
+      <p class="form-msg" data-msg aria-live="polite"></p>
+    </div>
+  </div>
+
+  <!-- ============ 개인정보 수집·이용 동의 팝업 ============ -->
+  <div class="privacy-modal" data-privacy-modal role="dialog" aria-modal="true" aria-labelledby="inq-privacy-title">
+    <div class="box">
+      <div class="box-head">
+        <h3 id="inq-privacy-title">개인정보 수집·이용 동의</h3>
+        <button type="button" class="box-close" data-close-privacy aria-label="닫기">×</button>
+      </div>
+      <div class="box-body">
+        <p>가시리 포레스트(이하 "운영자")는 문의 접수 및 상담 처리를 위해 아래와 같이 개인정보를 수집·이용합니다. 내용을 확인하신 후 동의 여부를 결정해 주시기 바랍니다.</p>
+
+        <h4>1. 수집 항목</h4>
+        <table>
+          <tr><th>구분</th><th>수집 항목</th></tr>
+          <tr><td>개인</td><td>이름, 전화번호, 문의 내용</td></tr>
+          <tr><td>기업·단체</td><td>회사명, 담당자 성함, 전화번호, 문의 내용</td></tr>
+        </table>
+
+        <h4>2. 수집·이용 목적</h4>
+        <p>문의 내용 확인 및 답변, 상담 진행, 프로그램 안내 등 문의 처리에 필요한 연락</p>
+
+        <h4>3. 보유 및 이용 기간</h4>
+        <p>문의 처리 완료 후 <strong>1년간 보관</strong>하며, 보유 기간 경과 또는 처리 목적 달성 시 지체 없이 파기합니다. 단, 관계 법령에 따라 보존할 필요가 있는 경우 해당 법령에서 정한 기간 동안 보관합니다.</p>
+
+        <h4>4. 동의 거부 권리 및 불이익</h4>
+        <p>귀하는 개인정보 수집·이용에 대한 동의를 거부할 권리가 있습니다. 다만, 동의를 거부하실 경우 문의 접수 및 상담 처리가 제한될 수 있습니다.</p>
+      </div>
+      <div class="box-foot">
+        <button type="button" class="closeBtn2" data-close-privacy>닫기</button>
+        <button type="button" class="agreeBtn" data-agree-privacy>동의하고 닫기</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+  (function(){
+    var root = document.getElementById('inquirySection');
+    if(!root) return;
+
+    /* ====== Supabase 설정 (실제 값으로 교체) ====== */
+    var SUPABASE_URL = 'https://stzfwiwlwoguibdiyzai.supabase.co';
+    var SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InN0emZ3aXdsd29ndWliZGl5emFpIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODAxODY1MjUsImV4cCI6MjA5NTc2MjUyNX0.8W3dOmPm2OB6bJo4RGffhiy8Cb0m4Ty2xBMuiWQTEKg'; /* ⚠ anon public 키로 교체 */
+
+    /* ====== 등장 애니메이션 (JS 성공 시에만 초기 숨김) ====== */
+    try{
+      root.classList.add('js-ready');
+      var reveals = root.querySelectorAll('.reveal');
+      if('IntersectionObserver' in window){
+        var io = new IntersectionObserver(function(entries){
+          entries.forEach(function(e){
+            if(e.isIntersecting){ e.target.classList.add('on'); io.unobserve(e.target); }
+          });
+        },{threshold:0.15});
+        reveals.forEach(function(el){ io.observe(el); });
+      }else{
+        reveals.forEach(function(el){ el.classList.add('on'); });
+      }
+    }catch(e){ root.classList.remove('js-ready'); }
+
+    /* ====== 배경 높이 고정 (탭 전환 시 배경 리사이즈 방지) ======
+       로드 시 섹션 높이 + 여유분으로 배경 레이어 높이를 고정하고,
+       가로폭이 실제로 변할 때만 재계산 (모바일 주소창 등 세로 변화 무시) */
+    var lastW = window.innerWidth;
+    function lockBgHeight(){
+      root.style.setProperty('--bgH', (root.offsetHeight + 240) + 'px');
+    }
+    lockBgHeight();
+    window.addEventListener('resize', function(){
+      if(window.innerWidth !== lastW){
+        lastW = window.innerWidth;
+        lockBgHeight();
+      }
+    });
+
+    /* ====== 개인 / 기업 탭 ====== */
+    var currentType = 'individual';
+    var tabs = root.querySelectorAll('.type-tabs button');
+    var companyField = root.querySelector('[data-field="company_name"]');
+    var nameLabel = root.querySelector('[data-name-label]');
+
+    tabs.forEach(function(btn){
+      btn.addEventListener('click', function(){
+        currentType = btn.getAttribute('data-type');
+        tabs.forEach(function(b){
+          var on = b === btn;
+          b.classList.toggle('active', on);
+          b.setAttribute('aria-selected', on ? 'true' : 'false');
+        });
+        var isCompany = currentType === 'company';
+        companyField.classList.toggle('hidden', !isCompany);
+        nameLabel.textContent = isCompany ? '성함' : '이름';
+        root.querySelector('#inq-name').placeholder =
+          isCompany ? '담당자 성함을 입력해 주세요' : '이름을 입력해 주세요';
+      });
+    });
+
+    /* ====== 전화번호: 숫자만, 최대 11자리 ====== */
+    var phoneInput = root.querySelector('#inq-phone');
+    phoneInput.addEventListener('input', function(){
+      var digits = phoneInput.value.replace(/\D/g, '').slice(0, 11);
+      if(phoneInput.value !== digits) phoneInput.value = digits;
+    });
+
+    /* ====== 개인정보 팝업 ====== */
+    var modal = root.querySelector('[data-privacy-modal]');
+    var privacyCheck = root.querySelector('#inq-privacy');
+
+    root.querySelector('[data-open-privacy]').addEventListener('click', function(){
+      modal.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    });
+    function closeModal(){
+      modal.classList.remove('open');
+      document.body.style.overflow = '';
+    }
+    root.querySelectorAll('[data-close-privacy]').forEach(function(b){
+      b.addEventListener('click', closeModal);
+    });
+    modal.addEventListener('click', function(e){ if(e.target === modal) closeModal(); });
+    document.addEventListener('keydown', function(e){
+      if(e.key === 'Escape' && modal.classList.contains('open')) closeModal();
+    });
+    root.querySelector('[data-agree-privacy]').addEventListener('click', function(){
+      privacyCheck.checked = true;
+      closeModal();
+    });
+
+    /* ====== 제출 ====== */
+    var submitBtn = root.querySelector('[data-submit]');
+    var msgEl = root.querySelector('[data-msg]');
+
+    function showMsg(text, ok){
+      msgEl.textContent = text;
+      msgEl.className = 'form-msg ' + (ok ? 'ok' : 'err');
+    }
+
+    submitBtn.addEventListener('click', function(){
+      var company = root.querySelector('#inq-company').value.trim();
+      var name = root.querySelector('#inq-name').value.trim();
+      var phone = root.querySelector('#inq-phone').value.trim();
+      var message = root.querySelector('#inq-message').value.trim();
+      var isCompany = currentType === 'company';
+
+      /* 검증 */
+      if(isCompany && !company) return showMsg('회사명을 입력해 주세요.', false);
+      if(!name) return showMsg(isCompany ? '담당자 성함을 입력해 주세요.' : '이름을 입력해 주세요.', false);
+      if(!phone) return showMsg('전화번호를 입력해 주세요.', false);
+      if(!/^010\d{8}$/.test(phone)) return showMsg('전화번호는 010으로 시작하는 숫자 11자리로 입력해 주세요.', false);
+      if(!message) return showMsg('문의 내용을 입력해 주세요.', false);
+      if(!privacyCheck.checked) return showMsg('개인정보 수집·이용에 동의해 주세요.', false);
+
+      submitBtn.disabled = true;
+      submitBtn.textContent = '전송 중...';
+      showMsg('', true);
+
+      fetch(SUPABASE_URL + '/rest/v1/forest_inquiries', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'apikey': SUPABASE_ANON_KEY,
+          'Authorization': 'Bearer ' + SUPABASE_ANON_KEY,
+          'Prefer': 'return=minimal'
+        },
+        body: JSON.stringify({
+          inquiry_type: currentType,
+          company_name: isCompany ? company : null,
+          name: name,
+          phone: phone,
+          message: message,
+          agree_privacy: true
+        })
+      })
+      .then(function(res){
+        if(!res.ok) throw new Error('전송 실패 (' + res.status + ')');
+        showMsg('문의가 정상적으로 접수되었습니다. 빠른 시일 내에 연락드리겠습니다.', true);
+        /* 폼 초기화 */
+        root.querySelector('#inq-company').value = '';
+        root.querySelector('#inq-name').value = '';
+        root.querySelector('#inq-phone').value = '';
+        root.querySelector('#inq-message').value = '';
+        privacyCheck.checked = false;
+      })
+      .catch(function(){
+        showMsg('전송 중 오류가 발생했습니다. 잠시 후 다시 시도해 주세요.', false);
+      })
+      .finally(function(){
+        submitBtn.disabled = false;
+        submitBtn.textContent = '문의 신청하기';
+      });
+    });
+  })();
+  </script>
+</section>
+
+<!-- <section id="contactSection" aria-label="Contact us">
+  <style>
+    #contactSection{
+      --ink:#ffffff;
+      --muted:rgba(255,255,255,.85);
+      --accent:#ffffff;
+      --bg:url('./img/p-2-2.jpg') center/cover no-repeat;
+
+      --brightness:0.85;
+
+      position:relative;
+      font-family:Pretendard,"Noto Sans KR",system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
+      color:var(--ink);
+      height:500px;
+      display:flex;
+      align-items:center;
+    }
+
+    #contactSection::before{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:var(--bg);
+      filter:brightness(var(--brightness));
+    }
+
+    #contactSection .inner{
+      position:relative;
+      z-index:1;
+      max-width:1200px;
+      margin:0 auto;
+      padding:80px 20px;
+    }
+
+    #contactSection h2{
+      font-size:2.5rem;
+      font-weight:600;
+      margin-bottom:16px;
+    }
+
+    #contactSection p.sub{
+      font-size:1rem;
+      color:var(--muted);
+      margin-bottom:32px;
+    }
+
+    #contactSection .moreBtn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      padding:14px 32px;
+      font-size:1rem;
+      font-weight:600;
+      border-radius:40px;
+
+      background:rgba(255,255,255,0.2);
+      backdrop-filter:blur(10px);
+      -webkit-backdrop-filter:blur(10px);
+
+      color:#fff;
+      border:1px solid rgba(255,255,255,0.4);
+      transition:all .35s ease;
+      text-decoration:none;
+      cursor:pointer;
+    }
+
+    #contactSection .moreBtn:hover{
+      background:rgba(255,255,255,0.32);
+      transform:translateY(-3px);
+      box-shadow:0 8px 20px rgba(0,0,0,0.25);
+    }
+
+    /* 우측 하단 Top 버튼 */
+    #contactSection .topBtn{
+      position:fixed;
+      right:24px; bottom:24px;
+      width:46px; height:46px;
+      background:#0d2238;
+      display:flex; align-items:center; justify-content:center;
+      border-radius:4px;
+      cursor:pointer;
+      z-index:10;
+    }
+    #contactSection .topBtn svg{
+      width:20px; height:20px; stroke:#fff;
+    }
+
+    @media(max-width:768px){
+      #contactSection h2{font-size:2rem;}
+      #contactSection p.sub{font-size:.95rem;}
+    }
+  </style>
+
+  <div class="inner">
+    <h2>네이버 예약 문의</h2>
+    <p class="sub">새로운 공간에서 펼쳐지는 이야기의 시작</p>
+    <a href="#" class="moreBtn">네이버 예약하기</a>
+  </div>
+
+  <div class="topBtn" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="맨 위로">
+    <svg fill="none" stroke-width="2" viewBox="0 0 24 24">
+      <path d="M5 15l7-7 7 7" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </div>
+</section> -->
+
+
+
+
+<!-- <section id="contactSection1" aria-label="Contact us">
+  <style>
+    #contactSection1{
+      --ink:#ffffff;
+      --muted:rgba(255,255,255,.85);
+      --accent:#ffffff;
+      --bg:url('./img/p-2.png') center/cover no-repeat;
+
+      --brightness:0.75;
+
+      position:relative;
+      font-family:Pretendard,"Noto Sans KR",system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
+      color:var(--ink);
+      height:500px;
+      display:flex;
+      align-items:center;
+    }
+
+    #contactSection1::before{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:var(--bg);
+      filter:brightness(var(--brightness));
+    }
+
+    #contactSection1 .inner{
+      position:relative;
+      z-index:1;
+      max-width:1200px;
+      margin:0 auto;
+      padding:80px 20px;
+    }
+
+    #contactSection1 h2{
+      font-size:2.5rem;
+      font-weight:600;
+      margin-bottom:16px;
+    }
+    
+    #contactSection1 p.sub{
+      font-size:1rem;
+      color:var(--muted);
+      margin-bottom:32px;
+    }
+
+    #contactSection1 .moreBtn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      padding:14px 32px;
+      font-size:1rem;
+      font-weight:600;
+      border-radius:40px;
+
+      background:rgba(255,255,255,0.2);
+      backdrop-filter:blur(10px);
+      -webkit-backdrop-filter:blur(10px);
+
+      color:#fff;
+      border:1px solid rgba(255,255,255,0.4);
+      transition:all .35s ease;
+      text-decoration:none;
+      cursor:pointer;
+    }
+
+    #contactSection1 .moreBtn:hover{
+      background:rgba(255,255,255,0.32);
+      transform:translateY(-3px);
+      box-shadow:0 8px 20px rgba(0,0,0,0.25);
+    }
+
+    #contactSection1 .topBtn{
+      position:fixed;
+      right:24px; bottom:24px;
+      width:46px; height:46px;
+      background:#0d2238;
+      display:flex; align-items:center; justify-content:center;
+      border-radius:4px;
+      cursor:pointer;
+      z-index:10;
+    }
+    #contactSection1 .topBtn svg{
+      width:20px; height:20px; stroke:#fff;
+    }
+
+    @media(max-width:768px){
+      #contactSection1 h2{font-size:2rem;}
+      #contactSection1 p.sub{font-size:.95rem;}
+    }
+  </style>
+
+  <div class="inner">
+    <h2>전화 문의</h2>
+    <p class="sub">새로운 공간에서 펼쳐지는 이야기의 시작</p>
+    <a href="#" class="moreBtn">전화 연결하기</a>
+  </div>
+
+  <div class="topBtn" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="맨 위로">
+    <svg fill="none" stroke-width="2" viewBox="0 0 24 24">
+      <path d="M5 15l7-7 7 7" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </div>
+</section> -->
+
+
+
+
+
+
+</body>
+
+<div id="footerContainer"></div>
+
+
+<script src="./js/menu.js"></script>
+<script src="./js/footer.js"></script>
+<script src="./js/main.js"></script>
+
+</html>

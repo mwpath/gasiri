@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+<head>
+  <!-- ===== 기본 메타 ===== -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>생태명상 &amp; 가시리 포레스트 | 숲을 통한 치유와 회복</title>
+  <meta name="description" content="제주 가시리 포레스트에서 자연과 연결되는 생태명상·산림치유 프로그램을 경험하세요. 숲속 걷기, 명상, 이완 활동 등으로 몸과 마음을 회복합니다.">
+  <meta name="keywords" content="생태명상, 산림치유, 숲치유, 제주 치유여행, 가시리 포레스트, 명상 프로그램, 자연 치유">
+  <meta name="author" content="Gasir i Forest">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <link rel="canonical" href="https://example.com/"> <!-- TODO: 실제 도메인으로 교체 -->
+
+  <!-- ===== 색상/테마 ===== -->
+  <meta name="theme-color" content="#0f1112">
+  <meta name="msapplication-TileColor" content="#0f1112">
+
+  <!-- ===== 성능 최적화: 프리커넥트/폰트 ===== -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Pretendard를 CDN으로 쓰는 경우 아래 예시 사용(프로젝트 정책에 맞게 교체 가능) -->
+  <!-- <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@400;600;700;800&display=swap" rel="stylesheet"> -->
+
+  <!-- ===== 파비콘/아이콘 ===== -->
+  <!-- TODO: 경로를 실제 아이콘 파일로 교체 -->
+  <link rel="icon" href="/icons/favicon.ico" sizes="any">
+  <link rel="icon" href="/icons/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+
+  <!-- ===== Open Graph / Facebook ===== -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ko_KR">
+  <meta property="og:site_name" content="GASIRI FOREST">
+  <meta property="og:title" content="생태명상 &amp; 가시리 포레스트 | 숲을 통한 치유와 회복">
+  <meta property="og:description" content="자연과 연결되는 생태명상·산림치유 프로그램으로 몸과 마음을 회복하세요.">
+  <meta property="og:url" content="https://example.com/">
+  <meta property="og:image" content="https://example.com/og/forest-1200x630.jpg"> <!-- 1200x630 권장 -->
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+
+  <!-- ===== Twitter Card ===== -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="생태명상 &amp; 가시리 포레스트 | 숲을 통한 치유와 회복">
+  <meta name="twitter:description" content="숲속 걷기, 명상, 이완 활동 등으로 자연과 깊이 연결되는 시간. 제주 가시리 포레스트.">
+  <meta name="twitter:image" content="https://example.com/og/forest-1200x630.jpg">
+
+  <!-- ===== 프리로드(Above-the-fold 이미지) ===== -->
+  <!-- TODO: 실제 경로로 교체 -->
+  <link rel="preload" as="image" href="./img/intro-1.png" imagesrcset="./img/intro-1.png" fetchpriority="high">
+  <link rel="preload" as="image" href="./img/wood-1.jpg">
+  <link rel="preload" as="image" href="./img/wood.jpg">
+
+  <!-- ===== 구조화 데이터(JSON-LD) : 사이트/조직 ===== -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "name": "GASIRI FOREST",
+        "url": "https://example.com/",
+        "inLanguage": "ko-KR",
+        "description": "제주 가시리 포레스트의 생태명상·산림치유 프로그램 안내"
+      },
+      {
+        "@type": "Organization",
+        "name": "가시리 포레스트",
+        "url": "https://example.com/",
+        "logo": "https://example.com/icons/logo.png",
+        "sameAs": [
+          "https://www.instagram.com/example",
+          "https://www.facebook.com/example"
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <!-- ===== 기본 스타일 리셋(선택) : 필요시 사용자 프로젝트 리셋 사용 ===== -->
+  <style>
+    /* 시스템 폰트 스택 + 한글 가독성 개선 */
+    html { -webkit-text-size-adjust: 100%; }
+    body { margin:0; font-synthesis-weight: none; text-rendering: optimizeLegibility; }
+    img { max-width: 100%; height: auto; }
+    button { font: inherit; }
+  </style>
+</head>
+<body>
+
+<div id="menu_a"></div>
+
+
+<section id="whoWeAre" aria-label="Who We Are">
+  <style>
+    /* ================= Scope: #whoWeAre only ================= */
+    #whoWeAre {
+      --ink: #ffffff; /* 글자색 */
+      --overlay: rgba(0, 0, 0, 0.35); /* 어두운 오버레이 */
+      --border:#6a8b2e; /* 하단 라인 */
+      font-family: Pretendard, "Noto Sans KR", system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+      position: relative;
+      width: 100%;
+      min-height: 296px;
+      color: var(--ink);
+      background: url('./img/b02.JPG') center/cover no-repeat; /* 👉 여기에 배경 이미지 교체 */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      overflow: hidden;
+      border-bottom: 6px solid var(--border);
+    }
+
+    #whoWeAre::before {
+  
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: var(--overlay);
+      z-index: 1;
+    }
+
+    #whoWeAre .textBox {
+      position: relative;
+      z-index: 2;
+    }
+
+    #whoWeAre h2 {
+      font-size: 2.4rem;
+      font-weight: 500;
+      line-height: 1.3;
+      margin: 0;
+    }
+
+    /* ===== 반응형 ===== */
+    @media (max-width: 768px) {
+      #whoWeAre {
+        min-height: 260px;
+      }
+      #whoWeAre h2 {
+        font-size: 1.8rem;
+      }
+    }
+  </style>
+
+  <div class="textBox">
+    <h2>진행 중인 프로그램</h2>
+      <!-- <p>현재 진행 중인 프로그램을 소개합니다.</p> -->
+
+  </div>
+</section>
+
+<section id="h-service-banners" style="position:relative;">
+  <div class="h-container">
+    <!-- <h2 class="h-main-title">현재 진행 중인<br>현장에서 실제 <span class="g">혁신</span>을<br>이루기 위한 확장 컨텐츠</h2> -->
+ 
+    <!-- 카테고리 필터 -->
+    <div class="h-filter-wrap">
+      <div class="h-filter" role="tablist" aria-label="칼럼 카테고리">
+        <button class="h-filter-btn is-active" data-filter="all" role="tab" aria-selected="true">전체</button>
+        <button class="h-filter-btn" data-filter="program" role="tab" aria-selected="false">숲치료</button>
+        <!-- <button class="h-filter-btn" data-filter="homepage" role="tab" aria-selected="false">비즈니스</button>
+        <button class="h-filter-btn" data-filter="aivideo" role="tab" aria-selected="false">혁신 사례</button> -->
+      </div>
+    </div>
+ 
+    <div class="h-banner-wrapper" id="h-banner-container">
+      <a class="h-banner banner-1" data-category="marketing" href="./program-event.html" aria-label="1편 : 혁신의 필요성을 느끼고 있는 사업자라면?으로 이동">
+        <span class="h-num">01</span>
+        <div class="h-banner-content">
+          <h3 class="h-dummy-title">“숲이 보낸 처방전 – 숨낭愛”</h3>
+          <span class="h-cat">숲치료</span>
+          <p class="h-banner-text">참가자는 숲과 마을에 머무르며 산림치유 활동과 지역연계 탐방을 경험</p>
+          <span class="h-more">자세히 보기 <span class="arrow">→</span></span>
+        </div>
+      </a>
+ 
+         <!-- <a class="h-banner banner-2" data-category="marketing" href="./special-column2.html" aria-label="2편. 혁신을 위해 꼭 알아야 할 비즈니스의 본질로 이동">
+        <span class="h-num">02</span>
+        <div class="h-banner-content">
+          <h3 class="h-dummy-title">혁신의 최종 목적지는<br>인간과 사회의 행복이다</h3>
+          <span class="h-cat">사업의 철학</span>
+          <p class="h-banner-text">혁신의 본질은 기술 그 자체에 있지 않다</p>
+          <span class="h-more">자세히 보기 <span class="arrow">→</span></span>
+        </div>
+      </a> -->
+ 
+      <!-- <a class="h-banner banner-3" data-category="homepage" href="column-3.html" aria-label="3편. 성공하는 비즈니스 혁신의 4가지 형태로 이동">
+        <span class="h-num">03</span>
+        <div class="h-banner-content">
+          <h3 class="h-dummy-title">성공하는 비즈니스 혁신의 4가지 형태</h3>
+          <span class="h-cat">HOMEPAGE</span>
+          <p class="h-banner-text">방식은 무수히 많아 보이지만, 성과로 이어진 혁신은 대부분 네 가지 유형 안에서 반복된다.</p>
+          <span class="h-more">자세히 보기 <span class="arrow">→</span></span>
+        </div>
+      </a>
+ 
+      <a class="h-banner banner-4" data-category="homepage" href="column-4.html" aria-label="4편. 혁신을 위한 진정한 비즈니스의 흐름은 어떻게 읽어내는가?로 이동">
+        <span class="h-num">04</span>
+        <div class="h-banner-content">
+          <h3 class="h-dummy-title">혁신을 위한 진정한 비즈니스의 흐름은 어떻게 읽어내는가?</h3>
+          <span class="h-cat">HOMEPAGE</span>
+          <p class="h-banner-text">혁신을 위한 가장 중요한 능력은 시대의 바람을 읽어내는 힘이다.</p>
+          <span class="h-more">자세히 보기 <span class="arrow">→</span></span>
+        </div>
+      </a>
+ 
+      <a class="h-banner banner-5" data-category="aivideo" href="column-5.html" aria-label="5편. 혁신은 아무나 못한다로 이동">
+        <span class="h-num">05</span>
+        <div class="h-banner-content">
+          <h3 class="h-dummy-title">혁신은 아무나 못한다</h3>
+          <span class="h-cat">AI VIDEO</span>
+          <p class="h-banner-text">왜 혁신은 늘 소수의 선택으로 남을까? 혁신을 가로막는 구조적인 장벽이 존재하기 때문이다.</p>
+          <span class="h-more">자세히 보기 <span class="arrow">→</span></span>
+        </div>
+      </a>
+ 
+      <a class="h-banner banner-6" data-category="aivideo" href="column-6.html" aria-label="6편. 혁신은 개인적이지만, 이뤄내는 것은 함께로 이동">
+        <span class="h-num">06</span>
+        <div class="h-banner-content">
+          <h3 class="h-dummy-title">혁신은 개인적이지만, 이뤄내는 것은 함께</h3>
+          <span class="h-cat">AI VIDEO</span>
+          <p class="h-banner-text">혁신의 출발은 개인이지만, 완주는 시스템과 팀이 만든다. 실행이 지속되는 협업 구조의 중요성.</p>
+          <span class="h-more">자세히 보기 <span class="arrow">→</span></span>
+        </div>
+      </a>
+ 
+      <a class="h-banner banner-1" data-category="marketing" href="#" aria-label="데모 카드">
+        <span class="h-num">07</span>
+        <div class="h-banner-content">
+          <h3 class="h-dummy-title">데이터로 증명하는 마케팅 의사결정</h3>
+          <span class="h-cat">MARKETING</span>
+          <p class="h-banner-text">감이 아니라 숫자로 움직이는 조직이 혁신을 지속한다. 측정 가능한 지표의 설계.</p>
+          <span class="h-more">자세히 보기 <span class="arrow">→</span></span>
+        </div>
+      </a>
+ 
+      <a class="h-banner banner-2" data-category="homepage" href="#" aria-label="데모 카드">
+        <span class="h-num">08</span>
+        <div class="h-banner-content">
+          <h3 class="h-dummy-title">신뢰를 만드는 홈페이지 구조 설계</h3>
+          <span class="h-cat">HOMEPAGE</span>
+          <p class="h-banner-text">방문자가 머무는 페이지에는 분명한 흐름과 이유가 있다. 전환을 부르는 설계 원칙.</p>
+          <span class="h-more">자세히 보기 <span class="arrow">→</span></span>
+        </div>
+      </a>
+ 
+      <a class="h-banner banner-3" data-category="aivideo" href="#" aria-label="데모 카드">
+        <span class="h-num">09</span>
+        <div class="h-banner-content">
+          <h3 class="h-dummy-title">AI 영상으로 브랜드의 첫인상을 바꾸다</h3>
+          <span class="h-cat">AI VIDEO</span>
+          <p class="h-banner-text">짧은 영상 하나가 브랜드의 격을 결정한다. 기획부터 연출까지의 핵심.</p>
+          <span class="h-more">자세히 보기 <span class="arrow">→</span></span>
+        </div>
+      </a>
+ 
+      <a class="h-banner banner-4" data-category="marketing" href="#" aria-label="데모 카드">
+        <span class="h-num">10</span>
+        <div class="h-banner-content">
+          <h3 class="h-dummy-title">작은 예산으로 큰 시장을 여는 법</h3>
+          <span class="h-cat">MARKETING</span>
+          <p class="h-banner-text">자원이 한정될수록 집중과 선택이 성패를 가른다. 효율을 극대화하는 전략.</p>
+          <span class="h-more">자세히 보기 <span class="arrow">→</span></span>
+        </div>
+      </a>
+ 
+      <a class="h-banner banner-5" data-category="homepage" href="#" aria-label="데모 카드">
+        <span class="h-num">11</span>
+        <div class="h-banner-content">
+          <h3 class="h-dummy-title">전환을 부르는 랜딩페이지의 조건</h3>
+          <span class="h-cat">HOMEPAGE</span>
+          <p class="h-banner-text">한 번에 모든 걸 말하려 하면 아무것도 남지 않는다. 메시지의 우선순위.</p>
+          <span class="h-more">자세히 보기 <span class="arrow">→</span></span>
+        </div>
+      </a>
+ 
+      <a class="h-banner banner-6" data-category="aivideo" href="#" aria-label="데모 카드">
+        <span class="h-num">12</span>
+        <div class="h-banner-content">
+          <h3 class="h-dummy-title">콘텐츠가 자산이 되는 순간</h3>
+          <span class="h-cat">AI VIDEO</span>
+          <p class="h-banner-text">한 번 만든 콘텐츠를 여러 채널의 자산으로 확장하는 운영 구조.</p>
+          <span class="h-more">자세히 보기 <span class="arrow">→</span></span>
+        </div>
+      </a>
+ 
+      <a class="h-banner banner-1" data-category="marketing" href="#" aria-label="데모 카드">
+        <span class="h-num">13</span>
+        <div class="h-banner-content">
+          <h3 class="h-dummy-title">고객을 다시 부르는 리텐션 설계</h3>
+          <span class="h-cat">MARKETING</span>
+          <p class="h-banner-text">신규 유입보다 비싼 것은 떠난 고객이다. 다시 찾게 만드는 경험의 설계.</p>
+          <span class="h-more">자세히 보기 <span class="arrow">→</span></span>
+        </div>
+      </a>
+ 
+      <a class="h-banner banner-2" data-category="homepage" href="#" aria-label="데모 카드">
+        <span class="h-num">14</span>
+        <div class="h-banner-content">
+          <h3 class="h-dummy-title">속도가 곧 경쟁력인 웹 성능 최적화</h3>
+          <span class="h-cat">HOMEPAGE</span>
+          <p class="h-banner-text">0.1초의 지연이 이탈을 만든다. 체감 속도를 끌어올리는 기본기.</p>
+          <span class="h-more">자세히 보기 <span class="arrow">→</span></span>
+        </div>
+      </a>  -->
+    </div>
+ 
+    <div class="h-more-wrap">
+      <button id="h-load-more-btn" class="h-load-more" type="button">더 보기 <span class="lm-arrow">▼</span></button>
+    </div>
+  </div>
+ 
+  <style>
+    /* ==============================
+       Scope: #h-service-banners only
+       ============================== */
+    #h-service-banners *,
+    #h-service-banners *::before,
+    #h-service-banners *::after{ box-sizing: border-box; }
+ 
+    #h-service-banners{
+      /* ── 화이트 & 블루 팔레트 ── */
+      --bnz-bg:       #0fbf0724;   /* 완전한 화이트 배경 */
+      --bnz-surface:  #ffffff;   /* 화이트 서피스(필터바) */
+      --bnz-blue:     #6a8b2e;   /* 브랜드 블루 (메인 강조) */
+      --bnz-blue-2:   #95c143;   /* 보조 블루 */
+      --bnz-ink:      #0f1f3d;   /* 네이비 텍스트(밝은 배경 위) */
+      --bnz-ink-dim:  #5b6b86;   /* 보조 텍스트 */
+      --bnz-line:     #e2e8f5;   /* 헤어라인 */
+      --bnz-card-acc: #95c143;   /* 카드(블루) 위 라이트 블루 강조 */
+ 
+      font-family: 'Pretendard', -apple-system, system-ui, sans-serif;
+      padding: 90px 20px;
+      margin: 0 auto;
+      text-align: center;
+      background: var(--bnz-bg);
+    }
+ 
+    #h-service-banners .h-container{ max-width: 1120px; margin: 0 auto; }
+ 
+    #h-service-banners .h-main-title{
+      font-size: 32px;
+      font-weight: 700;
+      margin-bottom: 36px;
+      line-height: 1.45;
+      color: var(--bnz-ink);
+      letter-spacing: -0.02em;
+    }
+    #h-service-banners .h-main-title .g{ color: var(--bnz-blue); }
+ 
+    /* ── 카테고리 필터 ── */
+    #h-service-banners .h-filter-wrap{ text-align: center; margin-bottom: 48px; }
+    #h-service-banners .h-filter{
+      display: inline-flex;
+      gap: 4px;
+      padding: 6px;
+      border-radius: 50px;
+      background: var(--bnz-surface);
+      border: 1px solid var(--bnz-line);
+      box-shadow: 0 6px 18px rgba(16,40,90,.06);
+    }
+    #h-service-banners .h-filter-btn{
+      border: none;
+      background: transparent;
+      color: var(--bnz-ink-dim);
+      font-family: inherit;
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+      padding: 10px 22px;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: background .25s ease, color .25s ease;
+    }
+    #h-service-banners .h-filter-btn:hover:not(.is-active){ color: var(--bnz-blue); }
+    #h-service-banners .h-filter-btn.is-active{ background: var(--bnz-blue); color: #fff; }
+ 
+    /* ── 3열 그리드 ── */
+    #h-service-banners .h-banner-wrapper{
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      align-items: stretch;
+      gap: 24px;
+      margin: 0 auto;
+    }
+ 
+    /* 카드 */
+    #h-service-banners .h-banner{
+      position: relative;
+      min-height: 440px;
+      border-radius: 20px;
+      overflow: hidden;
+ 
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: flex-start;
+      text-align: left;
+ 
+      color: #fff;
+      box-shadow: 0 14px 34px rgba(16,40,90,.12);
+      transition: transform .45s ease, box-shadow .45s ease, opacity .45s ease;
+ 
+      cursor: pointer;
+      outline: none;
+      text-decoration: none;
+      -webkit-tap-highlight-color: transparent;
+      user-select: none;
+    }
+ 
+    /* 이미지 레이어 */
+    #h-service-banners .h-banner::before{
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image: var(--h-bg);
+      background-size: cover;
+      background-position: center;
+      transform: scale(1);
+      transition: transform 600ms cubic-bezier(.2,.8,.2,1);
+      will-change: transform;
+      z-index: 0;
+    }
+ 
+    /* 블루 듀오톤 오버레이 */
+    #h-service-banners .h-banner::after{
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+      linear-gradient(180deg, rgba(11, 26, 74, 0.22) 0%, rgba(11, 26, 74, 0.50) 52%, rgba(8, 20, 58, 0.90) 100%), linear-gradient(0deg, rgb(0 0 0 / 30%) 0%, rgb(255 255 255 / 30%) 100%);
+      pointer-events: none;
+      z-index: 1;
+    }
+ 
+    /* 번호 */
+    #h-service-banners .h-num{
+      position: absolute;
+      top: 26px;
+      left: 26px;
+      z-index: 4;
+      font-size: 34px;
+      font-weight: 400;
+      line-height: 1;
+      letter-spacing: 1px;
+      color: #fff;
+    }
+    #h-service-banners .h-num::after{
+      content: "";
+      display: block;
+      width: 26px;
+      height: 2px;
+      background: var(--bnz-card-acc);
+      margin-top: 10px;
+    }
+ 
+    /* 콘텐츠 */
+    #h-service-banners .h-banner-content{
+      position: relative;
+      z-index: 2;
+      width: 100%;
+      padding: 26px;
+    }
+    #h-service-banners .h-dummy-title{
+      font-size: 24px;
+      font-weight: 700;
+      margin-bottom: 10px;
+      letter-spacing: -0.02em;
+      line-height: 1.3;
+      word-break: keep-all;
+      color: #fff;
+    }
+    #h-service-banners .h-cat{
+      display: inline-block;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      color: var(--bnz-card-acc);
+      margin-bottom: 14px;
+    }
+    #h-service-banners .h-banner-text{
+      font-size: 14px;
+      color: rgba(255,255,255,.88);
+      line-height: 1.6;
+      word-break: keep-all;
+      letter-spacing: -0.01em;
+      margin-bottom: 18px;
+    }
+    #h-service-banners .h-more{
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: .3px;
+      color: var(--bnz-card-acc);
+    }
+    #h-service-banners .h-more .arrow{ transition: transform .3s; }
+ 
+    @media (hover:hover){
+      #h-service-banners .h-banner:hover{
+        transform: translateY(-4px);
+        box-shadow: 0 22px 46px rgba(28,78,216,.26);
+      }
+      #h-service-banners .h-banner:hover::before{ transform: scale(1.08); }
+      #h-service-banners .h-banner:hover .h-more .arrow{ transform: translateX(4px); }
+    }
+    #h-service-banners .h-banner:focus-visible{
+      box-shadow: 0 0 0 3px rgba(28,78,216,.45);
+    }
+ 
+    /* ── 더 보기 버튼 ── */
+    #h-service-banners .h-more-wrap{ text-align: center; margin-top: 48px; }
+    #h-service-banners .h-load-more{
+      font-family: inherit;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 15px 56px;
+      border-radius: 50px;
+      border: 1.5px solid var(--bnz-blue);
+      background: #fff;
+      color: var(--bnz-blue);
+      font-size: 15px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background .25s ease, color .25s ease, box-shadow .25s ease;
+    }
+    #h-service-banners .h-load-more:hover{
+      background: var(--bnz-blue);
+      color: #fff;
+      box-shadow: 0 12px 26px rgba(28,78,216,.28);
+    }
+    #h-service-banners .h-load-more .lm-arrow{ font-size: 11px; }
+    #h-service-banners .h-load-more[hidden]{ display: none; }
+ 
+    /* 배너별 이미지 */
+    #h-service-banners .banner-1{ --h-bg: url('./img/b03.jpg'); }
+   #h-service-banners .banner-2{ --h-bg: url('./img/2-4.jpg'); }
+    #h-service-banners .banner-3{ --h-bg: url('https://images.unsplash.com/photo-1466611653911-95081537e5b7?q=80&w=1000&auto=format&fit=crop'); }
+    #h-service-banners .banner-4{ --h-bg: url('https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?q=80&w=1000&auto=format&fit=crop'); }
+    #h-service-banners .banner-5{ --h-bg: url('https://images.unsplash.com/photo-1509391366360-fe5bb58583bb?q=80&w=1000&auto=format&fit=crop'); }
+    #h-service-banners .banner-6{ --h-bg: url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1000&auto=format&fit=crop'); }
+ 
+    /* ── 반응형 ── */
+    @media (max-width: 980px){
+      #h-service-banners .h-banner-wrapper{ grid-template-columns: repeat(2, 1fr); }
+      #h-service-banners .h-main-title{ font-size: 26px; }
+      #h-service-banners .h-dummy-title{ font-size: 22px; }
+    }
+    @media (max-width: 600px){
+      #h-service-banners .h-banner-wrapper{ grid-template-columns: 1fr; }
+      #h-service-banners .h-banner{ min-height: 360px; }
+      #h-service-banners .h-banner-text{ font-size: 15px; }
+      #h-service-banners .h-filter-btn{ padding: 9px 16px; font-size: 13px; }
+      #h-service-banners .h-load-more{ padding: 14px 44px; }
+    }
+ 
+    @media (prefers-reduced-motion: reduce){
+      #h-service-banners .h-banner,
+      #h-service-banners .h-banner::before,
+      #h-service-banners .h-banner::after,
+      #h-service-banners .h-more .arrow{
+        transition: none !important;
+      }
+    }
+  </style>
+ 
+  <script>
+    (function() {
+      var root = document.getElementById('h-service-banners');
+      if(!root) return;
+ 
+      var STEP = 12; /* ✅ 처음 노출 개수 = 클릭당 추가 노출 개수 */
+ 
+      var filterBtns = root.querySelectorAll('.h-filter-btn');
+      var cards = Array.prototype.slice.call(root.querySelectorAll('.h-banner'));
+      var moreBtn = root.querySelector('#h-load-more-btn');
+ 
+      var currentFilter = 'all';
+      var shown = STEP;
+ 
+      function matches(card){
+        return currentFilter === 'all' || card.getAttribute('data-category') === currentFilter;
+      }
+ 
+      function render(){
+        var matchedCount = 0;
+        cards.forEach(function(card){
+          if(matches(card)){
+            card.style.display = (matchedCount < shown) ? '' : 'none';
+            matchedCount++;
+          } else {
+            card.style.display = 'none';
+          }
+        });
+        if(moreBtn){ moreBtn.hidden = !(matchedCount > shown); }
+      }
+ 
+      filterBtns.forEach(function(btn){
+        btn.addEventListener('click', function(){
+          filterBtns.forEach(function(x){
+            x.classList.remove('is-active');
+            x.setAttribute('aria-selected','false');
+          });
+          btn.classList.add('is-active');
+          btn.setAttribute('aria-selected','true');
+ 
+          currentFilter = btn.getAttribute('data-filter');
+          shown = STEP;        /* 필터 바꾸면 다시 처음부터 */
+          render();
+        });
+      });
+ 
+      if(moreBtn){
+        moreBtn.addEventListener('click', function(){
+          shown += STEP;       /* 클릭할 때마다 STEP개씩 더 노출 */
+          render();
+        });
+      }
+ 
+      render();
+    })();
+  </script>
+</section>
+
+
+
+
+
+
+
+</body>
+
+<div id="footerContainer"></div>
+
+
+<script src="./js/menu.js"></script>
+<script src="./js/footer.js"></script>
+<script src="./js/main.js"></script>
+
+</html>

@@ -388,6 +388,7 @@ document.write(`
           <ul class="menu-list">
             <li><a href="./program.html">세부 프로그램</a></li>
             <li><a href="./calender.html">연간 프로그램</a></li>
+            <li><a href="./live-program.html">진행 중인 프로그램</a></li>
             <li><a href="./contact.html">참여 및 문의</a></li>
           </ul>
         </div>
